@@ -14,7 +14,10 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Enable SDK Internal Logging](#example-enable-sdk-internal-logging)
     - [Example: Return the Mobile SDK Version](#example-return-the-mobile-sdk-version)
     - [Example: Track User Navigation in the App](#example-track-user-navigation-in-the-app)
-    - ...
+    - [Example: Bind a Device ID to and Identity](#example-bind-a-device-id-to-and-identity)
+    - [Example: Detach Identitiy from Device](#example-detach-identitiy-from-device)
+    - [Example: Working with Events](#example-working-with-events)
+    - [Example: Reset the Mobile Device ID](#example-reset-the-mobile-device-id)
 
 
 ## Framework Versions
@@ -86,13 +89,15 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
 
 ---
 
-### Example: Return the Mobile SDK Version
+### Example: Retrieving the Mobile SDK Version
+
 <details><summary>Click to expand</summary>
-This example outlines how to retrieve the SDK version in both native iOS Objective-C and React Native iOS TypeScript using the example provided.
+
+This example provides guidance on how to obtain the SDK version in both native iOS using Objective-C and React Native iOS using TypeScript.
 
 ## Native iOS Objective-C
 
-In our native iOS using Objective-C, you can retrieve the SDK version using the following method:
+To retrieve the SDK version in native iOS using Objective-C, you can use the following method:
 
 ```objective-c
 // Objective-C
@@ -101,41 +106,43 @@ In our native iOS using Objective-C, you can retrieve the SDK version using the 
 
 ## React Native iOS TypeScript
 
-In React Native using TypeScript, follow these steps to retrieve the SDK version:
+To retrieve the SDK version in React Native using TypeScript, follow these steps:
 
-1. Import required modules and functions:
-   
+1. Import the required modules and functions:
+
    ```typescript
-   import React from 'react';
-   import { Text, Platform } from 'react-native';
-   import { getSdkVersion } from 'react-native-mobile-sdk';
+   import React, { useState, useEffect } from 'react';
+   import { View, Text, Platform } from 'react-native';
+   import { getSdkVersion } from 'mobile-sdk-react-native';
    ```
 
-2. In your component, set up state to hold the SDK version:
+2. Set up state in your component to store the SDK version:
 
    ```typescript
-   const [sdkVersion, setSdkVersion] = React.useState<string>('');
+   const [sdkVersion, setSdkVersion] = useState<string>('');
    ```
 
 3. Utilize the `useEffect` hook to fetch the SDK version and update the state:
 
    ```typescript
-   React.useEffect(() => {
+   useEffect(() => {
        getSdkVersion((version: string) => {
            setSdkVersion(version);
        });
    }, []);
    ```
 
-4. Render the SDK version in your component's `return` statement:
+4. Display the SDK version in your component's `return` statement:
 
    ```typescript
    return (
-       <Text>{Platform.OS} SDK version: {sdkVersion}</Text>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>{Platform.OS} SDK version: {sdkVersion}</Text>
+    </View>
    );
    ```
 
-5. As Reference, in our react-native sdk, the `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
+5. As a reference, the `getSdkVersion` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
 
    ```objective-c
    RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback)
@@ -150,34 +157,38 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
 
 ---
 
-### Example: Track User Navigation in the App
-<details><summary>Click to expand</summary>
-This example outlines how to call the newPage API via React Native SDK
+### Example: Monitoring User Navigation within the App
 
-**Native iOS SDK **
+<details><summary>Click to expand</summary>
+
+This example illustrates the process of using the `newPage` API from the React Native SDK to track user navigation within your app.
+
+**Using the Native iOS SDK:**
 
 ```objective-c
 [SASCollector newPage:@"outdoor/fishing/livebait"];
 ```
 
-In React Native using TypeScript, follow these steps to retrieve the SDK version:
+**Using React Native with TypeScript:**
 
-1. Import required modules and functions:
-   
+Follow these steps to monitor user navigation within your app:
+
+1. Import the necessary modules and functions:
+
    ```typescript
    import React from 'react';
-   import { newPage } from 'react-native-mobile-sdk';
+   import { newPage } from 'mobile-sdk-react-native';
    ```
 
-2. Trigger newPage API in your component's `return` statement:
+2. Trigger the `newPage` API within your component's `return` statement:
 
    ```typescript
    return (
-      newPage('outdoor/fishing/livebair');
+      newPage('outdoor/fishing/livebait');
    );
    ```
 
-3. As Reference, in our react-native sdk, the `newPage` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
+3. As a reference, the `newPage` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
 
    ```objective-c
    RCT_EXPORT_METHOD(newPage:(NSString*)uri)
@@ -185,11 +196,243 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
       [SASCollector newPage:uri];
    }
    ```
-
 </details>
-
 
 
 ---
 
+### Example: Bind a Device ID to and Identity
+
+<details><summary>Click to expand</summary>
+
+This example demonstrates how to use the `identity:withType:completion:` API from the React Native SDK to associate a user's identity with a device ID. This association is performed after the user signs in to your app, allowing you to uniquely identify the user. The `type` parameter specifies the type of identity (customer ID or login), while the `value` parameter holds the corresponding identifier. The supported identity types are `SASCOLLECTOR_IDENTITY_TYPE_CUSTOMER_ID` and `SASCOLLECTOR_IDENTITY_TYPE_LOGIN`, which are constants defined in `SASCollectorEvents.h`.
+
+**Using the Native iOS SDK:**
+
+Here's an example that uses `CUSTOMER_ID` as the identity:
+
+```objective-c
+[SASCollector
+    identity:logonValue
+    withType:SASCOLLECTOR_IDENTITY_TYPE_CUSTOMER_ID
+    completion:^(bool completed) {
+        NSLog(completed ? @"success" : @"failure");
+    
+        // Identity is now associated
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Perform tasks here that need to be on the main thread
+        });
+}];
+```
+
+**Using React Native with TypeScript:**
+
+Follow these steps to retrieve the SDK version:
+
+1. Import the required modules and functions:
+
+   ```typescript
+   import React, { useState } from 'react';
+   import { View, Button } from 'react-native';
+   import { identity } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up state in your component to hold the login type and user ID:
+
+   ```typescript
+   const [loginType, setLoginType] = React.useState<string>('');
+   const [userId, setUserId] = React.useState<string>('');
+   ```
+
+3. Create a handler function to trigger the `identity` function:
+
+   ```typescript
+   const handlePress = async () => {
+    try {
+        await identity(userId, loginType);
+        console.log('Log-in Success');
+    } catch (error) {
+        console.log('Log-in Failure');
+    }
+   };
+   ```
+
+4. Include a button in your component's `return` statement:
+
+   ```typescript
+   return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Button title="Identity" onPress={handlePress} />
+    </View>
+   );
+   ```
+
+5. As a reference, the `identity` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
+
+   ```objective-c
+    RCT_EXPORT_METHOD(identity:(NSString*)value withType:(NSString*)type isSuccess:(RCTPromiseResolveBlock)successPromise isFailure:(RCTPromiseRejectBlock)failurePromise) {
+        [SASCollector identity:value withType:type completion:^(BOOL success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (success) {
+                    successPromise([NSNumber numberWithBool:success]);
+                } else {
+                    failurePromise(@"Error", @"Identity failure", nil);
+                }
+            });
+
+        }];
+    }
+   ```
+</details>
+
+
+---
+
+### Example: Detach Identity from Device
+
+<details><summary>Click to expand</summary>
+
+Use the `detachIdentity` method to allow users to sign out from your app. This action:
+
+- Disconnects the device from the user's current identity, stopping personalized push notifications.
+- Generates new session and focus events.
+  
+**Using the Native iOS SDK:**
+
+```objective-c
++(void)detachIdentity:(void(^)(bool))completionHandler
+```
+
+You can also suspend data collection and detach identity together using `shutdownAndDetachIdentity`. To reattach the device, use the `identity` method. To resume collection, call `[SASCollector initializeCollection];`.
+
+**Using React Native with TypeScript:**
+
+Follow these steps to retrieve the SDK version:
+
+1. Import the required modules and functions:
+
+   ```typescript
+   import React, { useState } from 'react';
+   import { View, Button } from 'react-native';
+   import { detachIdentity } from 'mobile-sdk-react-native';
+   ```
+
+2. Create a handler function to trigger the `detachIdentity` function:
+
+   ```typescript
+   const handlePress = async () => {
+    try {
+        await detachIdentity();
+        console.log('Log-out Success');
+    } catch (error) {
+        console.log('Log-out Failure');
+    }
+   };
+   ```
+
+3. Include a button in your component's `return` statement:
+
+   ```typescript
+   return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Button title="Detach Identity" onPress={handlePress} />
+    </View>
+   );
+   ```
+
+4. As a reference, the `detachIdentity` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
+
+   ```objective-c
+    RCT_EXPORT_METHOD(detachIdentity:(RCTPromiseResolveBlock)successPromise isFailure:(RCTPromiseRejectBlock)failurePromise) {
+        [SASCollector detachIdentity:^(BOOL success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (success) {
+                    successPromise([NSNumber numberWithBool:success]);
+                } else {
+                    failurePromise(@"Error", @"Identity detachh failure", [NSError new]);
+                }
+            });
+
+        }];
+    }
+   ```
+
+</details>
+
+
+---
+
+### Example: Working with Events
+
+<details><summary>Click to expand</summary>
+
+When working with events, utilize the `addAppEvent` API to send customized event data to the mobile SDK. This API involves:
+
+- An event identifier (mobile event key) that aligns with your SAS Customer Intelligence 360 configuration.
+- Optional metadata in the form of name-value pairs within a dictionary.
+
+**Using the Native iOS SDK:**
+
+To send events in native iOS, use the following method:
+
+```objective-c
++(void)addAppEvent:(NSString*)eventName data:(NSDictionary *)data;
+```
+
+Example usage:
+
+```objective-c
+[SASCollector addAppEvent:@"myEventId"
+      data:@{@"myAttributeName":@"myAttributeValue"}];
+```
+
+You can omit metadata using:
+
+```objective-c
+[SASCollector addAppEvent:@"myEvent" data:nil];
+```
+
+**Using React Native with TypeScript:**
+
+Follow these steps:
+
+1. Import necessary modules and functions:
+
+   ```typescript
+   import React, { useState } from 'react';
+   import { View, TextInput, Button } from 'react-native';
+   import { addAppEvent } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up state to hold custom event data:
+
+   ```typescript
+   const [customEvent, setCustomEvent] = React.useState<string>('');
+   ```
+
+3. Include a TextInput and Button to submit `addAppEvent`:
+
+   ```typescript
+   return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <TextInput onChangeText={setCustomEvent} value={customEvent} style={{ height: 40, width: 200, borderWidth: 1 }} />
+      <Button title="Submit Custom Event" onPress={() => {
+        addAppEvent(customEvent, null);
+      }} />
+    </View>
+   );
+   ```
+
+5. As a reference, the `addAppEvent` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
+
+   ```objective-c
+    RCT_EXPORT_METHOD(addAppEvent: (NSString*)eventKey data:(NSDictionary*)data){
+        [SASCollector addAppEvent:eventKey data:data];
+    }
+   ```
+
+</details>
+
+
+---
 (Continue with other functionalities)
