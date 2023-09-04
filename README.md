@@ -407,7 +407,7 @@ Follow these steps:
 2. Set up state to hold custom event data:
 
    ```typescript
-   const [customEvent, setCustomEvent] = React.useState<string>('');
+   const [customEventKey, setCustomEventKey] = React.useState<string>('');
    ```
 
 3. Include a TextInput and Button to submit `addAppEvent`:
@@ -415,9 +415,9 @@ Follow these steps:
    ```typescript
    return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <TextInput onChangeText={setCustomEvent} value={customEvent} style={{ height: 40, width: 200, borderWidth: 1 }} />
+      <TextInput onChangeText={setCustomEventKey} value={customEventKey} style={{ height: 40, width: 200, borderWidth: 1 }} />
       <Button title="Submit Custom Event" onPress={() => {
-        addAppEvent(customEvent, null);
+        addAppEvent(customEventKey, null);
       }} />
     </View>
    );
