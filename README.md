@@ -94,7 +94,7 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
 ### Example: Retrieving the Mobile SDK Version
 
 <details><summary>Click to expand</summary>
-<a name="#expand-return-the-mobile-sdk-version"></a>
+<a name="expand-return-the-mobile-sdk-version"></a>
 
 This example provides guidance on how to obtain the SDK version in both native iOS using Objective-C and React Native iOS using TypeScript.
 
@@ -164,7 +164,7 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
 ### Example: Track User Navigation in the App
 
 <details><summary>Click to expand</summary>
-<a name="#expand-track-user-navigation-in-the-app"></a>
+<a name="expand-track-user-navigation-in-the-app"></a>
 
 This example illustrates the process of using the `newPage` API from the React Native SDK to track user navigation within your app.
 
@@ -211,7 +211,7 @@ Follow these steps to monitor user navigation within your app:
 ### Example: Bind a Device ID to and Identity
 
 <details><summary>Click to expand</summary>
-<a name="#expand-bind-a-device-id-to-and-identity"></a>
+<a name="expand-bind-a-device-id-to-and-identity"></a>
 
 This example demonstrates how to use the `identity:withType:completion:` API from the React Native SDK to associate a user's identity with a device ID. This association is performed after the user signs in to your app, allowing you to uniquely identify the user. The `type` parameter specifies the type of identity (customer ID or login), while the `value` parameter holds the corresponding identifier. The supported identity types are `SASCOLLECTOR_IDENTITY_TYPE_CUSTOMER_ID` and `SASCOLLECTOR_IDENTITY_TYPE_LOGIN`, which are constants defined in `SASCollectorEvents.h`.
 
@@ -301,7 +301,7 @@ Follow these steps to retrieve the SDK version:
 ### Example: Detach Identity from Device
 
 <details><summary>Click to expand</summary>
-<a name="#expand-detach-identitiy-from-device"></a>
+<a name="expand-detach-identitiy-from-device"></a>
 
 Use the `detachIdentity` method to allow users to sign out from your app. This action:
 
@@ -377,7 +377,7 @@ Follow these steps to retrieve the SDK version:
 ### Example: Working with Events
 
 <details><summary>Click to expand</summary>
-<a name="#expand-working-with-events"></a>
+<a name="expand-working-with-events"></a>
 
 When working with events, utilize the `addAppEvent` API to send customized event data to the mobile SDK. This API involves:
 
