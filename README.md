@@ -10,7 +10,7 @@ This repository aims to help developers understand the translation of various fu
 2. [Framework Versions](#framework-versions)
 3. [Functionality Comparisons](#functionality-comparisons)
     - [Example 1: Enable SDK Internal Logging](#example-1-enable-sdk-internal-logging)
-    - [Example 2: User Interface](#example-2-user-interface)
+    - [Example 2: Return the Mobile SDK Version](#example-2-return-the-mobile-sdk-version)
     - [Example 3: Accessing Device Features](#example-3-accessing-device-features)
     - ...
 4. [Resources](#resources)
@@ -92,7 +92,7 @@ Note: The setup for Native iOS and React Native iOS projects is the same for thi
 
 ---
 
-### Example 2 - SDK Version Retrieval Comparison
+### Example 2 - Return the Mobile SDK Version
 
 This example outlines how to retrieve the SDK version in both native iOS Objective-C and React Native iOS TypeScript using the example provided.
 
