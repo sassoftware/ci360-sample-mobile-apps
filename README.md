@@ -11,7 +11,7 @@ Before proceeding, ensure that you have successfully installed the React-Native 
 <a name="back-to-top"></a>
 1. [Framework Versions](#framework-versions)
 2. [Functionality Comparisons](#functionality-comparisons)
-    - [Example: Enable SDK Internal Logging](#expand-example-enable-sdk-internal-logging)
+    - [Example: Enable SDK Internal Logging](#expand-enable-sdk-internal-logging)
     - [Example: Return the Mobile SDK Version](#expand-return-the-mobile-sdk-version)
     - [Example: Track User Navigation in the App](#expand-track-user-navigation-in-the-app)
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
@@ -31,7 +31,7 @@ State the versions of Native iOS and React Native frameworks that you're using f
 
 ### Example: Enable SDK internal Logging
 <details><summary>Click to expand</summary>
-<a name="expand-example-enable-sdk-internal-logging"></a>
+<a name="expand-enable-sdk-internal-logging"></a>
 
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
 
