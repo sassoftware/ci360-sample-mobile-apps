@@ -1,4 +1,4 @@
-# React-Native SDK Guide and Comparison
+# Working with the react-native iOS Mobile SDK
 
 Welcome to the React-Native SDK guide for our platform! This document is designed to provide you with a comprehensive understanding of how to effectively utilize our React-Native SDK. We will walk you through usage examples and provide a comparison with the native SDK to enhance your understanding.
 
