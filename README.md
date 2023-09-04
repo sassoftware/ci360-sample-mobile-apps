@@ -154,8 +154,7 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
       callback(@[sdkVersion]);
    }
    ```
-6. [This is the working example](sdkVersionExample.tsx)
-   [!INCLUDE [Other File](sdkVersionExample.tsx)]
+6. [!INCLUDE [sdkVersionExample.tsx](sdkVersionExample.tsx)]
    
 [Back to Top](#back-to-top)
 </details>
