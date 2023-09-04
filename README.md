@@ -138,7 +138,8 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
 5. As Reference, in our react-native sdk, the `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
 
    ```objective-c
-   RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback){
+   RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback)
+   {
       NSString* sdkVersion = [SASCollector sdkVersion];
       callback(@[sdkVersion]);
    }
@@ -149,19 +150,45 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
 
 ---
 
-### Example 3: Accessing Device Features
+### Example 3: Track User Navigation in the App
+<details><summary>Click to expand</summary>
+This example outlines how to call the newPage API via React Native SDK
 
-**Native iOS - Swift**
+**Native iOS SDK **
 
-```swift
-// Swift code for accessing device features like the camera
+```objective-c
+[SASCollector newPage:@"outdoor/fishing/livebait"];
 ```
 
-**React Native - JavaScript**
+In React Native using TypeScript, follow these steps to retrieve the SDK version:
 
-```javascript
-// JavaScript code for accessing device features like the camera
-```
+1. Import required modules and functions:
+   
+   ```typescript
+   import React from 'react';
+   import { newPage } from 'react-native-mobile-sdk';
+   ```
+
+2. Trigger newPage API in your component's `return` statement:
+
+   ```typescript
+   return (
+      newPage('outdoor/fishing/livebair');
+   );
+   ```
+
+3. As Reference, in our react-native sdk, the `newPage` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
+
+   ```objective-c
+   RCT_EXPORT_METHOD(newPage:(NSString*)uri)
+   {
+      [SASCollector newPage:uri];
+   }
+   ```
+
+</details>
+
+
 
 ---
 
