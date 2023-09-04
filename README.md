@@ -1,26 +1,21 @@
-# Functionality Comparison between Native iOS and React Native for CI360 iOS SDK
+# React-Native SDK Guide and Comparison
 
-## Overview
+Welcome to the React-Native SDK guide for our platform! This document is designed to provide you with a comprehensive understanding of how to effectively utilize our React-Native SDK. We will walk you through usage examples and provide a comparison with the native SDK to enhance your understanding.
 
-This repository aims to help developers understand the translation of various functionalities from Native iOS to React Native. This is particularly useful if you're well-versed in Native iOS development and are considering or starting to work with React Native.
+## Installation
+
+Before proceeding, ensure that you have successfully installed the React-Native SDK [installation guide](link-to-installation-guide). If you haven't completed this step yet, please refer to the installation guide for step-by-step instructions on setting up the SDK.
+
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Framework Versions](#framework-versions)
-3. [Functionality Comparisons](#functionality-comparisons)
+1. [Framework Versions](#framework-versions)
+2. [Functionality Comparisons](#functionality-comparisons)
     - [Example 1: Enable SDK Internal Logging](#example-1-enable-sdk-internal-logging)
     - [Example 2: Return the Mobile SDK Version](#example-2-return-the-mobile-sdk-version)
     - [Example 3: Accessing Device Features](#example-3-accessing-device-features)
     - ...
 
-## Installation
-
-Provide instructions on how to clone your repository and install any dependencies so that they can run the examples.
-
-```bash
-# Installation steps
-```
 
 ## Framework Versions
 
@@ -34,7 +29,7 @@ State the versions of Native iOS and React Native frameworks that you're using f
 ### Example: Enable SDK internal Logging
 <details><summary>Click to expand</summary>
 
-This example illustrates how to set up SAS Collector and Logger in a Native iOS application. You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
+This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
 
 #### Step 1: Update AppDelegate.h
 
@@ -84,7 +79,6 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
     return YES;
 }
 ```
-Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.
 
 </details>
 
@@ -98,7 +92,7 @@ This example outlines how to retrieve the SDK version in both native iOS Objecti
 
 ## Native iOS Objective-C
 
-In native iOS using Objective-C, you can retrieve the SDK version using the following method:
+In our native iOS using Objective-C, you can retrieve the SDK version using the following method:
 
 ```objective-c
 // Objective-C
@@ -141,7 +135,7 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
    );
    ```
 
-5. The `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file as follows:
+5. The `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
 
    ```objective-c
    RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback){
