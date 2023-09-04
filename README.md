@@ -8,17 +8,16 @@ Before proceeding, ensure that you have successfully installed the React-Native 
 
 
 ## Table of Contents
-
+<a name="back-to-top"></a>
 1. [Framework Versions](#framework-versions)
 2. [Functionality Comparisons](#functionality-comparisons)
-    - [Example: Enable SDK Internal Logging](#example-enable-sdk-internal-logging)
-    - [Testing](#details-section)
-    - [Example: Return the Mobile SDK Version](#example-return-the-mobile-sdk-version)
-    - [Example: Track User Navigation in the App](#example-track-user-navigation-in-the-app)
-    - [Example: Bind a Device ID to and Identity](#example-bind-a-device-id-to-and-identity)
-    - [Example: Detach Identitiy from Device](#example-detach-identitiy-from-device)
-    - [Example: Working with Events](#example-working-with-events)
-    - [Example: Reset the Mobile Device ID](#example-reset-the-mobile-device-id)
+    - [Example: Enable SDK Internal Logging](#expand-example-enable-sdk-internal-logging)
+    - [Example: Return the Mobile SDK Version](#expand-return-the-mobile-sdk-version)
+    - [Example: Track User Navigation in the App](#expand-track-user-navigation-in-the-app)
+    - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
+    - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
+    - [Example: Working with Events](#expand-working-with-events)
+    - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
 
 
 ## Framework Versions
@@ -32,7 +31,8 @@ State the versions of Native iOS and React Native frameworks that you're using f
 
 ### Example: Enable SDK internal Logging
 <details><summary>Click to expand</summary>
-<a name="details-section"></a>
+<a name="expand-example-enable-sdk-internal-logging"></a>
+
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
 
 #### Step 1: Update AppDelegate.h
@@ -84,6 +84,7 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
 }
 ```
 
+[Back to Top](#back-to-top)
 </details>
 
 
@@ -93,6 +94,7 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
 ### Example: Retrieving the Mobile SDK Version
 
 <details><summary>Click to expand</summary>
+<a name="#expand-return-the-mobile-sdk-version"></a>
 
 This example provides guidance on how to obtain the SDK version in both native iOS using Objective-C and React Native iOS using TypeScript.
 
@@ -153,6 +155,7 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
    }
    ```
 
+[Back to Top](#back-to-top)
 </details>
 
 
@@ -161,6 +164,7 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
 ### Example: Track User Navigation in the App
 
 <details><summary>Click to expand</summary>
+<a name="#expand-track-user-navigation-in-the-app"></a>
 
 This example illustrates the process of using the `newPage` API from the React Native SDK to track user navigation within your app.
 
@@ -197,6 +201,8 @@ Follow these steps to monitor user navigation within your app:
       [SASCollector newPage:uri];
    }
    ```
+
+[Back to Top](#back-to-top)   
 </details>
 
 
@@ -205,6 +211,7 @@ Follow these steps to monitor user navigation within your app:
 ### Example: Bind a Device ID to and Identity
 
 <details><summary>Click to expand</summary>
+<a name="#expand-bind-a-device-id-to-and-identity"></a>
 
 This example demonstrates how to use the `identity:withType:completion:` API from the React Native SDK to associate a user's identity with a device ID. This association is performed after the user signs in to your app, allowing you to uniquely identify the user. The `type` parameter specifies the type of identity (customer ID or login), while the `value` parameter holds the corresponding identifier. The supported identity types are `SASCOLLECTOR_IDENTITY_TYPE_CUSTOMER_ID` and `SASCOLLECTOR_IDENTITY_TYPE_LOGIN`, which are constants defined in `SASCollectorEvents.h`.
 
@@ -284,6 +291,8 @@ Follow these steps to retrieve the SDK version:
         }];
     }
    ```
+
+[Back to Top](#back-to-top)
 </details>
 
 
@@ -292,6 +301,7 @@ Follow these steps to retrieve the SDK version:
 ### Example: Detach Identity from Device
 
 <details><summary>Click to expand</summary>
+<a name="#expand-detach-identitiy-from-device"></a>
 
 Use the `detachIdentity` method to allow users to sign out from your app. This action:
 
@@ -358,6 +368,7 @@ Follow these steps to retrieve the SDK version:
     }
    ```
 
+[Back to Top](#back-to-top)
 </details>
 
 
@@ -366,6 +377,7 @@ Follow these steps to retrieve the SDK version:
 ### Example: Working with Events
 
 <details><summary>Click to expand</summary>
+<a name="#expand-working-with-events"></a>
 
 When working with events, utilize the `addAppEvent` API to send customized event data to the mobile SDK. This API involves:
 
@@ -432,6 +444,7 @@ Follow these steps:
     }
    ```
 
+[Back to Top](#back-to-top)
 </details>
 
 
