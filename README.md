@@ -13,8 +13,6 @@ This repository aims to help developers understand the translation of various fu
     - [Example 2: Return the Mobile SDK Version](#example-2-return-the-mobile-sdk-version)
     - [Example 3: Accessing Device Features](#example-3-accessing-device-features)
     - ...
-4. [Resources](#resources)
-5. [Contributing](#contributing)
 
 ## Installation
 
@@ -141,6 +139,14 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
    );
    ```
 
+5. The `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file as follows:
+
+   ```objective-c
+   RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback){
+      NSString* sdkVersion = [SASCollector sdkVersion];
+      callback(@[sdkVersion]);
+   }
+   ```
 ---
 
 ### Example 3: Accessing Device Features
