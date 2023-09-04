@@ -154,8 +154,9 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
       callback(@[sdkVersion]);
    }
    ```
-6. Example Code: [[sdkVersionExample.tsx](./sdkVersionExample.tsx)]]
-   
+
+6. Example Code: [sdkVersionExample.tsx](./sdkVersionExample.tsx)
+
 [Back to Top](#back-to-top)
 </details>
 
@@ -202,6 +203,8 @@ Follow these steps to monitor user navigation within your app:
       [SASCollector newPage:uri];
    }
    ```
+
+3. Example Code: [newPageExample.tsx](./newPageExample.tsx)
 
 [Back to Top](#back-to-top)   
 </details>
@@ -292,6 +295,8 @@ Follow these steps to retrieve the SDK version:
         }];
     }
    ```
+
+6. Example Code: [identityExample.tsx](./identityExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
