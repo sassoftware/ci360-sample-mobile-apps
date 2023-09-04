@@ -11,9 +11,9 @@ Before proceeding, ensure that you have successfully installed the React-Native 
 
 1. [Framework Versions](#framework-versions)
 2. [Functionality Comparisons](#functionality-comparisons)
-    - [Example 1: Enable SDK Internal Logging](#example-1-enable-sdk-internal-logging)
-    - [Example 2: Return the Mobile SDK Version](#example-2-return-the-mobile-sdk-version)
-    - [Example 3: Track User Navigation in the App](#example-3-track-user-navigation-in-the-app)
+    - [Example: Enable SDK Internal Logging](#example-enable-sdk-internal-logging)
+    - [Example: Return the Mobile SDK Version](#example-return-the-mobile-sdk-version)
+    - [Example: Track User Navigation in the App](#example-track-user-navigation-in-the-app)
     - ...
 
 
@@ -26,7 +26,7 @@ State the versions of Native iOS and React Native frameworks that you're using f
 
 ## Functionality Comparisons
 
-### Example 1: Enable SDK internal Logging
+### Example: Enable SDK internal Logging
 <details><summary>Click to expand</summary>
 
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
@@ -86,7 +86,7 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
 
 ---
 
-### Example 2 - Return the Mobile SDK Version
+### Example: Return the Mobile SDK Version
 <details><summary>Click to expand</summary>
 This example outlines how to retrieve the SDK version in both native iOS Objective-C and React Native iOS TypeScript using the example provided.
 
@@ -150,7 +150,7 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
 
 ---
 
-### Example 3: Track User Navigation in the App
+### Example: Track User Navigation in the App
 <details><summary>Click to expand</summary>
 This example outlines how to call the newPage API via React Native SDK
 
