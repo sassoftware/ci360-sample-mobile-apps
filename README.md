@@ -151,6 +151,8 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
    ```
 
 </details>
+
+
 ---
 
 ### Example 3: Accessing Device Features
