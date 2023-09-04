@@ -135,7 +135,7 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
    );
    ```
 
-5. The `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
+5. As Reference, in our react-native sdk, the `getSdkVersion` function is implemented in the `react-native-mobile-sdk.mm` file, as follows:
 
    ```objective-c
    RCT_EXPORT_METHOD(getSdkVersion:(RCTResponseSenderBlock)callback){
