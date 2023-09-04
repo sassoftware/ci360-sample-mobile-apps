@@ -157,7 +157,7 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
 
 ---
 
-### Example: Monitoring User Navigation within the App
+### Example: Track User Navigation in the App
 
 <details><summary>Click to expand</summary>
 
