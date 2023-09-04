@@ -13,7 +13,7 @@ Before proceeding, ensure that you have successfully installed the React-Native 
 2. [Functionality Comparisons](#functionality-comparisons)
     - [Example 1: Enable SDK Internal Logging](#example-1-enable-sdk-internal-logging)
     - [Example 2: Return the Mobile SDK Version](#example-2-return-the-mobile-sdk-version)
-    - [Example 3: Accessing Device Features](#example-3-accessing-device-features)
+    - [Example 3: Track User Navigation in the Apps](#example-3-treack-user-navigation-in-the-apps)
     - ...
 
 
