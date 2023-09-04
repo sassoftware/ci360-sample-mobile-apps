@@ -32,8 +32,7 @@ State the versions of Native iOS and React Native frameworks that you're using f
 ## Functionality Comparisons
 
 ### Example: Enable SDK internal Logging
-
-**Note: The setup for Native iOS and React Native iOS projects is the same for this functionality. **
+<details><summary>Click to expand</summary>
 
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
 
@@ -87,11 +86,14 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and 
 ```
 Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.
 
+</details>
+
+
 
 ---
 
 ### Example 2 - Return the Mobile SDK Version
-
+<details><summary>Click to expand</summary>
 This example outlines how to retrieve the SDK version in both native iOS Objective-C and React Native iOS TypeScript using the example provided.
 
 ## Native iOS Objective-C
@@ -147,6 +149,8 @@ In React Native using TypeScript, follow these steps to retrieve the SDK version
       callback(@[sdkVersion]);
    }
    ```
+
+</details>
 ---
 
 ### Example 3: Accessing Device Features
