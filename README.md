@@ -560,10 +560,10 @@ Follow these steps:
 
 5. As a reference, the `Inline AdView` is implemented in the `mobile-sdk-react-native\ios\views` folder in our React Native SDK, there are serval files to make spot to display content. And `Constants.m` file and its header to control the iOS messaging event.
     
-    -[AdDelegateEvent.m](./views/AdDelegateEvent.m)
-    -[InlineAdView.m](./views/InlineAdView.m)
-    -[InlineAdViewManager.m](./views/InlineAdViewManager.m)
-    -[Constants.m](./Constants.m)
+    - [AdDelegateEvent.m](./views/AdDelegateEvent.m)
+    - [InlineAdView.m](./views/InlineAdView.m)
+    - [InlineAdViewManager.m](./views/InlineAdViewManager.m)
+    - [Constants.m](./Constants.m)
 
 6. Example Code: [addAppEventExample.tsx](./addInlineAdViewExample.tsx)
 
