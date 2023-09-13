@@ -2,6 +2,20 @@
 
 Welcome to the React-Native SDK guide for our platform! This document is designed to provide you with a comprehensive understanding of how to effectively utilize our React-Native SDK. We will walk you through usage examples and provide a comparison with the native SDK to enhance your understanding.
 
+## Design Abstract
+In our project, we've leveraged the power of React Native SDK for iOS and Android to provide a flexible and efficient development experience. Here's an overview of how it works compared to the native SDK:
+
+ - **Key Functions with Native SDK:** 
+While we embrace the benefits of React Native, it's important to note that the core functionality of our application still relies on the native SDKs for iOS and Android. These native SDKs provide the foundation for critical operations.
+
+ - **Bridging with React Native:** 
+React Native SDK serves as a bridge between our JavaScript code and the native modules. It facilitates seamless communication between the JavaScript world and the underlying native code. This bridging is essential for integrating native capabilities into our React Native app.
+
+ - **TypeScript Functions:**
+Our application makes extensive use of TypeScript functions, which provide a statically-typed and more maintainable codebase. These TypeScript functions are called from within our React Native components to interact with both the React Native SDK and the underlying native SDKs.
+
+This combination of native SDKs and React Native SDK, along with TypeScript, enables us to build a cross-platform mobile application that leverages the strengths of both worlds while maintaining a high level of performance and extensibility.
+
 ## Installation
 
 Before proceeding, ensure that you have successfully installed the React-Native SDK [installation guide](link-to-installation-guide). If you haven't completed this step yet, please refer to the installation guide for step-by-step instructions on setting up the SDK.
@@ -17,6 +31,7 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
     - [Example: Working with Events](#expand-working-with-events)
+    - [Example: Working with Spots](#expand-working-with-spots)
     - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
 
 
@@ -244,16 +259,17 @@ Follow these steps to retrieve the SDK version:
 1. Import the required modules and functions:
 
    ```typescript
-   import React, { useState } from 'react';
-   import { View, Button } from 'react-native';
-   import { identity } from 'mobile-sdk-react-native';
+    import React, { useState } from 'react';
+    import { View, Button, TextInput } from 'react-native';
+    import { identity } from 'mobile-sdk-react-native';
    ```
 
 2. Set up state in your component to hold the login type and user ID:
 
    ```typescript
-   const [loginType, setLoginType] = React.useState<string>('');
-   const [userId, setUserId] = React.useState<string>('');
+    const [userId, setUserId] = React.useState<string>('');
+    const loginType = 'IDENTITY_TYPE_CUSTOMER_ID';
+    // const loginType = 'IDENTITY_TYPE_LOGIN_ID';
    ```
 
 3. Create a handler function to trigger the `identity` function:
@@ -274,6 +290,10 @@ Follow these steps to retrieve the SDK version:
    ```typescript
    return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <TextInput
+            placeholder="Enter User ID"
+            onChangeText={setUserId} // Capture and update the userId state
+        />
       <Button title="Identity" onPress={handlePress} />
     </View>
    );
@@ -373,6 +393,7 @@ Follow these steps to retrieve the SDK version:
         }];
     }
    ```
+5. Example Code: [detachIdentityExample.tsx](./detachIdentityExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -433,12 +454,17 @@ Follow these steps:
 
    ```typescript
    return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <TextInput onChangeText={setCustomEventKey} value={customEventKey} style={{ height: 40, width: 200, borderWidth: 1 }} />
-      <Button title="Submit Custom Event" onPress={() => {
-        addAppEvent(customEventKey, null);
-      }} />
-    </View>
+     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <TextInput
+            placeholder="Submit Custom Event"
+            onChangeText={setCustomEventKey} // Capture and update the CustomEventKey state
+        />
+       <Button title="Submit Custom Event" onPress={
+           () => {
+               addAppEvent(customEventKey, null);
+            }
+        } />
+     </View>
    );
    ```
 
@@ -450,9 +476,99 @@ Follow these steps:
     }
    ```
 
+6. Example Code: [addAppEventExample.tsx](./addAppEventExample.tsx)
+
 [Back to Top](#back-to-top)
 </details>
 
+
+---
+### Example: Working with Spots (InlineAdView)
+
+<details><summary>Click to expand</summary>
+<a name="expand-working-with-spots"></a>
+
+When utilizing the `InlineAdView` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`. 
+
+In React Native, the primary task is to specify the spotId and configure the View Tag in TypeScript.
+
+**Using the Native iOS SDK:**
+
+To define spot in native iOS, use the following method:
+
+```objective-c
+self.myAd1.spotID = @"MySpotID";
+[self.myAd1 load];
+```
+
+**Using React Native with TypeScript:**
+
+Follow these steps:
+
+1. Import necessary modules and functions:
+
+   ```typescript
+   import React, { useEffect } from 'react';
+   import { View, NativeEventEmitter } from 'react-native';
+   import { InlineAdView } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up iOS messaging event that handle by NativeEventEmitter:
+
+   ```typescript
+   let iOSMessagingEvent: NativeEventEmitter;
+    if (Platform.OS === 'ios') {
+      iOSMessagingEvent = new NativeEventEmitter(AdDelegateEvent);
+    }
+   ```
+
+3. Utilize the `useEffect` to listen `Inline Ad view is loaded` or `returned default conetent` (optional):
+   ```typescript
+    useEffect(() => {
+      if (Platform.OS === 'ios') {
+        const adLoadedListener = iOSMessagingEvent.addListener(Constants.AD_LOADED, (event: Event) => {
+          if (event === Constants.TYPE_INLINE_AD) {
+            console.log('Inline Ad view is loaded.');
+          }
+        });
+
+        const adDefaultLoadedListener = iOSMessagingEvent.addListener(Constants.AD_DEFAULT_LOADED, (event: Event) => {
+          if (event === Constants.TYPE_INLINE_AD) {
+            console.log('Inline Ad view returned default content.');
+          }
+        });
+
+        return () => {
+          adLoadedListener.remove();
+          adDefaultLoadedListener.remove();
+        };
+      }
+    }, []);
+    ```
+4. Include a `spotId` in `InlineAdView` for display content:
+
+   ```typescript
+   return (
+     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <InlineAdView
+            spotId="snzrle_app_spot" //the mobile spot id defined in your tenant
+            style={{ height: 250, width:300, margin: 25}}
+        />
+     </View>
+   );
+   ```
+
+5. As a reference, the `Inline AdView` is implemented in the `mobile-sdk-react-native\ios\views` folder in our React Native SDK, there are serval files to make spot to display content. And `Constants.m` file and its header to control the iOS messaging event.
+    
+    -[AdDelegateEvent.m](./views/AdDelegateEvent.m)
+    -[InlineAdView.m](./views/InlineAdView.m)
+    -[InlineAdViewManager.m](./views/InlineAdViewManager.m)
+    -[Constants.m](./Constants.m)
+
+6. Example Code: [addAppEventExample.tsx](./addInlineAdViewExample.tsx)
+
+[Back to Top](#back-to-top)
+</details>
 
 ---
 (Continue with other functionalities)
