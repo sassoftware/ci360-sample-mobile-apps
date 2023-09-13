@@ -9,7 +9,7 @@ In our project, we've leveraged the power of React Native SDK for iOS and Androi
 While we embrace the benefits of React Native, it's important to note that the core functionality of our application still relies on the native SDKs for iOS and Android. These native SDKs provide the foundation for critical operations.
 
  - **Bridging with React Native:** 
-React Native SDK serves as a bridge between our TypeScript code and the native modules. It facilitates seamless communication between the JavaScript world and the underlying native code. This bridging is essential for integrating native capabilities into our React Native app.
+React Native SDK serves as a bridge between our JavaScript code and the native modules. It facilitates seamless communication between the TypeScript world and the underlying native code. This bridging is essential for integrating native capabilities into our React Native app.
 
  - **TypeScript Functions:**
 Our application makes extensive use of TypeScript functions, which provide a statically-typed and more maintainable codebase. These TypeScript functions are called from within our React Native components to interact with both the React Native SDK and the underlying native SDKs.
@@ -31,7 +31,7 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
     - [Example: Working with Events](#expand-working-with-events)
-    - [Example: Working with Spots](#expand-working-with-spots)
+    - [Example: Working with Spots (InlineAdView)](#expand-working-with-spots-inline)
     - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
 
 
@@ -486,9 +486,9 @@ Follow these steps:
 ### Example: Working with Spots (InlineAdView)
 
 <details><summary>Click to expand</summary>
-<a name="expand-working-with-spots"></a>
+<a name="expand-working-with-spots-inline"></a>
 
-When utilizing the `InlineAdView` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`. 
+When utilizing the `InlineAdView` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`, `src\InlineAdView.tsx`, `Constants.m`. 
 
 In React Native, the primary task is to specify the spotId and configure the View Tag in TypeScript.
 
@@ -558,12 +558,16 @@ Follow these steps:
    );
    ```
 
-5. As a reference, the `Inline AdView` is implemented in the `mobile-sdk-react-native\ios\views` folder in our React Native SDK, there are serval files to make spot to display content. And `Constants.m` file and its header to control the iOS messaging event.
-    
-    - [AdDelegateEvent.m](./views/AdDelegateEvent.m)
-    - [InlineAdView.m](./views/InlineAdView.m)
-    - [InlineAdViewManager.m](./views/InlineAdViewManager.m)
-    - [Constants.m](./Constants.m)
+5. As a reference, working with the InlineAdView spot involves three components:
+
+    Bridging: 
+    - ios/[views/InlineAdViewManager.m](./views/AdDelegateEvent.m)
+    - ios/[views/InlineAdView.m](./views/InlineAdView.m)
+    Managing events:
+    - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
+    - ios/[Constants.m](./Constants.m)
+    UIManager:
+    - src/[views/InlineAdView.tsx](./views/InlineAdView.tsx) 
 
 6. Example Code: [addAppEventExample.tsx](./addInlineAdViewExample.tsx)
 
