@@ -9,7 +9,7 @@ In our project, we've leveraged the power of React Native SDK for iOS and Androi
 While we embrace the benefits of React Native, it's important to note that the core functionality of our application still relies on the native SDKs for iOS and Android. These native SDKs provide the foundation for critical operations.
 
  - **Bridging with React Native:** 
-React Native SDK serves as a bridge between our JavaScript code and the native modules. It facilitates seamless communication between the JavaScript world and the underlying native code. This bridging is essential for integrating native capabilities into our React Native app.
+React Native SDK serves as a bridge between our TypeScript code and the native modules. It facilitates seamless communication between the JavaScript world and the underlying native code. This bridging is essential for integrating native capabilities into our React Native app.
 
  - **TypeScript Functions:**
 Our application makes extensive use of TypeScript functions, which provide a statically-typed and more maintainable codebase. These TypeScript functions are called from within our React Native components to interact with both the React Native SDK and the underlying native SDKs.
