@@ -560,14 +560,14 @@ Follow these steps:
 
 5. As a reference, working with the InlineAdView spot involves three components:
 
-    Bridging: 
-    - ios/[views/InlineAdViewManager.m](./views/AdDelegateEvent.m)
-    - ios/[views/InlineAdView.m](./views/InlineAdView.m)
-    Managing events:
-    - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
-    - ios/[Constants.m](./Constants.m)
-    UIManager:
-    - src/[views/InlineAdView.tsx](./views/InlineAdView.tsx) 
+   - Bridging: 
+      - ios/[views/InlineAdViewManager.m](./views/AdDelegateEvent.m)
+      - ios/[views/InlineAdView.m](./views/InlineAdView.m)
+   - Managing events:
+      - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
+      - ios/[Constants.m](./Constants.m)
+   - UIManager:
+      - src/[views/InlineAdView.tsx](./views/InlineAdView.tsx) 
 
 6. Example Code: [addAppEventExample.tsx](./addInlineAdViewExample.tsx)
 
