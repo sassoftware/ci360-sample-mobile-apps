@@ -31,9 +31,8 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
     - [Example: Working with Events](#expand-working-with-events)
-    - Example: Working with Spots:
-        - [Add a Spot (InlineAdView)](#expand-working-with-spots-inline)
-        - [Add an Interstitial Spot (InterstitialAd)](#expand-working-with-spots-interstitial)
+    - [Example: Working with Spots: Add an Inline Spot](#expand-working-with-spots-inline)
+    - [Example: Working with Spots: Add an Interstitial Spot](#expand-working-with-spots-interstitial)
     - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
 
 
