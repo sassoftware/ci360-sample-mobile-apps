@@ -31,7 +31,9 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
     - [Example: Working with Events](#expand-working-with-events)
-    - [Example: Working with Spots (InlineAdView)](#expand-working-with-spots-inline)
+    - Example: Working with Spots:
+        - [Add a Spot (InlineAdView)](#expand-working-with-spots-inline)
+        - [Add an Interstitial Spot (InterstitialAd)](#expand-working-with-spots-interstitial)
     - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
 
 
@@ -483,23 +485,40 @@ Follow these steps:
 
 
 ---
-### Example: Working with Spots (InlineAdView)
+### Example: Add an Inline Spot
 
 <details><summary>Click to expand</summary>
 <a name="expand-working-with-spots-inline"></a>
 
-When utilizing the `InlineAdView` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`, `src\InlineAdView.tsx`, `Constants.m`. 
+When define `Inline` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`, `src\InlineAdView.tsx`, `Constants.m`. 
 
-In React Native, the primary task is to specify the spotId and configure the View Tag in TypeScript.
+For better comparison, the corresponding example in our native iOS SDK uses UIKit with Objective-C.
 
 **Using the Native iOS SDK:**
 
-To define spot in native iOS, use the following method:
+To define spot in native iOS via UIKit, use the following method:
 
-```objective-c
-self.myAd1.spotID = @"MySpotID";
-[self.myAd1 load];
-```
+1. in .h file, import UIKit and SASCollector and conform SASIA_AdDelegate protocol in the ViewContorller
+    ```objective-c
+    #import <UIKit/UIKit.h>
+    #import <SASCollector/SASCollector.h>
+    @interface ViewController : UIViewController <SASIA_AdDelegate>
+    @end
+    ```
+
+2. in .m file, with the viewDidLoad method
+    - initialize SASCollectorUIAdView, 
+    - define SpotID
+    - add to View and load the Spot:
+    ```objective-c
+    SASCollectorUIAdView *myAd1 = [[SASCollectorUIAdView alloc] initWithFrame:CGRectMake(25, 25, 400, 300)];
+
+    myAd1.delegate = self; 
+    myAd1.spotID = @"snzrle_native_spot";
+    
+    [self.view addSubview:myAd1];
+    [myAd1 load];
+    ```
 
 **Using React Native with TypeScript:**
 
@@ -510,7 +529,7 @@ Follow these steps:
    ```typescript
    import React, { useEffect } from 'react';
    import { View, NativeEventEmitter } from 'react-native';
-   import { InlineAdView } from 'mobile-sdk-react-native';
+   import { InlineAdView, AdDelegateEvent, Constants } from 'mobile-sdk-react-native';
    ```
 
 2. Set up iOS messaging event that handle by NativeEventEmitter:
@@ -522,7 +541,7 @@ Follow these steps:
     }
    ```
 
-3. Utilize the `useEffect` to listen `Inline Ad view is loaded` or `returned default conetent` (optional):
+3. Utilize the `useEffect` to listen `Inline Ad view is loaded` or `returned default content` (optional):
    ```typescript
     useEffect(() => {
       if (Platform.OS === 'ios') {
@@ -561,7 +580,7 @@ Follow these steps:
 5. As a reference, working with the InlineAdView spot involves three components:
 
    - Bridging: 
-      - ios/[views/InlineAdViewManager.m](./views/AdDelegateEvent.m)
+      - ios/[views/InlineAdViewManager.m](./views/InlineAdViewManager.m)
       - ios/[views/InlineAdView.m](./views/InlineAdView.m)
    - Managing events:
       - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
@@ -569,10 +588,107 @@ Follow these steps:
    - UIManager:
       - src/[views/InlineAdView.tsx](./views/InlineAdView.tsx) 
 
-6. Example Code: [addAppEventExample.tsx](./addInlineAdViewExample.tsx)
+6. Example Code: [addInlineAdViewExample.tsx](./addInlineAdViewExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
 
+---
+### Example: Add an Interstitial Spot
+
+<details><summary>Click to expand</summary>
+<a name="expand-working-with-spots-interstitials"></a>
+
+When utilizing the `Interstitial` spot in a React Native project, it should be initilized during the screen display and similar to Inline Spot which require the spotID.
+
+**Using the Native iOS SDK:**
+
+To define spot in native iOS, use the following method:
+
+1. Initial the interstitial ad spot on screen load:
+    ```objective-c
+    self.interstitialAd = [[SASCollectorInterstitialAd alloc] init];
+    ```
+
+2. define the interstitial spot with spotID:
+    ```objective-c
+    self.interstitialAd.spotID = @"MySpotID";
+    self.MyInterstitialAd1.delegate = self;
+    [self.MyInterstitialAd1 load];
+    ```
+
+**Using React Native with TypeScript:**
+
+Follow these steps:
+
+1. Import necessary modules and functions:
+
+   ```typescript
+   import React, { useEffect } from 'react';
+   import { View, NativeEventEmitter } from 'react-native';
+   import { InterstitialAdView, AdDelegateEvent, Constants } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up iOS messaging event that handle by NativeEventEmitter:
+
+   ```typescript
+   let iOSMessagingEvent: NativeEventEmitter;
+    if (Platform.OS === 'ios') {
+      iOSMessagingEvent = new NativeEventEmitter(AdDelegateEvent);
+    }
+   ```
+
+3. Utilize the `useEffect` to listen `Interstitial Ad view is loaded` or `returned default content` (optional):
+   ```typescript
+    useEffect(() => {
+      if (Platform.OS === 'ios') {
+        const adLoadedListener = iOSMessagingEvent.addListener(Constants.AD_LOADED, (event: Event) => {
+          if (event === Constants.TYPE_INTERSTITIAL_AD) {
+            console.log('Interstitial Ad view is loaded.');
+          }
+        });
+
+        const adDefaultLoadedListener = iOSMessagingEvent.addListener(Constants.AD_DEFAULT_LOADED, (event: Event) => {
+          if (event === Constants.TYPE_INTERSTITIAL_AD) {
+            console.log('Interstitial Ad view returned default content.');
+          }
+        });
+
+        return () => {
+          adLoadedListener.remove();
+          adDefaultLoadedListener.remove();
+        };
+      }
+    }, []);
+    ```
+4. Include a `spotId` in `InterstitialAdView` for display content:
+
+   ```typescript
+   return (
+     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <InterstitialAdView
+            spotId="snzrle_app_interstitial" //the mobile spot id defined in your tenant
+        />
+        <Text>Page to load Interstitial Spot.</Text>
+     </View>
+   );
+   ```
+
+5. As a reference, working with the InterstitialAdView spot involves three components:
+
+   - Bridging: 
+      - ios/[views/InterstitialAdViewController.m](./views/InterstitialAdViewController.m)
+      - ios/[views/InterstitialAdViewManager.m](./views/InterstitialAdViewManager.m)
+      - ios/[views/InterstitialAdView.m](./views/InterstitialAdView.m)
+   - Managing events:
+      - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
+      - ios/[Constants.m](./Constants.m)
+   - UIManager:
+      - src/[views/InterstitialAdView.tsx](./views/InterstitialAdView.tsx) 
+
+6. Example Code: [addInterstitialAdViewExample.tsx](./addInterstitialAdViewExample.tsx)
+
+[Back to Top](#back-to-top)
+</details>
 ---
 (Continue with other functionalities)
