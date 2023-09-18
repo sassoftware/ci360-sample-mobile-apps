@@ -890,6 +890,7 @@ Replace the content in `AppDelegate.h` with the following code:
    };
    ```
 
+[Back to Top](#back-to-top)
 </details>
 
 ---
@@ -980,7 +981,8 @@ Replace the content in `AppDelegate.h` with the following code:
    ```
 
    This will enable rich push notifications for your iOS React Native application. The guide now includes the configuration for `AppDelegate.h`, `AppDelegate.m`, and rich push notifications.
-   
+
+[Back to Top](#back-to-top)
 </details>
 
 ---
