@@ -844,6 +844,52 @@ Replace the content in `AppDelegate.h` with the following code:
 
    Please refere to [Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification) section.
 
+
+7. **Enable Push Notification in React Native App**
+    After apply iOS configuration via XCode, we can now able to add React Native
+
+   ### Step 1: Import Required Modules
+   ```typescript
+   import { NativeEventEmitter, DeviceEventEmitter, Platform } from 'react-native';
+   ```
+
+   ### Step 2: Initialize Mobile Messaging Event for iOS
+   ```typescript
+   let iOSMessagingEvent;
+   if (SASMobileMessagingEvent != null) {
+   iOSMessagingEvent = new NativeEventEmitter(SASMobileMessagingEvent);
+   }
+   ```
+
+   ### Step 3: Add Event Listeners
+   Add the following code to ensure that event listeners are in place to handle both push notifications and in-app messages.
+   ```typescript
+   React.useEffect(() => {
+   if (Platform.OS === 'ios') {
+      iOSMessagingEvent.addListener(Constants.MESSAGE_OPENED, (data) => {
+         console.log('data: ' + data);
+         console.log('message type: ' + data.type + ' link is: ' + data.link);
+         const msg = (data.type === 'InAppMsg' ? 'User got in-app msg with link:' + data.link : 'User got push notification with link:' + data.link);
+      });
+
+      iOSMessagingEvent.addListener(Constants.MESSAGE_DISMISSED, () => {
+         console.log('User dismissed message');
+      });
+   }
+   }, []);
+   ```
+
+   ### Step 4: Cleanup
+   Make sure to remove all listeners when the component unmounts.
+   ```typescript
+   return () => {
+      DeviceEventEmitter.removeAllListeners();
+      if (SASMobileMessagingEvent) {
+         iOSMessagingEvent.removeAllListeners(SASMobileMessagingEvent);
+      }
+   };
+   ```
+
 </details>
 
 ---
