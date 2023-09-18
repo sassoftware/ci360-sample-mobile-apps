@@ -32,7 +32,9 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
     - [Example: Working with Events](#expand-working-with-events)
     - [Example: Working with Spots: Add an Inline Spot](#expand-working-with-spots-inline)
-    - [Example: Working with Spots: Add an Interstitial Spot](#expand-working-with-spots-interstitial)
+    - [Example: Working with Spots: Add an Interstitial Spot](#enable-mobile-messages-push-notification)
+    - [Example: Enable Mobile Messages: Push Notification](#enable-mobile-messages-push-notification)
+    - [Example: Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification)
     - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
 
 
@@ -49,7 +51,7 @@ State the versions of Native iOS and React Native frameworks that you're using f
 <details><summary>Click to expand</summary>
 <a name="expand-enable-sdk-internal-logging"></a>
 
-This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.mm` files.
+This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.m` files.
 
 #### Step 1: Update AppDelegate.h
 
@@ -67,9 +69,9 @@ In your `AppDelegate.h` file, you need to import the SASCollector header.
 // ... Rest of the file
 ```
 
-#### Step 2: Update AppDelegate.mm
+#### Step 2: Update AppDelegate.m
 
-In your `AppDelegate.mm` file, you will need to import two headers: `SASCollector.h` and `SASLogger.h`.
+In your `AppDelegate.m` file, you will need to import two headers: `SASCollector.h` and `SASLogger.h`.
 
 ```objective-c
 // AppDelegate.mm
@@ -86,7 +88,7 @@ In your `AppDelegate.mm` file, you will need to import two headers: `SASCollecto
 
 #### Step 3: Modify didFinishLaunchingWithOptions Method
 
-Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.mm` and add the following line to set the SAS Logger level.
+Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.m` and add the following line to set the SAS Logger level.
 
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -484,7 +486,7 @@ Follow these steps:
 
 
 ---
-### Example: Add an Inline Spot
+### Example: Working with Spots: Add an Inline Spot
 
 <details><summary>Click to expand</summary>
 <a name="expand-working-with-spots-inline"></a>
@@ -593,7 +595,7 @@ Follow these steps:
 </details>
 
 ---
-### Example: Add an Interstitial Spot
+### Example: Working with Spots: Add an Interstitial Spot
 
 <details><summary>Click to expand</summary>
 <a name="expand-working-with-spots-interstitials"></a>
@@ -689,5 +691,251 @@ Follow these steps:
 
 [Back to Top](#back-to-top)
 </details>
+
+---
+### Example: Enable Mobile Messages: Push Notification
+
+<details><summary>Click to expand</summary>
+<a name="enable-mobile-messages-push-notification"></a>
+
+## Prerequisites
+- Generate APNS authentication key
+- Set up Push Notification and Background capability in XCode
+
+
+## Enable iOS application with Push Notification via SAS SDK
+
+### AppDelegate.h Configuration
+
+Replace the content in `AppDelegate.h` with the following code:
+
+   ```objective-c
+   #import <React/RCTBridgeDelegate.h>
+   #import <UIKit/UIKit.h>
+   #import <UserNotifications/UserNotifications.h>
+   #import <React/RCTBridge.h>
+   #import <React/RCTEventDispatcher.h>
+   #import <SASCollector/SASCollector.h>
+
+   @interface AppDelegate : UIResponder <UIApplicationDelegate, UNUserNotificationCenterDelegate, RCTBridgeDelegate, SASMobileMessagingDelegate2>
+   @property (nonatomic, strong) UIWindow *window;
+   @end
+   ```
+
+### AppDelegate.m Configuration
+
+1. **Add Imports**
+
+   Add these imports for SAS CI360 SDK:
+
+   ```objective-c
+   #import <SASCollector/SASCollector.h>
+   #import <SASCollector/SASLogger.h>
+   #import <mobile-sdk-react-native/SASMobileMessagingEvent.h>
+   ```
+
+2. **Initialize Logger and Request Authorization**
+
+   In the `didFinishLaunchingWithOptions` method, add `currentNotificationCenter` with Authorization code for asking permission to use Push Notificaiton in user's iPhone:
+
+   ```objective-c
+   [SASLogger setLevel:SASLoggerLevelAll];
+
+   if (@available(iOS 10.0, *)) {
+      UNUserNotificationCenter.currentNotificationCenter.delegate = self;
+      [UNUserNotificationCenter.currentNotificationCenter requestAuthorizationWithOptions:(UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+         if (error != nil) {
+            [SASLogger error:error.localizedDescription];
+            return;
+         }
+         dispatch_async(dispatch_get_main_queue(), ^{
+            [application registerForRemoteNotifications];
+         });
+      }];
+   }
+
+   [SASCollector setMobileMessagingDelegate2:self];
+   ```
+
+3. **Register for Remote Notifications**
+
+   Add the `didRegisterForRemoteNotificationsWithDeviceToken` and `didReceiveRemoteNotification` methods to the application with SASCollector function, for register device token and push notification handler:
+
+   ```objective-c
+   -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+      [SASCollector registerForMobileMessages:deviceToken completionHandler:^{
+         [SASLogger info:@"Registering for remote notifications is successful"];
+      } failureHandler:^{
+         [SASLogger info:@"Registering for remote notifications failed"];
+      }];
+   }
+
+   -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+      [SASCollector handleMobileMessage:userInfo withApplication:application];
+      completionHandler(UIBackgroundFetchResultNoData);
+   }
+   ```
+
+4. **Handle Notification Response**
+
+   Add `didReceiveNotificationResponse` method:
+
+   ```objective-c
+   -(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+      [SASCollector handleMobileMessage:response.notification.request.content.userInfo withApplication:UIApplication.sharedApplication];
+      completionHandler();
+   }
+   ```
+
+5. **Add support functions for SAS**
+
+   To handle Push Notification Action Link:
+   ```objective-c
+   -(NSDictionary*)getActionLinkFromMobileMessage:
+      (NSDictionary *)notificationInfo {
+         if (notificationInfo == nil) {
+            return nil;
+         }
+         NSDictionary *aps = notificationInfo[@"aps"];
+         NSDictionary *mobileMessageDictionary =
+         aps[@"MobileMessage"];
+
+         if (mobileMessageDictionary == nil) {
+            return nil;
+         }
+         if (![mobileMessageDictionary[@"template"]
+            isEqualToString:@"creative.pushNotification"]) {
+            return nil;
+      }
+      NSArray *actions = mobileMessageDictionary[@"actions"];
+      NSString *link = actions[0][@"link"];
+      if (link == nil) {
+         return nil;
+      }
+      return @{@"notificationWithLink": link};
+   }
+   ```
+
+   To handle the user action when Push Notification / In-App Message received:
+   ```objective-c
+   #pragma mark SASMobileMessagingDelegate2
+   -(void)actionWithLink:(NSString * _Nonnull)link
+   type:(SASMobileMessageType)type {
+   NSMutableString* msgType = [NSMutableString
+      stringWithString:@""];
+   if (type == SASMobileMessageTypePushNotification) {
+      msgType = [NSMutableString
+         stringWithString:@"PushNotification"];
+   } else if (type == SASMobileMessageTypeInAppMessage) {
+      msgType = [NSMutableString
+         stringWithString:@"InAppMsg"];
+   }
+   NSDictionary *args = @{@"type": msgType,
+   @"link": link};
+   [SASMobileMessagingEvent
+      emitMessageOpenedWithPayload:args];
+   }
+   -(void)messageDismissed {
+   [SASMobileMessagingEvent emitMessageDismissed];
+   }
+   ```
+
+6. **To enable Rich Push Notification**
+
+   Please refere to [Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification) section.
+
+</details>
+
+---
+### Example: Enable Mobile Messages: Rich Push Notification
+
+<details><summary>Click to expand</summary>
+<a name="enable-mobile-messages-rich-push-notification"></a>
+
+### Step 1: Create Notification Service Extension
+
+   1. Open your project in Xcode.
+   2. Go to `File` -> `New` -> `Target`.
+   3. Choose `Notification Service Extension` and click `Next`.
+   4. Enter the name for your new target and click `Finish`.
+ 
+
+### Step 2: Update NotificationService.m
+
+   After the target is created, two new files are added: `NotificationService.h` and `NotificationService.m`. Replace the `didReceiveNotificationRequest` method in `NotificationService.m` with the following code:
+
+   ```objective-c
+   -(void)didReceiveNotificationRequest:(UNNotificationRequest
+      *)request withContentHandler:(void
+      (^)(UNNotificationContent * _Nonnull))contentHandler {
+         self.contentHandler = contentHandler;
+         self.bestAttemptContent = [request.content mutableCopy];
+         NSDictionary *notificationData =
+         (NSDictionary*)request.content.userInfo[@"data"];
+         if (notificationData == nil) {
+            return;
+         }
+         NSString *urlStr = (NSString*)[notificationData
+         objectForKey:@"attachment-url"];
+         if (urlStr == nil) {
+            return;
+         }
+         NSURL *fileUrl = [NSURL URLWithString:urlStr];
+         if (fileUrl == nil) {
+            return;
+         }
+         NSURLSessionDownloadTask *downloadTask =
+         [NSURLSession.sharedSession
+            downloadTaskWithURL:fileUrl
+            completionHandler:^(NSURL * _Nullable location,
+                  NSURLResponse * _Nullable response,
+                  NSError * _Nullable error) {
+                  if (location != nil && error == nil) {
+                     NSString *tempDir = NSTemporaryDirectory();
+                     NSString *suggestedName = [response
+                     suggestedFilename];
+                     if (suggestedName != nil) {
+                        NSString *fileName = [NSString
+                           stringWithFormat:@"file://%@%@", tempDir, suggestedName];
+                        NSString *tempFileName = [fileName
+                           stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+                        NSURL *tempUrl = [NSURL
+                           URLWithString:tempFileName];
+                        NSError *removeFileError;
+
+                        if ([NSFileManager.defaultManager
+                           fileExistsAtPath:tempUrl.path] &&
+                           [NSFileManager.defaultManager
+                              isDeletableFileAtPath:tempUrl.path]) {
+                              [NSFileManager.defaultManager
+                              removeItemAtPath:tempUrl.path error:&removeFileError];
+                     }
+                     if (removeFileError != nil) return;
+
+                     NSError *moveFileError;
+                     [NSFileManager.defaultManager
+                     moveItemAtURL:location toURL:tempUrl error:&moveFileError];
+                     if (moveFileError != nil) return;
+
+                     NSError *attachmentError;
+                     UNNotificationAttachment *attachment =
+                     [UNNotificationAttachment
+                     attachmentWithIdentifier:@"ci360content" URL:tempUrl
+                     options:nil error:&attachmentError];
+                     self.bestAttemptContent.attachments =
+                     @[attachment];
+                     if (attachmentError != nil) return;
+                  }
+            }
+            self.contentHandler(self.bestAttemptContent);
+         }];
+         [downloadTask resume];
+      }
+   ```
+
+   This will enable rich push notifications for your iOS React Native application. The guide now includes the configuration for `AppDelegate.h`, `AppDelegate.m`, and rich push notifications.
+   
+</details>
+
 ---
 (Continue with other functionalities)
