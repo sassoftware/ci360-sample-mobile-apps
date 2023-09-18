@@ -29,9 +29,9 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Return the Mobile SDK Version](#expand-return-the-mobile-sdk-version)
     - [Example: Retrieving the Session ID](#expand-return-session-id)
     - [Example: Retrieving the Device ID](#expand-return-device-id)
-    - [Example: Track User Navigation in the App](#expand-track-user-navigation-in-the-app)
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
+    - [Example: Track User Navigation in the App](#expand-track-user-navigation-in-the-app)
     - [Example: Working with Events](#expand-working-with-events)
     - [Example: Working with Spots: Add an Inline Spot](#expand-working-with-spots-inline)
     - [Example: Working with Spots: Add an Interstitial Spot](#enable-mobile-messages-push-notification)
@@ -324,6 +324,7 @@ To retrieve the Device ID in React Native using TypeScript, follow these steps:
 
 [Back to Top](#back-to-top)
 </details>
+
 ---
 
 ### Example: Track User Navigation in the App
