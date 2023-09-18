@@ -27,6 +27,8 @@ Before proceeding, ensure that you have successfully installed the React-Native 
 2. [Functionality Comparisons](#functionality-comparisons)
     - [Example: Enable SDK Internal Logging](#expand-enable-sdk-internal-logging)
     - [Example: Return the Mobile SDK Version](#expand-return-the-mobile-sdk-version)
+    - [Example: Retrieving the Session ID](#expand-return-session-id)
+    - [Example: Retrieving the Device ID](#expand-return-device-id)
     - [Example: Track User Navigation in the App](#expand-track-user-navigation-in-the-app)
     - [Example: Bind a Device ID to and Identity](#expand-bind-a-device-id-to-and-identity)
     - [Example: Detach Identitiy from Device](#expand-detach-identitiy-from-device)
@@ -109,7 +111,7 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.m` and a
 
 ---
 
-### Example: Retrieving the Mobile SDK Version
+### Example: Return the Mobile SDK Version
 
 <details><summary>Click to expand</summary>
 <a name="expand-return-the-mobile-sdk-version"></a>
@@ -179,6 +181,149 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
 </details>
 
 
+---
+
+### Example: Retrieving the Session ID
+
+<details><summary>Click to expand</summary>
+<a name="expand-return-session-id"></a>
+
+This example provides guidance on how to obtain the session ID in both native iOS using Objective-C and React Native iOS using TypeScript.
+
+## Native iOS Objective-C
+
+To retrieve the session ID in native iOS using Objective-C, you can use the following method:
+
+```objective-c
+// Objective-C
+NSString* sessionParamter = [SASCollector getSessionBindingParamter]; //_ci_=<device_id>*<session_id>*<heartbeat>*<timestamp>
+NSString* sessionID = [[sessionParamter componentsSeparatedByString:@"="][1] componentsSeparatedByString:@"*"][1];
+```
+
+## React Native iOS TypeScript
+
+To retrieve the Session ID in React Native using TypeScript, follow these steps:
+
+1. Import the required modules and functions:
+
+   ```typescript
+   import React, { useState, useEffect } from 'react';
+   import { View, Text } from 'react-native';
+   import { getSessionID } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up state in your component to store the session ID:
+
+   ```typescript
+   const [sessionID, setSessionID] = useState<string>('');
+   ```
+
+3. Utilize the `useEffect` hook to fetch the SDK version and update the state:
+
+   ```typescript
+   useEffect(() => {
+       getSessionID((sessionID: string) => {
+           setSessionID(sessionID);
+       });
+   }, []);
+   ```
+
+4. Display the session ID in your component's `return` statement:
+
+   ```typescript
+   return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Session ID: {sessionID}</Text>
+    </View>
+   );
+   ```
+
+5. As a reference, the `getSessionID` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
+
+   ```objective-c
+    RCT_EXPORT_METHOD(getSessionID:(RCTResponseSenderBlock)callback)
+    {
+        NSString* sessionParamter = [SASCollector getSessionBindingParamter]; //_ci_=<device_id>*<session_id>*<heartbeat>*<timestamp>
+        NSString* sessionID = [[sessionParamter componentsSeparatedByString:@"="][1] componentsSeparatedByString:@"*"][1];
+        callback(@[sessionID]);
+    }
+   ```
+
+6. Example Code: [sessionIdExample.tsx](./sessionIdExample.tsx)
+
+[Back to Top](#back-to-top)
+</details>
+
+
+---
+
+### Example: Retrieving the Device ID
+
+<details><summary>Click to expand</summary>
+<a name="expand-return-session-id"></a>
+
+This example provides guidance on how to obtain the Device ID in both native iOS using Objective-C and React Native iOS using TypeScript.
+
+## Native iOS Objective-C
+
+To retrieve the Device ID in native iOS using Objective-C, you can use the following method:
+
+```objective-c
+// Objective-C
+[SASCollector deviceId];
+```
+
+## React Native iOS TypeScript
+
+To retrieve the Device ID in React Native using TypeScript, follow these steps:
+
+1. Import the required modules and functions:
+
+   ```typescript
+   import React, { useState, useEffect } from 'react';
+   import { View, Text } from 'react-native';
+   import { getDeviceID } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up state in your component to store the Device ID:
+
+   ```typescript
+   const [deviceID, setDeviceID] = useState<string>('');
+   ```
+
+3. Utilize the `useEffect` hook to fetch the SDK version and update the state:
+
+   ```typescript
+   useEffect(() => {
+       getDeviceID((deviceID: string) => {
+           setDeviceID(deviceID);
+       });
+   }, []);
+   ```
+
+4. Display the Device ID in your component's `return` statement:
+
+   ```typescript
+   return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Device ID: {deviceID}</Text>
+    </View>
+   );
+   ```
+
+5. As a reference, the `getDeviceID` function is implemented in the `mobile-sdk-react-native.mm` file of our React Native SDK:
+
+   ```objective-c
+    RCT_EXPORT_METHOD(getDeviceID:(RCTResponseSenderBlock)callback) {
+        NSString* deviceID = [SASCollector deviceId];
+        callback(@[deviceID]);
+    }
+   ```
+
+6. Example Code: [deviceIdExample.tsx](./deviceIdExample.tsx)
+
+[Back to Top](#back-to-top)
+</details>
 ---
 
 ### Example: Track User Navigation in the App
