@@ -175,7 +175,7 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
    }
    ```
 
-6. Example Code: [sdkVersionExample.tsx](./sdkVersionExample.tsx)
+6. Example Code: [sdkVersionExample.tsx](./docs/sdkVersionExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -249,7 +249,7 @@ To retrieve the Session ID in React Native using TypeScript, follow these steps:
     }
    ```
 
-6. Example Code: [sessionIdExample.tsx](./sessionIdExample.tsx)
+6. Example Code: [sessionIdExample.tsx](./docs/sessionIdExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -320,7 +320,7 @@ To retrieve the Device ID in React Native using TypeScript, follow these steps:
     }
    ```
 
-6. Example Code: [deviceIdExample.tsx](./deviceIdExample.tsx)
+6. Example Code: [deviceIdExample.tsx](./docs/deviceIdExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -368,7 +368,7 @@ Follow these steps to monitor user navigation within your app:
    }
    ```
 
-3. Example Code: [newPageExample.tsx](./newPageExample.tsx)
+3. Example Code: [newPageExample.tsx](./docs/newPageExample.tsx)
 
 [Back to Top](#back-to-top)   
 </details>
@@ -465,7 +465,7 @@ Follow these steps to retrieve the SDK version:
     }
    ```
 
-6. Example Code: [identityExample.tsx](./identityExample.tsx)
+6. Example Code: [identityExample.tsx](./docs/identityExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -542,7 +542,7 @@ Follow these steps to retrieve the SDK version:
         }];
     }
    ```
-5. Example Code: [detachIdentityExample.tsx](./detachIdentityExample.tsx)
+5. Example Code: [detachIdentityExample.tsx](./docs/detachIdentityExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -625,7 +625,7 @@ Follow these steps:
     }
    ```
 
-6. Example Code: [addAppEventExample.tsx](./addAppEventExample.tsx)
+6. Example Code: [addAppEventExample.tsx](./docs/addAppEventExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -727,15 +727,15 @@ Follow these steps:
 5. As a reference, working with the InlineAdView spot involves three components:
 
    - Bridging: 
-      - ios/[views/InlineAdViewManager.m](./views/InlineAdViewManager.m)
-      - ios/[views/InlineAdView.m](./views/InlineAdView.m)
+      - ios/[views/InlineAdViewManager.m](./docs/views/InlineAdViewManager.m)
+      - ios/[views/InlineAdView.m](./docs/views/InlineAdView.m)
    - Managing events:
-      - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
-      - ios/[Constants.m](./Constants.m)
+      - ios/[views/AdDeledgateEvent.m](./docs/views/AdDelegateEvent.m)
+      - ios/[Constants.m](./docs/Constants.m)
    - UIManager:
-      - src/[views/InlineAdView.tsx](./views/InlineAdView.tsx) 
+      - src/[views/InlineAdView.tsx](./docs/views/InlineAdView.tsx) 
 
-6. Example Code: [addInlineAdViewExample.tsx](./addInlineAdViewExample.tsx)
+6. Example Code: [addInlineAdViewExample.tsx](./docs/addInlineAdViewExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
@@ -824,16 +824,16 @@ Follow these steps:
 5. As a reference, working with the InterstitialAdView spot involves three components:
 
    - Bridging: 
-      - ios/[views/InterstitialAdViewController.m](./views/InterstitialAdViewController.m)
-      - ios/[views/InterstitialAdViewManager.m](./views/InterstitialAdViewManager.m)
-      - ios/[views/InterstitialAdView.m](./views/InterstitialAdView.m)
+      - ios/[views/InterstitialAdViewController.m](./docs/views/InterstitialAdViewController.m)
+      - ios/[views/InterstitialAdViewManager.m](./docs/views/InterstitialAdViewManager.m)
+      - ios/[views/InterstitialAdView.m](./docs/views/InterstitialAdView.m)
    - Managing events:
-      - ios/[views/AdDeledgateEvent.m](./views/AdDelegateEvent.m)
-      - ios/[Constants.m](./Constants.m)
+      - ios/[views/AdDeledgateEvent.m](./docs/views/AdDelegateEvent.m)
+      - ios/[Constants.m](./docs/Constants.m)
    - UIManager:
-      - src/[views/InterstitialAdView.tsx](./views/InterstitialAdView.tsx) 
+      - src/[views/InterstitialAdView.tsx](./docs/views/InterstitialAdView.tsx) 
 
-6. Example Code: [addInterstitialAdViewExample.tsx](./addInterstitialAdViewExample.tsx)
+6. Example Code: [addInterstitialAdViewExample.tsx](./docs/addInterstitialAdViewExample.tsx)
 
 [Back to Top](#back-to-top)
 </details>
