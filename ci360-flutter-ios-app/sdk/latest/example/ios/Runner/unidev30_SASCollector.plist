@@ -1,0 +1,7 @@
+{
+tagServer="https://eventsingest-unidev.cidev.sas.us/t/mobile";
+developerInitialized="false";
+tenantId="71c1ceb33c00011744cb7f9d";
+locationMonitoringDisabled="true";
+applicationId="flutter_demo_app";
+}

@@ -1,0 +1,7 @@
+{
+	tagServer = "https://eventsingest-unistage.cidev.sas.us/t/mobile";
+	developerInitialized = false;
+	tenantId = "4a68f629d400011484fb38c6";
+	"locationMonitoringDisabled" = true;
+	applicationId = "flutter_demo_app";
+}

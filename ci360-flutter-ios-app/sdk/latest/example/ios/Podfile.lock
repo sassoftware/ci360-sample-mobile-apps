@@ -1,0 +1,53 @@
+PODS:
+  - Flutter (1.0.0)
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - location (0.0.1):
+    - Flutter
+  - mobile_sdk_flutter (0.0.1):
+    - Flutter
+  - path_provider_ios (0.0.1):
+    - Flutter
+  - permission_handler_apple (9.0.4):
+    - Flutter
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - location (from `.symlinks/plugins/location/ios`)
+  - mobile_sdk_flutter (from `.symlinks/plugins/mobile_sdk_flutter/ios`)
+  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Toast
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  location:
+    :path: ".symlinks/plugins/location/ios"
+  mobile_sdk_flutter:
+    :path: ".symlinks/plugins/mobile_sdk_flutter/ios"
+  path_provider_ios:
+    :path: ".symlinks/plugins/path_provider_ios/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  fluttertoast: f5360710363139c95ae6af9118633afb1d7e7824
+  location: 3a2eed4dd2fab25e7b7baf2a9efefe82b512d740
+  mobile_sdk_flutter: b69a7b75c55821ddc4ad21b281a25c3723a62991
+  path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 6a9a38ff01e9a79c254d622717ea8b8d560e3b57
+
+COCOAPODS: 1.10.0
