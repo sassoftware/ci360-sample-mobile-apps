@@ -988,7 +988,7 @@ Replace the content in `AppDelegate.h` with the following code:
 
 6. **To enable Rich Push Notification**
 
-   Please refere to [Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification) section.
+   Please refer to the [Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification) section.
 
 
 7. **Enable Push Notification in React Native App**
