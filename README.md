@@ -1,44 +1,42 @@
-techoffice
-new-project
-Repository
-new-project
-README.md
-Rich Main's avatar
-Update README.md template to note that the Contributing and License sections are required.
-Rich Main authored 3 years ago
-33f82c4c
-README.md
-2.83 KiB
-# Project Title
-**Required**. Your project's name is the first thing people will see upon scrolling down to your README and is included upon creation of your README file.
-## Table of Contents
-**Optional**. You might use a table of contents for lengthy and complex README files. A table of contents facilitates navigation.
+# SAS Customer Intelligence 360 - Sample Mobile Apps
+
 ## Overview
-**Required**. Include a brief project description here, written from the perspective of the value provided to the user. Make sure to define terms and don't expect the user to know terms that are internal to SAS. A good overview is clear, short, and to the point.
-### What's New
-**Optional**. If applicable to your project, list new features that users need to be aware of. This section might supplement the Changelog file from the repository and only highlight important changes.
-### Prerequisites
-**Optional**. Provide guidelines about any prerequisites for the setup of the user's environment. Prerequisites typically take the form of a list of required software that must be available. Each piece of software might require its own setup steps. Use lists and subtopics, as appropriate.
-### Installation
-**Required**. Provide step-by-step instructions to install your software project. Use subtopics and screenshots, as appropriate.  
-## Getting Started
-**Optional**. Instruct others about the initial tasks to get started using your project after they've installed it. This is a good place to include screenshots, animated GIFs, or short example videos.
-### Running
-**Optional**. Instruct others about the initial tasks to get started using your project after they've installed it. This is a good place to include screenshots, [asciinema](https://asciinema.org/) recordings, or short usage videos.
-### Examples
-**Optional**. Provide additional examples on how to use the software or point to further documentation. Make your project easy to learn and use!
-### Troubleshooting
-**Optional**. Provide workarounds and solutions to known problems. Organize troubleshooting information using subtopics, as appropriate.
-## Contributing
-**Required**. Use the default text below if you accept contributions. If you do not accept contributions (e.g., a samples project), note that here.
-> We welcome your contributions! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to submit contributions to this project. 
-## License
-**Required**. Use the default text below. **NOTE:** Nothing different should be used here without prior approval of SAS Legal.
-> This project is licensed under the [Apache 2.0 License](LICENSE).
-## Additional Resources
-**Required**. Include any additional resources that users may need or find useful when using your software. Additional resources might include the following:
-* Documentation links
-* SAS Global Forum papers
-* Blog posts
-* SAS Communities
-* Other SAS Documentation (Tech Support, Education)
+SAS CI360 Sample Mobile Apps provide working examples on how to utilize our iOS and Android native SDKs in hybrid framework mobile apps. This repository contains a number of mobile apps for different platforms/frameworks that are ready to be used by mobile app developers to experience how our SDK supports non-native mobile app frameworks. In addition, these sample mobile apps can be used for debugging/troubleshooting purposes.
+
+## Table of Contents
+1. [Prerequisites](#prerequisites)
+2. [Installation](#installation)
+3. [List of Sample Mobile Apps](#list-of-sample-mobile-apps)
+4. [Getting Started](#getting-started)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Additional Resources](#additional-resources)
+
+## <a name="prerequisites"></a>Prerequisites
+Prerequisites vary between frameworks of the hybrid apps, and they are listed in detail for each in the respective sub-folder mobile apps. Some of the prerequisites include:
+
+- CI360 Tenant account to download and associate with the SDK function.
+- Latest Android Studio for Android-related hybrid mobile development works.
+- Latest Xcode for iOS-related hybrid mobile development works.
+- Java 1.8 or newer, optional, is needed for troubleshooting to monitor the streaming data/events for mobile apps.
+
+## <a name="installation"></a>Installation
+Installation instructions for every extension are included in the project-specific sub-folder README file. Installation and deployment instructions are platform-specific.
+
+## <a name="list-of-sample-mobile-apps"></a>List of Sample Mobile Apps
+- [React Native - iOS](link-to-the-sub-folder)
+- [React Native - Android](link-to-the-sub-folder)
+- [Flutter - iOS](link-to-the-sub-folder)
+- [Flutter - Android](link-to-the-sub-folder)
+
+## <a name="getting-started"></a>Getting Started
+{To be provided later}
+
+## <a name="contributing"></a>Contributing
+We welcome your contributions! Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to submit contributions to this project.
+
+## <a name="license"></a>License
+This project is licensed under the [Apache 2.0 License](./LICENSE.txt).
+
+## <a name="additional-resources"></a>Additional Resources
+For more information, see [Integrate SAS Customer Intelligence 360 Mobile SDKs with a Hybrid App](https://go.documentation.sas.com/doc/en/cintcdc/production.a/cintmobdg/n15inj97vlw7s9n14bi52qthcqcd.htm).
