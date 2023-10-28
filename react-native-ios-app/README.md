@@ -18,7 +18,7 @@ This combination of native SDKs and React Native SDK, along with TypeScript, ena
 
 ## Installation
 
-Before proceeding, ensure that you have successfully installed the React-Native SDK [installation guide](link-to-installation-guide). If you haven't completed this step yet, please refer to the installation guide for step-by-step instructions on setting up the SDK.
+Before proceeding, ensure that you have successfully installed the React-Native SDK [installation guide](./sdk/v2/). If you haven't completed this step yet, please refer to the installation guide for step-by-step instructions on setting up the SDK.
 
 
 ## Table of Contents
