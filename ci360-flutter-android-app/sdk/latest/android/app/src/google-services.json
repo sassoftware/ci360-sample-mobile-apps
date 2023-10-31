@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "744582017156",
+    "firebase_url": "https://sasgciehotel.firebaseio.com",
+    "project_id": "sasgciehotel",
+    "storage_bucket": "sasgciehotel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744582017156:android:67a978455551b0923bd2d1",
+        "android_client_info": {
+          "package_name": "com.ronald.my_first_flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744582017156-seajb1jpoths6dsfgjf5r5pepvqj5n8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJiUC3aZsWA3wtT76JQrJX7aquZnLGtJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744582017156-seajb1jpoths6dsfgjf5r5pepvqj5n8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

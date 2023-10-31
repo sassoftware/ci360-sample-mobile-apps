@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_sdk_flutter/sas_collector_sdk.dart';
+import 'package:ron360flutterapp/home_page.dart';
+
+class DetailsPage extends StatelessWidget {
+  final String userId;
+  final MobileSdkFlutter mobileSdkFlutter;
+  var tenantId;
+  var tagServer;
+  var appVersion;
+  var platformVersion;
+  var deviceId;
+
+  DetailsPage(this.userId, this.mobileSdkFlutter);
+
+  void init() {
+    tenantId = mobileSdkFlutter.getTenantId();
+    tagServer = mobileSdkFlutter.getTagServer();
+    appVersion = mobileSdkFlutter.getApplicationVersion();
+    platformVersion = mobileSdkFlutter.getPlatformVersion();
+    deviceId = mobileSdkFlutter.getDeviceId();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+            child: SingleChildScrollView(
+                child: new Column(
+                  
+      children: [
+        const SizedBox(
+          height: 200,
+        ),
+        Image.asset('assets/SASCI360.png'),
+        Text(
+          'Welcome, $userId',
+          
+          style: GoogleFonts.lato(
+              fontStyle: FontStyle.italic,
+              fontSize: 30,
+              fontWeight: FontWeight.bold),
+        ), 
+        Text(
+          'Welcome, $userId',
+          style: GoogleFonts.lato(
+              fontStyle: FontStyle.italic,
+              fontSize: 30,
+              fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 20),
+        ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              fixedSize: const Size(250, 30),
+            ),
+            onPressed: () {
+              mobileSdkFlutter.detachIdentity().then((success) => {
+                    if (success)
+                      {Navigator.of(context).pop()}
+                    else
+                      {
+                        showDialog(
+                            context: context,
+                            builder: (_) => AlertDialog(
+                                  title: const Text("Error"),
+                                  content:
+                                      const Text("Detach identity failed."),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: () => Navigator.pop(context),
+                                        child: const Text('OK')),
+                                  ],
+                                ))
+                      }
+                  });
+            },
+            child: const Text('Detach Identity')),
+        ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            fixedSize: const Size(250, 30),
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) =>
+                      HomeRoute(mobileSdkFlutter: mobileSdkFlutter)),
+            );
+          },
+          child: const Text("Home Page"),
+        ),
+      ],
+    ))));
+  }
+}
+
+// ignore: must_be_immutable
+class HomeRoute extends StatelessWidget {
+  HomeRoute({Key? key, required this.mobileSdkFlutter}) : super(key: key);
+
+  MobileSdkFlutter mobileSdkFlutter;
+
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Navigator(
+        onGenerateRoute: (RouteSettings settings) {
+          return MaterialPageRoute(
+              builder: (BuildContext context) => HomePage(
+                    mobileSdkFlutter: mobileSdkFlutter,
+                  ));
+        },
+      ),
+    );
+  }
+}

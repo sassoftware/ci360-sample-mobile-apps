@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "xxxxxxxx",
+    "firebase_url": "https://xxxxxx.firebaseio.com",
+    "project_id": "xxxxxx",
+    "storage_bucket": "xxxxxxxxxxxxxxx"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "xxxxxxxxxxxxxxxxxxxx",
+        "android_client_info": {
+          "package_name": "com.ronald.my_first_flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "xxxxxxxxxxxxxxxxxx",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "xxxxxxxxxxxxxxxxxxx"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "xxxxxxxxxxxxxxxx",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

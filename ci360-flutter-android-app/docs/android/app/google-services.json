@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1005672365617",
+    "firebase_url": "https://ci360-cffa3.firebaseio.com",
+    "project_id": "ci360-cffa3",
+    "storage_bucket": "ci360-cffa3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005672365617:android:e8cae0209b552846289f10",
+        "android_client_info": {
+          "package_name": "com.ronald.my_first_flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005672365617-4oq0mrgvurn718f0qdqbk94h7atvla8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtawPEK4kQOUMbbUAXv-z8-0a7trQiQok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005672365617-4oq0mrgvurn718f0qdqbk94h7atvla8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
