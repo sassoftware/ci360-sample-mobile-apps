@@ -24,10 +24,10 @@ Prerequisites vary between frameworks of the hybrid apps, and they are listed in
 Installation instructions for every extension are included in the project-specific sub-folder README file. Installation and deployment instructions are platform-specific.
 
 ## <a name="list-of-sample-mobile-apps"></a>List of Sample Mobile Apps
-- [React Native - iOS](link-to-the-sub-folder)
-- [React Native - Android](link-to-the-sub-folder)
-- [Flutter - iOS](link-to-the-sub-folder)
-- [Flutter - Android](link-to-the-sub-folder)
+- [Flutter - Android](./ci360-flutter-android-app/)
+- [Flutter - iOS](./ci360-flutter-ios-app/)
+- [React Native - Android](./ci360-react-native-android-app/)
+- [React Native - iOS](./ci360-react-native-ios-app/)
 
 ## <a name="getting-started"></a>Getting Started
 {To be provided later}
