@@ -1,0 +1,2904 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.0.0 (clang-1300.0.29.30)
+/Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk
+iPhoneOS15.2.sdk
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/build/xfc/iphoneosDerivedPath/Build/Intermediates.noindex/ArchiveIntermediates/SASCollector/IntermediateBuildFilesPath/SASCollector.build/Release-iphoneos/SASCollector.build/DerivedSources/SASCollector_vers.c
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk
+-[SASCollectorInterstitialAd initWithSpotId:withTags:]
+-[SASCollectorInterstitialAd setSpotAttributes:]
+-[SASCollectorInterstitialAd addSpotAttributeName:value:]
+-[SASCollectorInterstitialAd removeSpotAttribute:]
+-[SASCollectorInterstitialAd base64encode:]
+-[SASCollectorInterstitialAd load]
+___34-[SASCollectorInterstitialAd load]_block_invoke
+___34-[SASCollectorInterstitialAd load]_block_invoke_2
+___34-[SASCollectorInterstitialAd load]_block_invoke_3
+___copy_helper_block_e8_32s40s48s
+___destroy_helper_block_e8_32s40s48s
+___copy_helper_block_e8_32s
+___destroy_helper_block_e8_32s
+___34-[SASCollectorInterstitialAd load]_block_invoke.72
+___34-[SASCollectorInterstitialAd load]_block_invoke.76
+-[SASCollectorInterstitialAd gatherAdParameters:]
+-[SASCollectorInterstitialAd adEventAttributes]
+-[SASCollectorInterstitialAd didFailLoad:error:failingUrl:]
+-[SASCollectorInterstitialAd didClose:]
+-[SASCollectorInterstitialAd willBeginAction:url:]
+-[SASCollectorInterstitialAd spotID]
+-[SASCollectorInterstitialAd setSpotID:]
+-[SASCollectorInterstitialAd adRequest]
+-[SASCollectorInterstitialAd taskId]
+-[SASCollectorInterstitialAd setTaskId:]
+-[SASCollectorInterstitialAd creativeId]
+-[SASCollectorInterstitialAd setCreativeId:]
+-[SASCollectorInterstitialAd tags]
+-[SASCollectorInterstitialAd setTags:]
+-[SASCollectorInterstitialAd .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_CLASSLIST_REFERENCES_$_.31
+_OBJC_IVAR_$_SASCollectorInterstitialAd._spotID
+_OBJC_CLASSLIST_REFERENCES_$_.32
+_OBJC_SELECTOR_REFERENCES_.34
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_CLASSLIST_REFERENCES_$_.37
+_OBJC_SELECTOR_REFERENCES_.42
+_OBJC_IVAR_$_SASCollectorInterstitialAd._tags
+_OBJC_SELECTOR_REFERENCES_.46
+_OBJC_CLASSLIST_REFERENCES_$_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_SELECTOR_REFERENCES_.53
+_OBJC_SELECTOR_REFERENCES_.57
+___block_descriptor_56_e8_32s40s48s_e15_v32?0816^B24l
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_CLASSLIST_REFERENCES_$_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_IVAR_$_SASCollectorInterstitialAd._adRequest
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_SELECTOR_REFERENCES_.69
+___block_descriptor_56_e8_32s40s48s_e5_v8?0l
+___block_descriptor_40_e8_32s_e18_v16?0"NSString"8l
+_OBJC_SELECTOR_REFERENCES_.74
+___block_descriptor_40_e8_32s_e17_v16?0"NSError"8l
+_OBJC_CLASSLIST_REFERENCES_$_.77
+_OBJC_CLASSLIST_REFERENCES_$_.82
+_OBJC_SELECTOR_REFERENCES_.84
+_OBJC_SELECTOR_REFERENCES_.86
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_SELECTOR_REFERENCES_.90
+_OBJC_SELECTOR_REFERENCES_.92
+___block_descriptor_40_e8_32s_e23_v16?0"NSURLResponse"8l
+_OBJC_SELECTOR_REFERENCES_.95
+_OBJC_SELECTOR_REFERENCES_.97
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_SELECTOR_REFERENCES_.103
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_SELECTOR_REFERENCES_.113
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.117
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_IVAR_$_SASCollectorInterstitialAd._taskId
+_OBJC_IVAR_$_SASCollectorInterstitialAd._creativeId
+__OBJC_METACLASS_RO_$_SASCollectorInterstitialAd
+__OBJC_$_INSTANCE_METHODS_SASCollectorInterstitialAd
+__OBJC_$_INSTANCE_VARIABLES_SASCollectorInterstitialAd
+__OBJC_$_PROP_LIST_SASCollectorInterstitialAd
+__OBJC_CLASS_RO_$_SASCollectorInterstitialAd
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollectorInterstitialAd.m
+SASCollector/SASCollector/SASCollectorInterstitialAd.m
+SASCollector/SASCollector/SASCollectorInterstitialAd.h
+__34-[SASCollectorInterstitialAd load]_block_invoke.76
+__34-[SASCollectorInterstitialAd load]_block_invoke.72
+__destroy_helper_block_e8_32s
+__copy_helper_block_e8_32s
+__destroy_helper_block_e8_32s40s48s
+__copy_helper_block_e8_32s40s48s
+__34-[SASCollectorInterstitialAd load]_block_invoke_3
+__34-[SASCollectorInterstitialAd load]_block_invoke_2
+__34-[SASCollectorInterstitialAd load]_block_invoke
+-[SASCollectorEvent init]
+-[SASCollectorEvent initWithKey:attributes:]
+-[SASCollectorEvent initWithKey:]
+-[SASCollectorEvent setAttributes:]
+-[SASCollectorEvent attributes]
+-[SASCollectorEvent clearAttributes]
+-[SASCollectorEvent addAttributeWithName:value:]
+-[SASCollectorEvent removeAttributeWithName:]
+-[SASCollectorEvent cartItems]
+-[SASCollectorEvent addCartItem:]
+-[SASCollectorEvent removeCartItem:]
+-[SASCollectorEvent clearCartItems]
+-[SASCollectorEvent eventKey]
+-[SASCollectorEvent setEventKey:]
+-[SASCollectorEvent internalAttributes]
+-[SASCollectorEvent setInternalAttributes:]
+-[SASCollectorEvent internalCartItems]
+-[SASCollectorEvent setInternalCartItems:]
+-[SASCollectorEvent newSessionNotAllowed]
+-[SASCollectorEvent setNewSessionNotAllowed:]
+-[SASCollectorEvent .cxx_destruct]
+_CISDKInitializer
+___CISDKInitializer_block_invoke
++[SASCollector skewClock:key:]
++[SASCollector getSharedSingleton]
++[SASCollector deviceInfo]
++[SASCollector createSharedSingleton]
+___37+[SASCollector createSharedSingleton]_block_invoke
++[SASCollector recreateSharedSingleton]
++[SASCollector setMobileMessagingDelegate2:]
++[SASCollector internalDisableSASCollector]
++[SASCollector setSharedSingleton:]
++[SASCollector internalEnableSASCollector]
++[SASCollector setAppId:]
++[SASCollector appId]
++[SASCollector setTenantId:]
++[SASCollector setDeveloperInitialized]
++[SASCollector tenantId]
++[SASCollector setTagServer:]
++[SASCollector tagServer]
++[SASCollector setApplicationVersion:]
++[SASCollector applicationVersion]
++[SASCollector sdkVersion]
++[SASCollector locationManager]
++[SASCollector setLocationManager:]
++[SASCollector deviceId]
++[SASCollector resetDeviceId]
++[SASCollector setSession:]
++[SASCollector session]
++[SASCollector currentGEOFence]
++[SASCollector resetCSI]
++[SASCollector disableSASCollector]
++[SASCollector isDisabled]
++[SASCollector isEnabled]
++[SASCollector addAppEvent:data:]
++[SASCollector addAppEvent:]
++[SASCollector addAppEvents:]
++[SASCollector identity:withType:completion:]
++[SASCollector identity:withType:]
++[SASCollector detachIdentity:]
++[SASCollector newPage:]
++[SASCollector registerForMobileMessages:completionHandler:failureHandler:]
++[SASCollector handleMobileMessage:WithApplication:]
++[SASCollector determineIARequest:completionHandler:failureHandler:badResponseHandler:]
++[SASCollector shutdown]
++[SASCollector shutdownAndDetachIdentity:]
++[SASCollector disableLocationMonitoring]
++[SASCollector startMonitoringLocation]
++[SASCollector getConfiguredWKWebsiteDatastore]
++[SASCollector getSessionWKWebViewConfiguration]
++[SASCollector getDecoratedWebSessionURL:]
++[SASCollector getSessionBindingParamter]
++[SASCollector getSessionBindingParamterQueryItem]
+-[SASCollector dispatchTimerWithInterval:leeway:queue:block:]
+-[SASCollector loadSASCollectorPlist]
+-[SASCollector init]
++[SASCollector initializeCollection]
+-[SASCollector handleStartupEvents:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___36-[SASCollector handleStartupEvents:]_block_invoke
+___copy_helper_block_e8_32r
+___destroy_helper_block_e8_32r
+-[SASCollector initializeCollection]
+___36-[SASCollector initializeCollection]_block_invoke
+___36-[SASCollector initializeCollection]_block_invoke_2
+___36-[SASCollector initializeCollection]_block_invoke.598
+___36-[SASCollector initializeCollection]_block_invoke_2.601
+___36-[SASCollector initializeCollection]_block_invoke_3
+___copy_helper_block_e8_32s40r
+___destroy_helper_block_e8_32s40r
+___36-[SASCollector initializeCollection]_block_invoke.618
+___36-[SASCollector initializeCollection]_block_invoke_2.619
+___36-[SASCollector initializeCollection]_block_invoke_3.623
+___36-[SASCollector initializeCollection]_block_invoke_4
+-[SASCollector determineIARequest:completionHandler:failureHandler:badResponseHandler:]
+___87-[SASCollector determineIARequest:completionHandler:failureHandler:badResponseHandler:]_block_invoke
+___copy_helper_block_e8_32b40s48b56b
+___destroy_helper_block_e8_32s40s48s56s
+-[SASCollector getSession]
+-[SASCollector setCurrentRegion:]
+-[SASCollector send:completionHandler:]
+-[SASCollector sendRequest:completionHandler:]
+-[SASCollector updateDefaultTimeoutsFromCookie:]
+-[SASCollector addNewLoadID:]
+-[SASCollector clearOfflineEvents]
+___34-[SASCollector clearOfflineEvents]_block_invoke
+___34-[SASCollector clearOfflineEvents]_block_invoke_2
+___34-[SASCollector clearOfflineEvents]_block_invoke.800
+___34-[SASCollector clearOfflineEvents]_block_invoke_2.811
+-[SASCollector sendEvents:]
+___27-[SASCollector sendEvents:]_block_invoke
+___27-[SASCollector sendEvents:]_block_invoke.833
+-[SASCollector sendEvent:]
+___26-[SASCollector sendEvent:]_block_invoke
+___26-[SASCollector sendEvent:]_block_invoke.842
+-[SASCollector sendEventBlock:completionHandler:failureHandler:]
+-[SASCollector sendEvent:completionHandler:failureHandler:]
+___59-[SASCollector sendEvent:completionHandler:failureHandler:]_block_invoke
+___copy_helper_block_e8_32s40b48b56r64r
+___destroy_helper_block_e8_32s40s48s56r64r
+-[SASCollector sendEventWithSerializable:]
+-[SASCollector registerDeviceToken:completionHandler:failureHandler:]
+___69-[SASCollector registerDeviceToken:completionHandler:failureHandler:]_block_invoke
+___copy_helper_block_e8_32b40b
+___destroy_helper_block_e8_32s40s
+-[SASCollector messageActionHandler:]
+-[SASCollector downloadImage:onCompletion:]
+___43-[SASCollector downloadImage:onCompletion:]_block_invoke
+___43-[SASCollector downloadImage:onCompletion:]_block_invoke_2
+___copy_helper_block_e8_32b40s
+___copy_helper_block_e8_32b
+-[SASCollector handleMobileMessage:WithApplication:]
+-[SASCollector handlePush:]
+___27-[SASCollector handlePush:]_block_invoke
+___copy_helper_block_e8_32s40s
+-[SASCollector identity:withType:completion:]
+___45-[SASCollector identity:withType:completion:]_block_invoke
+-[SASCollector detachIdentity:]
+___31-[SASCollector detachIdentity:]_block_invoke
+___copy_helper_block_e8_32s40b
+-[SASCollector detachIdentityWithoutSendingNewFocusEvent:]
+___58-[SASCollector detachIdentityWithoutSendingNewFocusEvent:]_block_invoke
+-[SASCollector requestNewGEOFence:failureHandler:]
+___50-[SASCollector requestNewGEOFence:failureHandler:]_block_invoke
+___copy_helper_block_e8_32b40s48b56r
+___destroy_helper_block_e8_32s40s48s56r
+-[SASCollector getNewRegions:]
+___30-[SASCollector getNewRegions:]_block_invoke
+___copy_helper_block_e8_32s40r48r56r
+___destroy_helper_block_e8_32s40r48r56r
+___30-[SASCollector getNewRegions:]_block_invoke.1141
+-[SASCollector fetchRegionWithIdentifier:]
+-[SASCollector locationManager:didChangeAuthorizationStatus:]
+-[SASCollector calculateDistanceInMetersBetweenCoord:coord:]
+-[SASCollector locationManager:didUpdateLocations:]
+-[SASCollector locationManager:didFailWithError:]
+-[SASCollector locationManager:monitoringDidFailForRegion:withError:]
+-[SASCollector locationManager:rangingBeaconsDidFailForRegion:withError:]
+-[SASCollector locationManager:didEnterRegion:]
+-[SASCollector locationManager:didExitRegion:]
+-[SASCollector beaconProximity:]
+-[SASCollector locationManager:didRangeBeacons:inRegion:]
+-[SASCollector crc16WithBytes:forLength:]
+-[SASCollector convertToAscii:len:buffer:]
+-[SASCollector generateId:]
+-[SASCollector generateLoadID]
+-[SASCollector appId]
+-[SASCollector setAppId:]
+-[SASCollector tenantId]
+-[SASCollector setTenantId:]
+-[SASCollector appVersion]
+-[SASCollector setAppVersion:]
+-[SASCollector mobileMessagingDelegate2]
+-[SASCollector setMobileMessagingDelegate2:]
+-[SASCollector locManager]
+-[SASCollector setLocManager:]
+-[SASCollector currentRegionIdentifier]
+-[SASCollector setCurrentRegionIdentifier:]
+-[SASCollector locationOnly]
+-[SASCollector setLocationOnly:]
+-[SASCollector validCurrentLoc]
+-[SASCollector setValidCurrentLoc:]
+-[SASCollector currentlyRangedBeacon]
+-[SASCollector setCurrentlyRangedBeacon:]
+-[SASCollector currentBeaconRegion]
+-[SASCollector setCurrentBeaconRegion:]
+-[SASCollector storageProvider]
+-[SASCollector setStorageProvider:]
+-[SASCollector timer]
+-[SASCollector setTimer:]
+-[SASCollector tagServer]
+-[SASCollector setTagServer:]
+-[SASCollector currentlyRequestingGEOFences]
+-[SASCollector setCurrentlyRequestingGEOFences:]
+-[SASCollector SASCollectorDisabled]
+-[SASCollector setSASCollectorDisabled:]
+-[SASCollector isInitialized]
+-[SASCollector setIsInitialized:]
+-[SASCollector developerInitialize]
+-[SASCollector setDeveloperInitialize:]
+-[SASCollector locationMonitoringDisabled]
+-[SASCollector setLocationMonitoringDisabled:]
+-[SASCollector inBackground]
+-[SASCollector setInBackground:]
+-[SASCollector applicationWillEnterForegroundNotification]
+-[SASCollector setApplicationWillEnterForegroundNotification:]
+-[SASCollector applicationDidFinishLaunchingNotification]
+-[SASCollector setApplicationDidFinishLaunchingNotification:]
+-[SASCollector applicationWillResignActiveNotification]
+-[SASCollector setApplicationWillResignActiveNotification:]
+-[SASCollector applicationWillTerminateNotification]
+-[SASCollector setApplicationWillTerminateNotification:]
+-[SASCollector applicationDidReceiveRemoteNotification]
+-[SASCollector setApplicationDidReceiveRemoteNotification:]
+-[SASCollector session]
+-[SASCollector setSession:]
+-[SASCollector CSI]
+-[SASCollector setCSI:]
+-[SASCollector sessionTimeout]
+-[SASCollector setSessionTimeout:]
+-[SASCollector maxSessionLength]
+-[SASCollector setMaxSessionLength:]
+-[SASCollector maxSessionTimeoutTime]
+-[SASCollector setMaxSessionTimeoutTime:]
+-[SASCollector idleTimeoutTime]
+-[SASCollector setIdleTimeoutTime:]
+-[SASCollector loadId]
+-[SASCollector setLoadId:]
+-[SASCollector loadURI]
+-[SASCollector setLoadURI:]
+-[SASCollector ignoreLoadID]
+-[SASCollector setIgnoreLoadID:]
+-[SASCollector sessionID]
+-[SASCollector setSessionID:]
+-[SASCollector mobileMessageController]
+-[SASCollector setMobileMessageController:]
+-[SASCollector dispatchGroup]
+-[SASCollector setDispatchGroup:]
+-[SASCollector inOfflineQueue]
+-[SASCollector setInOfflineQueue:]
+-[SASCollector lastDeviceId]
+-[SASCollector setLastDeviceId:]
+-[SASCollector dateProvider]
+-[SASCollector setDateProvider:]
+-[SASCollector lastIdentityValue]
+-[SASCollector setLastIdentityValue:]
+-[SASCollector lastIdentityType]
+-[SASCollector setLastIdentityType:]
+-[SASCollector popupWindow]
+-[SASCollector setPopupWindow:]
+-[SASCollector originalWindow]
+-[SASCollector setOriginalWindow:]
+-[SASCollector .cxx_destruct]
+___clang_at_available_requires_core_foundation_framework
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_SELECTOR_REFERENCES_.19
+_OBJC_SELECTOR_REFERENCES_.21
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_SELECTOR_REFERENCES_.25
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_SELECTOR_REFERENCES_.31
+__OBJC_METACLASS_RO_$_SASCollectorEvent
+__OBJC_$_INSTANCE_METHODS_SASCollectorEvent
+_OBJC_IVAR_$_SASCollectorEvent._newSessionNotAllowed
+_OBJC_IVAR_$_SASCollectorEvent._eventKey
+_OBJC_IVAR_$_SASCollectorEvent._internalAttributes
+_OBJC_IVAR_$_SASCollectorEvent._internalCartItems
+__OBJC_$_INSTANCE_VARIABLES_SASCollectorEvent
+__OBJC_$_PROP_LIST_SASCollectorEvent
+__OBJC_CLASS_RO_$_SASCollectorEvent
+_OBJC_CLASSLIST_REFERENCES_$_.76
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.83
+_CISDKInitializer.onceInitToken
+___block_descriptor_32_e5_v8?0l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_.87
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_SELECTOR_REFERENCES_.93
+_OBJC_CLASSLIST_REFERENCES_$_.94
+_sharedSingleton
+_OBJC_SELECTOR_REFERENCES_.96
+_OBJC_CLASSLIST_REFERENCES_$_.97
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_CLASSLIST_REFERENCES_$_.102
+_OBJC_SELECTOR_REFERENCES_.104
+_createSharedSingleton.onceCreateSharedSingletonToken
+___block_literal_global.105
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.125
+_OBJC_CLASSLIST_REFERENCES_$_.126
+_OBJC_SELECTOR_REFERENCES_.128
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_SELECTOR_REFERENCES_.136
+_OBJC_SELECTOR_REFERENCES_.138
+_OBJC_SELECTOR_REFERENCES_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.150
+_OBJC_SELECTOR_REFERENCES_.154
+_OBJC_CLASSLIST_REFERENCES_$_.155
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_SELECTOR_REFERENCES_.163
+_OBJC_CLASSLIST_REFERENCES_$_.164
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.188
+_OBJC_SELECTOR_REFERENCES_.192
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.202
+_OBJC_SELECTOR_REFERENCES_.204
+_OBJC_SELECTOR_REFERENCES_.206
+_OBJC_SELECTOR_REFERENCES_.210
+_OBJC_CLASSLIST_REFERENCES_$_.213
+_OBJC_SELECTOR_REFERENCES_.215
+_OBJC_CLASSLIST_REFERENCES_$_.216
+_OBJC_SELECTOR_REFERENCES_.218
+_OBJC_SELECTOR_REFERENCES_.220
+_OBJC_CLASSLIST_REFERENCES_$_.223
+_OBJC_SELECTOR_REFERENCES_.225
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.229
+_OBJC_SELECTOR_REFERENCES_.230
+_OBJC_SELECTOR_REFERENCES_.232
+_OBJC_SELECTOR_REFERENCES_.233
+_OBJC_SELECTOR_REFERENCES_.239
+_OBJC_SELECTOR_REFERENCES_.243
+_OBJC_SELECTOR_REFERENCES_.247
+_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.257
+_OBJC_SELECTOR_REFERENCES_.259
+_OBJC_SELECTOR_REFERENCES_.261
+_OBJC_SELECTOR_REFERENCES_.263
+_OBJC_SELECTOR_REFERENCES_.271
+_OBJC_SELECTOR_REFERENCES_.275
+_OBJC_SELECTOR_REFERENCES_.281
+_OBJC_SELECTOR_REFERENCES_.283
+_OBJC_SELECTOR_REFERENCES_.285
+_OBJC_SELECTOR_REFERENCES_.291
+_OBJC_CLASSLIST_REFERENCES_$_.294
+_OBJC_SELECTOR_REFERENCES_.296
+_OBJC_SELECTOR_REFERENCES_.298
+_OBJC_SELECTOR_REFERENCES_.300
+_OBJC_CLASSLIST_REFERENCES_$_.301
+_OBJC_SELECTOR_REFERENCES_.305
+_OBJC_SELECTOR_REFERENCES_.307
+_OBJC_SELECTOR_REFERENCES_.309
+_OBJC_CLASSLIST_REFERENCES_$_.310
+_OBJC_SELECTOR_REFERENCES_.314
+_OBJC_SELECTOR_REFERENCES_.316
+_OBJC_SELECTOR_REFERENCES_.318
+_OBJC_SELECTOR_REFERENCES_.320
+_OBJC_SELECTOR_REFERENCES_.322
+_OBJC_SELECTOR_REFERENCES_.324
+_OBJC_SELECTOR_REFERENCES_.326
+_OBJC_SELECTOR_REFERENCES_.328
+_OBJC_SELECTOR_REFERENCES_.330
+_OBJC_SELECTOR_REFERENCES_.332
+_OBJC_SELECTOR_REFERENCES_.334
+_OBJC_SELECTOR_REFERENCES_.336
+_OBJC_SELECTOR_REFERENCES_.338
+_OBJC_SELECTOR_REFERENCES_.340
+_OBJC_SELECTOR_REFERENCES_.342
+_OBJC_SELECTOR_REFERENCES_.344
+_OBJC_SELECTOR_REFERENCES_.346
+_OBJC_SELECTOR_REFERENCES_.348
+_OBJC_SELECTOR_REFERENCES_.350
+_OBJC_SELECTOR_REFERENCES_.352
+_OBJC_SELECTOR_REFERENCES_.354
+_OBJC_SELECTOR_REFERENCES_.356
+_OBJC_SELECTOR_REFERENCES_.358
+_OBJC_SELECTOR_REFERENCES_.360
+_OBJC_SELECTOR_REFERENCES_.362
+_OBJC_SELECTOR_REFERENCES_.364
+_OBJC_SELECTOR_REFERENCES_.366
+_OBJC_SELECTOR_REFERENCES_.370
+_OBJC_SELECTOR_REFERENCES_.374
+_OBJC_CLASSLIST_REFERENCES_$_.375
+_OBJC_SELECTOR_REFERENCES_.377
+_OBJC_SELECTOR_REFERENCES_.383
+_OBJC_SELECTOR_REFERENCES_.385
+_OBJC_SELECTOR_REFERENCES_.387
+_OBJC_SELECTOR_REFERENCES_.391
+_OBJC_SELECTOR_REFERENCES_.395
+_OBJC_SELECTOR_REFERENCES_.397
+_OBJC_CLASSLIST_REFERENCES_$_.398
+_OBJC_SELECTOR_REFERENCES_.400
+_OBJC_CLASSLIST_REFERENCES_$_.401
+_OBJC_SELECTOR_REFERENCES_.403
+_OBJC_SELECTOR_REFERENCES_.405
+_OBJC_SELECTOR_REFERENCES_.407
+_OBJC_SELECTOR_REFERENCES_.409
+_OBJC_SELECTOR_REFERENCES_.411
+_OBJC_CLASSLIST_REFERENCES_$_.412
+_OBJC_CLASSLIST_REFERENCES_$_.413
+_OBJC_SELECTOR_REFERENCES_.415
+_OBJC_SELECTOR_REFERENCES_.417
+_OBJC_CLASSLIST_REFERENCES_$_.420
+_OBJC_SELECTOR_REFERENCES_.422
+_OBJC_SELECTOR_REFERENCES_.424
+_OBJC_SELECTOR_REFERENCES_.426
+_OBJC_SELECTOR_REFERENCES_.428
+_OBJC_CLASSLIST_REFERENCES_$_.429
+_OBJC_SELECTOR_REFERENCES_.431
+_OBJC_SELECTOR_REFERENCES_.433
+_OBJC_SELECTOR_REFERENCES_.435
+_OBJC_SELECTOR_REFERENCES_.437
+_OBJC_SELECTOR_REFERENCES_.441
+_OBJC_CLASSLIST_REFERENCES_$_.444
+_OBJC_SELECTOR_REFERENCES_.446
+_OBJC_SELECTOR_REFERENCES_.448
+_OBJC_SELECTOR_REFERENCES_.450
+_OBJC_SELECTOR_REFERENCES_.452
+_OBJC_CLASSLIST_REFERENCES_$_.453
+_OBJC_SELECTOR_REFERENCES_.457
+_OBJC_SELECTOR_REFERENCES_.463
+_OBJC_SELECTOR_REFERENCES_.467
+_OBJC_SELECTOR_REFERENCES_.469
+_OBJC_SELECTOR_REFERENCES_.473
+_OBJC_SELECTOR_REFERENCES_.475
+_OBJC_SELECTOR_REFERENCES_.477
+_OBJC_SELECTOR_REFERENCES_.481
+_OBJC_SELECTOR_REFERENCES_.485
+_OBJC_SELECTOR_REFERENCES_.491
+_OBJC_SELECTOR_REFERENCES_.499
+_OBJC_SELECTOR_REFERENCES_.509
+_OBJC_SELECTOR_REFERENCES_.511
+_OBJC_SELECTOR_REFERENCES_.517
+_OBJC_SELECTOR_REFERENCES_.519
+_OBJC_SELECTOR_REFERENCES_.521
+_OBJC_SELECTOR_REFERENCES_.528
+_OBJC_SELECTOR_REFERENCES_.530
+_OBJC_CLASSLIST_REFERENCES_$_.531
+_OBJC_SELECTOR_REFERENCES_.533
+_OBJC_SELECTOR_REFERENCES_.535
+_OBJC_SELECTOR_REFERENCES_.537
+_OBJC_SELECTOR_REFERENCES_.539
+_OBJC_SELECTOR_REFERENCES_.543
+_OBJC_SELECTOR_REFERENCES_.549
+_OBJC_SELECTOR_REFERENCES_.551
+_OBJC_SELECTOR_REFERENCES_.555
+_OBJC_SELECTOR_REFERENCES_.557
+___block_descriptor_40_e8_32r_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.567
+_OBJC_SELECTOR_REFERENCES_.571
+_OBJC_SELECTOR_REFERENCES_.573
+_OBJC_SELECTOR_REFERENCES_.575
+_OBJC_SELECTOR_REFERENCES_.577
+_OBJC_CLASSLIST_REFERENCES_$_.580
+_OBJC_SELECTOR_REFERENCES_.584
+_OBJC_SELECTOR_REFERENCES_.586
+_OBJC_SELECTOR_REFERENCES_.588
+___block_descriptor_40_e8_32r_e24_v16?0"NSNotification"8l
+_OBJC_SELECTOR_REFERENCES_.595
+_OBJC_CLASSLIST_REFERENCES_$_.604
+_OBJC_SELECTOR_REFERENCES_.606
+___block_literal_global.607
+_OBJC_SELECTOR_REFERENCES_.611
+_OBJC_SELECTOR_REFERENCES_.615
+___block_descriptor_48_e8_32s40r_e24_v16?0"NSNotification"8l
+___block_literal_global.620
+___block_descriptor_32_e24_v16?0"NSNotification"8l
+___block_literal_global.624
+_OBJC_SELECTOR_REFERENCES_.628
+_OBJC_SELECTOR_REFERENCES_.630
+_OBJC_CLASSLIST_REFERENCES_$_.639
+_OBJC_SELECTOR_REFERENCES_.641
+_OBJC_SELECTOR_REFERENCES_.645
+_OBJC_SELECTOR_REFERENCES_.651
+_OBJC_CLASSLIST_REFERENCES_$_.652
+_OBJC_SELECTOR_REFERENCES_.654
+_OBJC_SELECTOR_REFERENCES_.656
+_OBJC_SELECTOR_REFERENCES_.658
+_OBJC_SELECTOR_REFERENCES_.660
+_OBJC_SELECTOR_REFERENCES_.664
+_OBJC_CLASSLIST_REFERENCES_$_.665
+_OBJC_SELECTOR_REFERENCES_.667
+_OBJC_SELECTOR_REFERENCES_.673
+_OBJC_SELECTOR_REFERENCES_.675
+_OBJC_CLASSLIST_REFERENCES_$_.676
+_OBJC_SELECTOR_REFERENCES_.678
+___block_descriptor_64_e8_32bs40s48bs56bs_e49_v36?0"NSData"8"NSURLResponse"16"NSError"24B32l
+_OBJC_SELECTOR_REFERENCES_.689
+_OBJC_CLASSLIST_REFERENCES_$_.692
+_OBJC_SELECTOR_REFERENCES_.694
+_OBJC_CLASSLIST_REFERENCES_$_.695
+_OBJC_CLASSLIST_REFERENCES_$_.696
+_OBJC_SELECTOR_REFERENCES_.698
+_OBJC_SELECTOR_REFERENCES_.702
+_send:completionHandler:.counter
+_OBJC_CLASSLIST_REFERENCES_$_.705
+_OBJC_CLASSLIST_REFERENCES_$_.706
+_OBJC_SELECTOR_REFERENCES_.708
+_OBJC_SELECTOR_REFERENCES_.710
+_sendRequest:completionHandler:.counter
+_OBJC_SELECTOR_REFERENCES_.714
+_OBJC_SELECTOR_REFERENCES_.718
+_OBJC_CLASSLIST_REFERENCES_$_.719
+_OBJC_SELECTOR_REFERENCES_.721
+_OBJC_SELECTOR_REFERENCES_.723
+_OBJC_SELECTOR_REFERENCES_.725
+_OBJC_SELECTOR_REFERENCES_.727
+_OBJC_SELECTOR_REFERENCES_.729
+_OBJC_SELECTOR_REFERENCES_.731
+_OBJC_SELECTOR_REFERENCES_.733
+_OBJC_SELECTOR_REFERENCES_.737
+_OBJC_SELECTOR_REFERENCES_.739
+_OBJC_SELECTOR_REFERENCES_.741
+_OBJC_SELECTOR_REFERENCES_.745
+_OBJC_SELECTOR_REFERENCES_.755
+_OBJC_SELECTOR_REFERENCES_.757
+_OBJC_SELECTOR_REFERENCES_.759
+_OBJC_SELECTOR_REFERENCES_.765
+_clearOfflineEvents.offline_queue
+_OBJC_SELECTOR_REFERENCES_.770
+_OBJC_SELECTOR_REFERENCES_.774
+_OBJC_SELECTOR_REFERENCES_.776
+_OBJC_SELECTOR_REFERENCES_.780
+_OBJC_SELECTOR_REFERENCES_.782
+_OBJC_SELECTOR_REFERENCES_.784
+_OBJC_SELECTOR_REFERENCES_.788
+_OBJC_SELECTOR_REFERENCES_.790
+_OBJC_SELECTOR_REFERENCES_.792
+_OBJC_SELECTOR_REFERENCES_.798
+___block_descriptor_40_e8_32r_e17_v16?0"NSArray"8l
+___block_descriptor_32_e17_v16?0"NSArray"8l
+___block_literal_global.801
+_OBJC_SELECTOR_REFERENCES_.807
+_OBJC_SELECTOR_REFERENCES_.809
+_OBJC_CLASSLIST_REFERENCES_$_.810
+_OBJC_SELECTOR_REFERENCES_.815
+___block_descriptor_48_e8_32s40r_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.822
+_OBJC_SELECTOR_REFERENCES_.824
+_OBJC_SELECTOR_REFERENCES_.826
+_OBJC_SELECTOR_REFERENCES_.828
+_OBJC_SELECTOR_REFERENCES_.832
+___block_descriptor_56_e8_32s40s48s_e17_v16?0"NSArray"8l
+___block_literal_global.834
+_OBJC_SELECTOR_REFERENCES_.838
+___block_descriptor_56_e8_32s40s48s_e8_v12?0B8l
+_OBJC_SELECTOR_REFERENCES_.844
+_sendEventBlock:completionHandler:failureHandler:.counter
+_OBJC_CLASSLIST_REFERENCES_$_.847
+_OBJC_SELECTOR_REFERENCES_.849
+_OBJC_SELECTOR_REFERENCES_.861
+_OBJC_SELECTOR_REFERENCES_.863
+_OBJC_SELECTOR_REFERENCES_.867
+_OBJC_SELECTOR_REFERENCES_.873
+_OBJC_SELECTOR_REFERENCES_.877
+___block_descriptor_72_e8_32s40bs48bs56r64r_e49_v36?0"NSData"8"NSURLResponse"16"NSError"24B32l
+_OBJC_SELECTOR_REFERENCES_.879
+_OBJC_SELECTOR_REFERENCES_.881
+_OBJC_SELECTOR_REFERENCES_.897
+_OBJC_SELECTOR_REFERENCES_.901
+_OBJC_SELECTOR_REFERENCES_.907
+___block_descriptor_48_e8_32bs40bs_e49_v36?0"NSData"8"NSURLResponse"16"NSError"24B32l
+_OBJC_SELECTOR_REFERENCES_.919
+_OBJC_SELECTOR_REFERENCES_.921
+_OBJC_SELECTOR_REFERENCES_.923
+_OBJC_SELECTOR_REFERENCES_.925
+_OBJC_SELECTOR_REFERENCES_.927
+_OBJC_CLASSLIST_REFERENCES_$_.928
+_OBJC_SELECTOR_REFERENCES_.930
+_OBJC_SELECTOR_REFERENCES_.932
+_OBJC_CLASSLIST_REFERENCES_$_.937
+_OBJC_SELECTOR_REFERENCES_.939
+___block_descriptor_48_e8_32bs40s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.941
+___block_descriptor_40_e8_32bs_e46_v32?0"NSData"8"NSURLResponse"16"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.944
+_OBJC_SELECTOR_REFERENCES_.946
+_OBJC_SELECTOR_REFERENCES_.960
+_OBJC_SELECTOR_REFERENCES_.962
+_OBJC_SELECTOR_REFERENCES_.964
+_OBJC_SELECTOR_REFERENCES_.978
+_OBJC_SELECTOR_REFERENCES_.980
+_OBJC_CLASSLIST_REFERENCES_$_.981
+_OBJC_SELECTOR_REFERENCES_.983
+_OBJC_SELECTOR_REFERENCES_.989
+_OBJC_SELECTOR_REFERENCES_.993
+_OBJC_SELECTOR_REFERENCES_.995
+_OBJC_CLASSLIST_REFERENCES_$_.996
+_OBJC_SELECTOR_REFERENCES_.998
+_OBJC_SELECTOR_REFERENCES_.1000
+_OBJC_CLASSLIST_REFERENCES_$_.1001
+_OBJC_SELECTOR_REFERENCES_.1003
+_OBJC_SELECTOR_REFERENCES_.1005
+_OBJC_SELECTOR_REFERENCES_.1007
+_OBJC_SELECTOR_REFERENCES_.1009
+_OBJC_SELECTOR_REFERENCES_.1011
+_OBJC_SELECTOR_REFERENCES_.1013
+_OBJC_SELECTOR_REFERENCES_.1015
+_OBJC_SELECTOR_REFERENCES_.1017
+_OBJC_CLASSLIST_REFERENCES_$_.1018
+_OBJC_SELECTOR_REFERENCES_.1019
+_OBJC_SELECTOR_REFERENCES_.1021
+_OBJC_SELECTOR_REFERENCES_.1029
+___block_descriptor_48_e8_32s40s_e5_v8?0l
+___block_descriptor_40_e8_32bs_e49_v36?0"NSData"8"NSURLResponse"16"NSError"24B32l
+___block_descriptor_48_e8_32s40bs_e49_v36?0"NSData"8"NSURLResponse"16"NSError"24B32l
+_OBJC_SELECTOR_REFERENCES_.1063
+_OBJC_CLASSLIST_REFERENCES_$_.1064
+_OBJC_SELECTOR_REFERENCES_.1066
+_OBJC_SELECTOR_REFERENCES_.1070
+_OBJC_SELECTOR_REFERENCES_.1074
+_OBJC_SELECTOR_REFERENCES_.1090
+_OBJC_SELECTOR_REFERENCES_.1092
+_OBJC_CLASSLIST_REFERENCES_$_.1093
+_OBJC_SELECTOR_REFERENCES_.1095
+___block_descriptor_64_e8_32bs40s48bs56r_e49_v36?0"NSData"8"NSURLResponse"16"NSError"24B32l
+_OBJC_SELECTOR_REFERENCES_.1100
+_OBJC_SELECTOR_REFERENCES_.1104
+_OBJC_SELECTOR_REFERENCES_.1108
+_OBJC_SELECTOR_REFERENCES_.1110
+_OBJC_SELECTOR_REFERENCES_.1112
+_OBJC_SELECTOR_REFERENCES_.1120
+_OBJC_SELECTOR_REFERENCES_.1122
+_OBJC_SELECTOR_REFERENCES_.1128
+_OBJC_SELECTOR_REFERENCES_.1132
+_OBJC_CLASSLIST_REFERENCES_$_.1135
+_OBJC_SELECTOR_REFERENCES_.1137
+_OBJC_SELECTOR_REFERENCES_.1139
+___block_descriptor_64_e8_32s40r48r56r_e50_v32?0"RegionsV2"8"RegionsV2"16"NSDictionary"24l
+___block_literal_global.1142
+_OBJC_SELECTOR_REFERENCES_.1144
+_OBJC_SELECTOR_REFERENCES_.1146
+_OBJC_SELECTOR_REFERENCES_.1152
+_OBJC_SELECTOR_REFERENCES_.1156
+_OBJC_SELECTOR_REFERENCES_.1158
+_OBJC_SELECTOR_REFERENCES_.1164
+_OBJC_CLASSLIST_REFERENCES_$_.1175
+_OBJC_SELECTOR_REFERENCES_.1181
+_OBJC_SELECTOR_REFERENCES_.1185
+_OBJC_CLASSLIST_REFERENCES_$_.1186
+_OBJC_SELECTOR_REFERENCES_.1188
+_OBJC_SELECTOR_REFERENCES_.1192
+_OBJC_SELECTOR_REFERENCES_.1208
+_OBJC_SELECTOR_REFERENCES_.1212
+_OBJC_SELECTOR_REFERENCES_.1214
+_OBJC_SELECTOR_REFERENCES_.1216
+_OBJC_SELECTOR_REFERENCES_.1218
+_OBJC_SELECTOR_REFERENCES_.1220
+_OBJC_CLASSLIST_REFERENCES_$_.1223
+_OBJC_SELECTOR_REFERENCES_.1225
+_OBJC_SELECTOR_REFERENCES_.1227
+_OBJC_SELECTOR_REFERENCES_.1229
+_OBJC_SELECTOR_REFERENCES_.1231
+_OBJC_SELECTOR_REFERENCES_.1233
+_OBJC_SELECTOR_REFERENCES_.1237
+__OBJC_$_CLASS_METHODS_SASCollector
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_CLLocationManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_CLLocationManagerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_CLLocationManagerDelegate
+__OBJC_PROTOCOL_$_CLLocationManagerDelegate
+__OBJC_LABEL_PROTOCOL_$_CLLocationManagerDelegate
+__OBJC_CLASS_PROTOCOLS_$_SASCollector
+__OBJC_METACLASS_RO_$_SASCollector
+__OBJC_$_INSTANCE_METHODS_SASCollector
+_OBJC_IVAR_$_SASCollector._locationOnly
+_OBJC_IVAR_$_SASCollector._validCurrentLoc
+_OBJC_IVAR_$_SASCollector._currentlyRequestingGEOFences
+_OBJC_IVAR_$_SASCollector._SASCollectorDisabled
+_OBJC_IVAR_$_SASCollector._isInitialized
+_OBJC_IVAR_$_SASCollector._developerInitialize
+_OBJC_IVAR_$_SASCollector._locationMonitoringDisabled
+_OBJC_IVAR_$_SASCollector._inBackground
+_OBJC_IVAR_$_SASCollector._ignoreLoadID
+_OBJC_IVAR_$_SASCollector._inOfflineQueue
+_OBJC_IVAR_$_SASCollector._appId
+_OBJC_IVAR_$_SASCollector._tenantId
+_OBJC_IVAR_$_SASCollector._appVersion
+_OBJC_IVAR_$_SASCollector._mobileMessagingDelegate2
+_OBJC_IVAR_$_SASCollector._locManager
+_OBJC_IVAR_$_SASCollector._currentRegionIdentifier
+_OBJC_IVAR_$_SASCollector._currentlyRangedBeacon
+_OBJC_IVAR_$_SASCollector._currentBeaconRegion
+_OBJC_IVAR_$_SASCollector._storageProvider
+_OBJC_IVAR_$_SASCollector._timer
+_OBJC_IVAR_$_SASCollector._tagServer
+_OBJC_IVAR_$_SASCollector._applicationWillEnterForegroundNotification
+_OBJC_IVAR_$_SASCollector._applicationDidFinishLaunchingNotification
+_OBJC_IVAR_$_SASCollector._applicationWillResignActiveNotification
+_OBJC_IVAR_$_SASCollector._applicationWillTerminateNotification
+_OBJC_IVAR_$_SASCollector._applicationDidReceiveRemoteNotification
+_OBJC_IVAR_$_SASCollector._session
+_OBJC_IVAR_$_SASCollector._CSI
+_OBJC_IVAR_$_SASCollector._sessionTimeout
+_OBJC_IVAR_$_SASCollector._maxSessionLength
+_OBJC_IVAR_$_SASCollector._maxSessionTimeoutTime
+_OBJC_IVAR_$_SASCollector._idleTimeoutTime
+_OBJC_IVAR_$_SASCollector._loadId
+_OBJC_IVAR_$_SASCollector._loadURI
+_OBJC_IVAR_$_SASCollector._sessionID
+_OBJC_IVAR_$_SASCollector._mobileMessageController
+_OBJC_IVAR_$_SASCollector._dispatchGroup
+_OBJC_IVAR_$_SASCollector._lastDeviceId
+_OBJC_IVAR_$_SASCollector._dateProvider
+_OBJC_IVAR_$_SASCollector._lastIdentityValue
+_OBJC_IVAR_$_SASCollector._lastIdentityType
+_OBJC_IVAR_$_SASCollector._popupWindow
+_OBJC_IVAR_$_SASCollector._originalWindow
+__OBJC_$_INSTANCE_VARIABLES_SASCollector
+__OBJC_$_PROP_LIST_SASCollector
+__OBJC_CLASS_RO_$_SASCollector
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollector.m
+SASCollector/SASCollector/SASCollector.m
+llvm.loop.mustprogress
+__30-[SASCollector getNewRegions:]_block_invoke.1141
+__destroy_helper_block_e8_32s40r48r56r
+__copy_helper_block_e8_32s40r48r56r
+__30-[SASCollector getNewRegions:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56r
+__copy_helper_block_e8_32b40s48b56r
+__50-[SASCollector requestNewGEOFence:failureHandler:]_block_invoke
+__58-[SASCollector detachIdentityWithoutSendingNewFocusEvent:]_block_invoke
+__copy_helper_block_e8_32s40b
+__31-[SASCollector detachIdentity:]_block_invoke
+__45-[SASCollector identity:withType:completion:]_block_invoke
+__copy_helper_block_e8_32s40s
+__27-[SASCollector handlePush:]_block_invoke
+__copy_helper_block_e8_32b
+__copy_helper_block_e8_32b40s
+__43-[SASCollector downloadImage:onCompletion:]_block_invoke_2
+__43-[SASCollector downloadImage:onCompletion:]_block_invoke
+__destroy_helper_block_e8_32s40s
+__copy_helper_block_e8_32b40b
+__69-[SASCollector registerDeviceToken:completionHandler:failureHandler:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56r64r
+__copy_helper_block_e8_32s40b48b56r64r
+__59-[SASCollector sendEvent:completionHandler:failureHandler:]_block_invoke
+__26-[SASCollector sendEvent:]_block_invoke.842
+__26-[SASCollector sendEvent:]_block_invoke
+__27-[SASCollector sendEvents:]_block_invoke.833
+__27-[SASCollector sendEvents:]_block_invoke
+__34-[SASCollector clearOfflineEvents]_block_invoke_2.811
+__34-[SASCollector clearOfflineEvents]_block_invoke.800
+__34-[SASCollector clearOfflineEvents]_block_invoke_2
+__34-[SASCollector clearOfflineEvents]_block_invoke
+__destroy_helper_block_e8_32s40s48s56s
+__copy_helper_block_e8_32b40s48b56b
+__87-[SASCollector determineIARequest:completionHandler:failureHandler:badResponseHandler:]_block_invoke
+__36-[SASCollector initializeCollection]_block_invoke_4
+__36-[SASCollector initializeCollection]_block_invoke_3.623
+__36-[SASCollector initializeCollection]_block_invoke_2.619
+__36-[SASCollector initializeCollection]_block_invoke.618
+__destroy_helper_block_e8_32s40r
+__copy_helper_block_e8_32s40r
+__36-[SASCollector initializeCollection]_block_invoke_3
+__36-[SASCollector initializeCollection]_block_invoke_2.601
+__36-[SASCollector initializeCollection]_block_invoke.598
+__36-[SASCollector initializeCollection]_block_invoke_2
+__36-[SASCollector initializeCollection]_block_invoke
+__destroy_helper_block_e8_32r
+__copy_helper_block_e8_32r
+__36-[SASCollector handleStartupEvents:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+__37+[SASCollector createSharedSingleton]_block_invoke
+/Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/dispatch/once.h
+__CISDKInitializer_block_invoke
+CISDKInitializer
+onUncaughtException
+SASCollector/SASCollector/SASCollector.h
+-[SASStorageProvider initWithFileManager:]
+-[SASStorageProvider init]
+-[SASStorageProvider initializeObject]
+-[SASStorageProvider deleteAllEvents]
+-[SASStorageProvider deleteEventsForCSI:]
+-[SASStorageProvider deleteEventsForCSIPath:]
+-[SASStorageProvider saveEvent:]
+-[SASStorageProvider mostRecentCSI]
+-[SASStorageProvider getEventBlocks]
+-[SASStorageProvider deleteAllRegions]
+-[SASStorageProvider loadRegions]
+-[SASStorageProvider saveRegions:]
+-[SASStorageProvider removeStackTrace]
+-[SASStorageProvider eventCacheDirectory]
+-[SASStorageProvider setEventCacheDirectory:]
+-[SASStorageProvider regionCacheDirectory]
+-[SASStorageProvider setRegionCacheDirectory:]
+-[SASStorageProvider crashCacheDirectory]
+-[SASStorageProvider setCrashCacheDirectory:]
+-[SASStorageProvider fm]
+-[SASStorageProvider setFm:]
+-[SASStorageProvider .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.5
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_CLASSLIST_REFERENCES_$_.24
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.55
+_OBJC_CLASSLIST_REFERENCES_$_.60
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_CLASSLIST_REFERENCES_$_.73
+_OBJC_SELECTOR_REFERENCES_.75
+_OBJC_SELECTOR_REFERENCES_.77
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_CLASSLIST_REFERENCES_$_.98
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.120
+_OBJC_CLASSLIST_REFERENCES_$_.121
+_OBJC_SELECTOR_REFERENCES_.123
+_OBJC_CLASSLIST_REFERENCES_$_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_CLASSLIST_REFERENCES_$_.133
+_OBJC_SELECTOR_REFERENCES_.135
+_OBJC_CLASSLIST_REFERENCES_$_.138
+_OBJC_CLASSLIST_REFERENCES_$_.139
+_OBJC_SELECTOR_REFERENCES_.143
+_OBJC_SELECTOR_REFERENCES_.145
+_OBJC_SELECTOR_REFERENCES_.147
+_OBJC_SELECTOR_REFERENCES_.149
+_OBJC_SELECTOR_REFERENCES_.151
+__OBJC_METACLASS_RO_$_SASStorageProvider
+__OBJC_$_INSTANCE_METHODS_SASStorageProvider
+_OBJC_IVAR_$_SASStorageProvider._eventCacheDirectory
+_OBJC_IVAR_$_SASStorageProvider._regionCacheDirectory
+_OBJC_IVAR_$_SASStorageProvider._crashCacheDirectory
+_OBJC_IVAR_$_SASStorageProvider._fm
+__OBJC_$_INSTANCE_VARIABLES_SASStorageProvider
+__OBJC_$_PROP_LIST_SASStorageProvider
+__OBJC_CLASS_RO_$_SASStorageProvider
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASStorageProvider.m
+SASCollector/SASCollector/SASStorageProvider.m
+-[SASSerializable dictionary]
+-[SASSerializable eventName]
+-[SASSerializable newSessionNotAllowed]
+-[SASSerializable setNewSessionNotAllowed:]
+_OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_SELECTOR_REFERENCES_.5
+_OBJC_CLASSLIST_REFERENCES_$_.12
+_OBJC_CLASSLIST_REFERENCES_$_.18
+_OBJC_SELECTOR_REFERENCES_.20
+__OBJC_METACLASS_RO_$_SASSerializable
+__OBJC_$_INSTANCE_METHODS_SASSerializable
+_OBJC_IVAR_$_SASSerializable._newSessionNotAllowed
+__OBJC_$_INSTANCE_VARIABLES_SASSerializable
+__OBJC_$_PROP_LIST_SASSerializable
+__OBJC_CLASS_RO_$_SASSerializable
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASSerializable.m
+SASCollector/SASCollector/SASSerializable.h
+SASCollector/SASCollector/SASSerializable.m
++[SASFormatVender sharedInstance]
+___33+[SASFormatVender sharedInstance]_block_invoke
+-[SASFormatVender init]
++[SASFormatVender stringFromDate:]
++[SASFormatVender dateFromString:]
+-[SASFormatVender formatter]
+-[SASFormatVender setFormatter:]
+-[SASFormatVender .cxx_destruct]
+_sharedInstance.onceFormatToken
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_CLASSLIST_REFERENCES_$_.6
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_CLASSLIST_REFERENCES_$_.16
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_CLASSLIST_REFERENCES_$_.29
+__OBJC_$_CLASS_METHODS_SASFormatVender
+__OBJC_METACLASS_RO_$_SASFormatVender
+__OBJC_$_INSTANCE_METHODS_SASFormatVender
+_OBJC_IVAR_$_SASFormatVender._formatter
+__OBJC_$_INSTANCE_VARIABLES_SASFormatVender
+__OBJC_$_PROP_LIST_SASFormatVender
+__OBJC_CLASS_RO_$_SASFormatVender
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASFormatVender.m
+SASCollector/SASCollector/SASFormatVender.m
+__33+[SASFormatVender sharedInstance]_block_invoke
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollectorEvents.m
+-[SASDateProvider date]
+-[SASDateProvider dateWithTimeInterval:sinceDate:]
+-[SASDateProvider dateWithTimeIntervalSinceNow:]
+-[SASSkewingDateProvider initWithSkew:]
+-[SASSkewingDateProvider date]
+-[SASSkewingDateProvider dateWithTimeInterval:sinceDate:]
+-[SASSkewingDateProvider dateWithTimeIntervalSinceNow:]
+-[SASSkewingDateProvider skew]
+-[SASSkewingDateProvider setSkew:]
+__OBJC_METACLASS_RO_$_SASDateProvider
+__OBJC_$_INSTANCE_METHODS_SASDateProvider
+__OBJC_CLASS_RO_$_SASDateProvider
+_OBJC_IVAR_$_SASSkewingDateProvider._skew
+__OBJC_METACLASS_RO_$_SASSkewingDateProvider
+__OBJC_$_INSTANCE_METHODS_SASSkewingDateProvider
+__OBJC_$_INSTANCE_VARIABLES_SASSkewingDateProvider
+__OBJC_$_PROP_LIST_SASSkewingDateProvider
+__OBJC_CLASS_RO_$_SASSkewingDateProvider
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASDateProvider.m
+SASCollector/SASCollector/SASDateProvider.h
+SASCollector/SASCollector/SASDateProvider.m
+-[SASIA_AbstractAd initWithFrame:]
+-[SASIA_AbstractAd setModalPresentationStyle:]
+-[SASIA_AbstractAd awakeFromNib]
+-[SASIA_AbstractAd setHostViewController:]
+-[SASIA_AbstractAd hostViewController]
+-[SASIA_AbstractAd delegateRespondsTo:]
+-[SASIA_AbstractAd allowContentCaching:]
+-[SASIA_AbstractAd webView]
+-[SASIA_AbstractAd viewController]
+-[SASIA_AbstractAd didChangeVisibility:]
+-[SASIA_AbstractAd executeJavaScript:jsStringExpression:completionHandler:]
+-[SASIA_AbstractAd isInterstitial]
+-[SASIA_AbstractAd isLoaded]
+-[SASIA_AbstractAd isDefaultLoaded]
+-[SASIA_AbstractAd setLoaded:default:fcid:]
+-[SASIA_AbstractAd load:]
+-[SASIA_AbstractAd close]
+-[SASIA_AbstractAd isActionInBrowser]
+-[SASIA_AbstractAd setActionInBrowser:]
+-[SASIA_AbstractAd actionTransitionStyle]
+-[SASIA_AbstractAd setActionTransitionStyle:]
+-[SASIA_AbstractAd isActionInProgress]
+-[SASIA_AbstractAd actionViewController]
+-[SASIA_AbstractAd cancelAction]
+-[SASIA_AbstractAd didLoad:]
+___28-[SASIA_AbstractAd didLoad:]_block_invoke
+-[SASIA_AbstractAd gatherAdParameters:]
+-[SASIA_AbstractAd didFailLoad:error:failingUrl:]
+-[SASIA_AbstractAd willClose:]
+-[SASIA_AbstractAd didClose:]
+-[SASIA_AbstractAd willBeginAction:url:]
+-[SASIA_AbstractAd didFinishAction:]
+-[SASIA_AbstractAd willExpand:url:]
+-[SASIA_AbstractAd didFinishExpand:]
+-[SASIA_AbstractAd willResize:size:]
+-[SASIA_AbstractAd didFinishResize:]
+-[SASIA_AbstractAd delegate]
+-[SASIA_AbstractAd setDelegate:]
+-[SASIA_AbstractAd fcid]
+-[SASIA_AbstractAd setFcid:]
+-[SASIA_AbstractAd modalPresentationStyle]
+-[SASIA_AbstractAd mraidView]
+-[SASIA_AbstractAd setMraidView:]
+-[SASIA_AbstractAd setLoaded:]
+-[SASIA_AbstractAd setDefaultLoaded:]
+-[SASIA_AbstractAd .cxx_destruct]
+_OBJC_IVAR_$_SASIA_AbstractAd._hostViewController
+_OBJC_IVAR_$_SASIA_AbstractAd._modalPresentationStyle
+_OBJC_IVAR_$_SASIA_AbstractAd._delegate
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_IVAR_$_SASIA_AbstractAd._loaded
+_OBJC_IVAR_$_SASIA_AbstractAd._defaultLoaded
+_OBJC_IVAR_$_SASIA_AbstractAd._fcid
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_CLASSLIST_REFERENCES_$_.53
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.73
+___block_descriptor_40_e8_32s_e20_v24?08"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.102
+_OBJC_SELECTOR_REFERENCES_.108
+_OBJC_SELECTOR_REFERENCES_.110
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.118
+__OBJC_$_PROTOCOL_REFS_SASIA_MRAIDWebViewDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_SASIA_MRAIDWebViewDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SASIA_MRAIDWebViewDelegate
+__OBJC_PROTOCOL_$_SASIA_MRAIDWebViewDelegate
+__OBJC_LABEL_PROTOCOL_$_SASIA_MRAIDWebViewDelegate
+__OBJC_CLASS_PROTOCOLS_$_SASIA_AbstractAd
+__OBJC_METACLASS_RO_$_SASIA_AbstractAd
+__OBJC_$_INSTANCE_METHODS_SASIA_AbstractAd
+__OBJC_$_INSTANCE_VARIABLES_SASIA_AbstractAd
+__OBJC_$_PROP_LIST_SASIA_AbstractAd
+__OBJC_CLASS_RO_$_SASIA_AbstractAd
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_AbstractAd.m
+SASCollector/SASIA/SASIA_AbstractAd.m
+SASCollector/SASIA/SASIA_AbstractAd.h
+__28-[SASIA_AbstractAd didLoad:]_block_invoke
+-[SASBeaconFence initWithEvent:beacon:region:]
+-[SASBeaconFence eventName]
+-[SASBeaconFence _eventName]
+-[SASBeaconFence set_eventName:]
+-[SASBeaconFence beacon_uuid]
+-[SASBeaconFence setBeacon_uuid:]
+-[SASBeaconFence beacon_major]
+-[SASBeaconFence setBeacon_major:]
+-[SASBeaconFence beacon_minor]
+-[SASBeaconFence setBeacon_minor:]
+-[SASBeaconFence geofence_id]
+-[SASBeaconFence setGeofence_id:]
+-[SASBeaconFence .cxx_destruct]
+_OBJC_IVAR_$_SASBeaconFence.__eventName
+_OBJC_IVAR_$_SASBeaconFence._beacon_uuid
+_OBJC_IVAR_$_SASBeaconFence._beacon_major
+_OBJC_IVAR_$_SASBeaconFence._beacon_minor
+_OBJC_IVAR_$_SASBeaconFence._geofence_id
+__OBJC_METACLASS_RO_$_SASBeaconFence
+__OBJC_$_INSTANCE_METHODS_SASBeaconFence
+__OBJC_$_INSTANCE_VARIABLES_SASBeaconFence
+__OBJC_$_PROP_LIST_SASBeaconFence
+__OBJC_CLASS_RO_$_SASBeaconFence
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASBeaconFence.m
+SASCollector/SASCollector/SASBeaconFence.m
+SASCollector/SASCollector/SASBeaconFence.h
+-[SASIA_InterstitialWebBrowser init]
+-[SASIA_InterstitialWebBrowser makeView]
+-[SASIA_InterstitialWebBrowser positionForBar:]
+-[SASIA_InterstitialWebBrowser adjustButtons]
+-[SASIA_InterstitialWebBrowser browseBackward]
+-[SASIA_InterstitialWebBrowser browseForward]
+-[SASIA_InterstitialWebBrowser refresh]
+-[SASIA_InterstitialWebBrowser webViewDidStartLoad:]
+-[SASIA_InterstitialWebBrowser webViewDidFinishLoad:]
+-[SASIA_InterstitialWebBrowser webView:didFailNavigation:withError:]
+-[SASIA_InterstitialWebBrowser webView:decidePolicyForNavigationAction:decisionHandler:]
+-[SASIA_InterstitialWebBrowser webView:didFailProvisionalNavigation:withError:]
+-[SASIA_InterstitialWebBrowser webView:didFailLoadWithError:]
+___61-[SASIA_InterstitialWebBrowser webView:didFailLoadWithError:]_block_invoke
+___61-[SASIA_InterstitialWebBrowser webView:didFailLoadWithError:]_block_invoke_2
+-[SASIA_InterstitialWebBrowser showFrom:url:didCloseBlock:]
+___59-[SASIA_InterstitialWebBrowser showFrom:url:didCloseBlock:]_block_invoke
+___59-[SASIA_InterstitialWebBrowser showFrom:url:didCloseBlock:]_block_invoke.202
+-[SASIA_InterstitialWebBrowser close]
+-[SASIA_InterstitialWebBrowser view]
+-[SASIA_InterstitialWebBrowser setView:]
+-[SASIA_InterstitialWebBrowser toolbar]
+-[SASIA_InterstitialWebBrowser setToolbar:]
+-[SASIA_InterstitialWebBrowser webView]
+-[SASIA_InterstitialWebBrowser setWebView:]
+-[SASIA_InterstitialWebBrowser interstitial]
+-[SASIA_InterstitialWebBrowser setInterstitial:]
+-[SASIA_InterstitialWebBrowser transitionStyle]
+-[SASIA_InterstitialWebBrowser setTransitionStyle:]
+-[SASIA_InterstitialWebBrowser .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.13
+_OBJC_CLASSLIST_REFERENCES_$_.23
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_CLASSLIST_REFERENCES_$_.38
+_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_CLASSLIST_REFERENCES_$_.45
+_OBJC_CLASSLIST_REFERENCES_$_.54
+_OBJC_SELECTOR_REFERENCES_.56
+_OBJC_CLASSLIST_REFERENCES_$_.57
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_SELECTOR_REFERENCES_.68
+_OBJC_CLASSLIST_REFERENCES_$_.69
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_CLASSLIST_REFERENCES_$_.117
+_OBJC_SELECTOR_REFERENCES_.127
+_OBJC_SELECTOR_REFERENCES_.129
+_OBJC_SELECTOR_REFERENCES_.133
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_SELECTOR_REFERENCES_.141
+_OBJC_CLASSLIST_REFERENCES_$_.144
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_SELECTOR_REFERENCES_.158
+_OBJC_SELECTOR_REFERENCES_.160
+_OBJC_SELECTOR_REFERENCES_.162
+_OBJC_SELECTOR_REFERENCES_.164
+_OBJC_CLASSLIST_REFERENCES_$_.165
+_OBJC_SELECTOR_REFERENCES_.169
+_OBJC_CLASSLIST_REFERENCES_$_.170
+___block_descriptor_32_e23_v16?0"UIAlertAction"8l
+_OBJC_SELECTOR_REFERENCES_.175
+_OBJC_SELECTOR_REFERENCES_.177
+_OBJC_SELECTOR_REFERENCES_.179
+_OBJC_SELECTOR_REFERENCES_.181
+___block_descriptor_40_e8_32s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.184
+_OBJC_CLASSLIST_REFERENCES_$_.185
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_SELECTOR_REFERENCES_.189
+_OBJC_SELECTOR_REFERENCES_.191
+_OBJC_SELECTOR_REFERENCES_.193
+_OBJC_SELECTOR_REFERENCES_.195
+_OBJC_SELECTOR_REFERENCES_.197
+_OBJC_SELECTOR_REFERENCES_.199
+_OBJC_SELECTOR_REFERENCES_.201
+_OBJC_CLASSLIST_REFERENCES_$_.203
+_OBJC_SELECTOR_REFERENCES_.205
+_OBJC_SELECTOR_REFERENCES_.207
+_OBJC_SELECTOR_REFERENCES_.209
+__OBJC_$_PROTOCOL_REFS_WKNavigationDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_WKNavigationDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_WKNavigationDelegate
+__OBJC_PROTOCOL_$_WKNavigationDelegate
+__OBJC_LABEL_PROTOCOL_$_WKNavigationDelegate
+__OBJC_$_PROTOCOL_REFS_UIBarPositioningDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UIBarPositioningDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_UIBarPositioningDelegate
+__OBJC_PROTOCOL_$_UIBarPositioningDelegate
+__OBJC_LABEL_PROTOCOL_$_UIBarPositioningDelegate
+__OBJC_$_PROTOCOL_REFS_UIToolbarDelegate
+__OBJC_PROTOCOL_$_UIToolbarDelegate
+__OBJC_LABEL_PROTOCOL_$_UIToolbarDelegate
+__OBJC_CLASS_PROTOCOLS_$_SASIA_InterstitialWebBrowser
+__OBJC_METACLASS_RO_$_SASIA_InterstitialWebBrowser
+__OBJC_$_INSTANCE_METHODS_SASIA_InterstitialWebBrowser
+_OBJC_IVAR_$_SASIA_InterstitialWebBrowser._view
+_OBJC_IVAR_$_SASIA_InterstitialWebBrowser._toolbar
+_OBJC_IVAR_$_SASIA_InterstitialWebBrowser._webView
+_OBJC_IVAR_$_SASIA_InterstitialWebBrowser._interstitial
+_OBJC_IVAR_$_SASIA_InterstitialWebBrowser._transitionStyle
+__OBJC_$_INSTANCE_VARIABLES_SASIA_InterstitialWebBrowser
+__OBJC_$_PROP_LIST_SASIA_InterstitialWebBrowser
+__OBJC_CLASS_RO_$_SASIA_InterstitialWebBrowser
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_InterstitialWebBrowser.m
+SASCollector/SASIA/SASIA_InterstitialWebBrowser.m
+SASCollector/SASIA/SASIA_InterstitialWebBrowser.h
+__59-[SASIA_InterstitialWebBrowser showFrom:url:didCloseBlock:]_block_invoke.202
+__59-[SASIA_InterstitialWebBrowser showFrom:url:didCloseBlock:]_block_invoke
+__61-[SASIA_InterstitialWebBrowser webView:didFailLoadWithError:]_block_invoke_2
+__61-[SASIA_InterstitialWebBrowser webView:didFailLoadWithError:]_block_invoke
+runOnMainQueueWithoutDeadlocking2
+-[SASCNetworkOperationBase init]
+-[SASCNetworkOperationBase setReady:]
+-[SASCNetworkOperationBase isReady]
+-[SASCNetworkOperationBase setExecuting:]
+-[SASCNetworkOperationBase isExecuting]
+-[SASCNetworkOperationBase setFinished:]
+-[SASCNetworkOperationBase isFinished]
+-[SASCNetworkOperationBase isAsynchronous]
+-[SASCNetworkOperationBase start]
+-[SASCNetworkOperationBase finish]
+_OBJC_IVAR_$_SASCNetworkOperationBase._ready
+_OBJC_IVAR_$_SASCNetworkOperationBase._executing
+_OBJC_IVAR_$_SASCNetworkOperationBase._finished
+__OBJC_METACLASS_RO_$_SASCNetworkOperationBase
+__OBJC_$_INSTANCE_METHODS_SASCNetworkOperationBase
+__OBJC_$_INSTANCE_VARIABLES_SASCNetworkOperationBase
+__OBJC_CLASS_RO_$_SASCNetworkOperationBase
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCNetworkOperationBase.m
+SASCollector/SASCollector/SASCNetworkOperationBase.m
+-[RegionV2 initWithData:]
+-[RegionV2 initWithDictionary:withMaxRadius:]
+-[RegionV2 setIdentifier:]
+-[RegionV2 isBounding]
+-[RegionV2 prepareForStorage]
+-[RegionV2 transformToRegion]
+-[RegionV2 transformToRegionWithIdentifier:]
+-[RegionV2 containsCoordinate:]
+-[RegionV2 latitude]
+-[RegionV2 setLatitude:]
+-[RegionV2 longitude]
+-[RegionV2 setLongitude:]
+-[RegionV2 radius]
+-[RegionV2 setRadius:]
+-[RegionV2 identifier]
+-[RegionV2 beacons]
+-[RegionV2 setBeacons:]
+-[RegionV2 transformedRegion]
+-[RegionV2 setTransformedRegion:]
+-[RegionV2 .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_CLASSLIST_REFERENCES_$_.34
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_CLASSLIST_REFERENCES_$_.59
+_OBJC_CLASSLIST_REFERENCES_$_.66
+_OBJC_SELECTOR_REFERENCES_.72
+__OBJC_METACLASS_RO_$_RegionV2
+__OBJC_$_INSTANCE_METHODS_RegionV2
+_OBJC_IVAR_$_RegionV2.boundingRegion
+_OBJC_IVAR_$_RegionV2._latitude
+_OBJC_IVAR_$_RegionV2._longitude
+_OBJC_IVAR_$_RegionV2._radius
+_OBJC_IVAR_$_RegionV2._identifier
+_OBJC_IVAR_$_RegionV2._beacons
+_OBJC_IVAR_$_RegionV2._transformedRegion
+__OBJC_$_INSTANCE_VARIABLES_RegionV2
+__OBJC_$_PROP_LIST_RegionV2
+__OBJC_CLASS_RO_$_RegionV2
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/RegionV2.m
+SASCollector/SASCollector/RegionV2.m
+SASCollector/SASCollector/RegionV2.h
++[SASIA_AdRequest prefixedDomain:]
++[SASIA_AdRequest setDomain:]
++[SASIA_AdRequest domain]
++[SASIA_AdRequest setCustomerId:]
++[SASIA_AdRequest customerId]
+-[SASIA_AdRequest initWithTags:]
+-[SASIA_AdRequest initWithDomain:customerId:tags:]
+___50-[SASIA_AdRequest initWithDomain:customerId:tags:]_block_invoke
+-[SASIA_AdRequest initWithURL:tags:]
+___36-[SASIA_AdRequest initWithURL:tags:]_block_invoke
+-[SASIA_AdRequest initWithURL:]
+-[SASIA_AdRequest description]
+-[SASIA_AdRequest baseURL]
+-[SASIA_AdRequest setBaseURL:]
+-[SASIA_AdRequest requestURL]
+-[SASIA_AdRequest setRequestURL:]
+-[SASIA_AdRequest .cxx_destruct]
+_domain
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_customerId
+_OBJC_CLASSLIST_REFERENCES_$_.20
+_OBJC_CLASSLIST_REFERENCES_$_.25
+___block_descriptor_40_e8_32s_e15_v32?0816^B24l
+_OBJC_SELECTOR_REFERENCES_.54
+__OBJC_$_CLASS_METHODS_SASIA_AdRequest
+__OBJC_METACLASS_RO_$_SASIA_AdRequest
+__OBJC_$_INSTANCE_METHODS_SASIA_AdRequest
+_OBJC_IVAR_$_SASIA_AdRequest._baseURL
+_OBJC_IVAR_$_SASIA_AdRequest._requestURL
+__OBJC_$_INSTANCE_VARIABLES_SASIA_AdRequest
+__OBJC_$_PROP_LIST_SASIA_AdRequest
+__OBJC_CLASS_RO_$_SASIA_AdRequest
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_AdRequest.m
+SASCollector/SASIA/SASIA_AdRequest.m
+SASCollector/SASIA/SASIA_AdRequest.h
+__36-[SASIA_AdRequest initWithURL:tags:]_block_invoke
+__50-[SASIA_AdRequest initWithDomain:customerId:tags:]_block_invoke
+-[RegionsV2 init]
+-[RegionsV2 initWithHTTPResponse:withMaxRadius:]
+-[RegionsV2 regionWithIdentifier:]
+-[RegionsV2 boundingRegion]
+-[RegionsV2 setBoundingRegion:]
+-[RegionsV2 regions]
+-[RegionsV2 setRegions:]
+-[RegionsV2 .cxx_destruct]
+__OBJC_METACLASS_RO_$_RegionsV2
+__OBJC_$_INSTANCE_METHODS_RegionsV2
+_OBJC_IVAR_$_RegionsV2._boundingRegion
+_OBJC_IVAR_$_RegionsV2._regions
+__OBJC_$_INSTANCE_VARIABLES_RegionsV2
+__OBJC_$_PROP_LIST_RegionsV2
+__OBJC_CLASS_RO_$_RegionsV2
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/RegionsV2.m
+SASCollector/SASCollector/RegionsV2.m
+SASCollector/SASCollector/RegionsV2.h
+-[SASIA_AbstractAd(AdParameters) findAdParameter:withContents:IAParam:]
+-[SASIA_AbstractAd(AdParameters) buildDictionary:withObject:forKey:]
+__OBJC_$_CATEGORY_INSTANCE_METHODS_SASIA_AbstractAd_$_AdParameters
+__OBJC_$_CATEGORY_SASIA_AbstractAd_$_AdParameters
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASIA_AbstractAd+AdParameters.m
+SASCollector/SASCollector/SASIA_AbstractAd+AdParameters.m
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/LocationManagerEnums.m
+-[IAWebView safeAreaInsets]
+-[SASIA_MRAIDNotLoaded initWithMraidView:]
+-[SASIA_MRAIDNotLoaded didFinishLoading]
+-[SASIA_MRAIDNotLoaded beginFromState:]
+-[SASIA_MRAIDNotLoaded enterFromState:]
+___39-[SASIA_MRAIDNotLoaded enterFromState:]_block_invoke
+-[SASIA_MRAIDNotLoaded hostController]
+-[SASIA_MRAIDNotLoaded showInterstitially:strongReference:]
+-[SASIA_MRAIDNotLoaded closeState]
+-[SASIA_MRAIDNotLoaded doClose]
+-[SASIA_MRAIDNotLoaded willClose]
+-[SASIA_MRAIDNotLoaded close]
+-[SASIA_MRAIDNotLoaded expand:]
+-[SASIA_MRAIDNotLoaded setUseCustomClose:]
+-[SASIA_MRAIDNotLoaded resize]
+-[SASIA_MRAIDNotLoaded orientationPropertiesChanged]
+-[SASIA_MRAIDNotLoaded positionChanged]
+-[SASIA_MRAIDNotLoaded openLink:]
+-[SASIA_MRAIDNotLoaded closeLink]
+-[SASIA_MRAIDNotLoaded linkHostController]
+-[SASIA_MRAIDNotLoaded mraidStateValue]
+-[SASIA_MRAIDNotLoaded executeJavaScript:jsStringExpression:completionHandler:]
+-[SASIA_MRAIDNotLoaded htmlContent:]
+-[SASIA_MRAIDNotLoaded webViewWebContentProcessDidTerminate:]
+-[SASIA_MRAIDNotLoaded webView:decidePolicyForNavigationAction:decisionHandler:]
+-[SASIA_MRAIDNotLoaded mraidView]
+-[SASIA_MRAIDNotLoaded setMraidView:]
+-[SASIA_MRAIDNotLoaded url]
+-[SASIA_MRAIDNotLoaded setUrl:]
+-[SASIA_MRAIDNotLoaded .cxx_destruct]
+-[SASIA_MRAIDNestedState initWithState:]
+-[SASIA_MRAIDNestedState enterFromState:]
+-[SASIA_MRAIDNestedState hostController]
+-[SASIA_MRAIDNestedState mraidStateValue]
+-[SASIA_MRAIDNestedState nestedState]
+-[SASIA_MRAIDNestedState setNestedState:]
+-[SASIA_MRAIDNestedState nestedVisible]
+-[SASIA_MRAIDNestedState setNestedVisible:]
+-[SASIA_MRAIDNestedState .cxx_destruct]
++[SASIA_MRAIDLoading userAgent:completionHandler:]
+___50+[SASIA_MRAIDLoading userAgent:completionHandler:]_block_invoke
+-[SASIA_MRAIDLoading initToLoad:successState:]
+-[SASIA_MRAIDLoading beginFromState:]
+___37-[SASIA_MRAIDLoading beginFromState:]_block_invoke
+-[SASIA_MRAIDLoading closeState]
+-[SASIA_MRAIDLoading doClose]
+-[SASIA_MRAIDLoading mraidStateValue]
+-[SASIA_MRAIDLoading didFailLoadWithError:failingUrl:]
+-[SASIA_MRAIDLoading webView:didFailLoadWithError:]
+___51-[SASIA_MRAIDLoading webView:didFailLoadWithError:]_block_invoke
+-[SASIA_MRAIDLoading webView:didFinishNavigation:]
+-[SASIA_MRAIDLoading didFinishLoading]
+-[SASIA_MRAIDLoading successState]
+-[SASIA_MRAIDLoading setSuccessState:]
+-[SASIA_MRAIDLoading .cxx_destruct]
+-[SASIA_MRAIDLoaded closeState]
+-[SASIA_MRAIDLoaded openLink:]
+-[SASIA_MRAIDLoaded htmlContent:]
+-[SASIA_MRAIDLoaded executeJavaScript:jsStringExpression:completionHandler:]
+___76-[SASIA_MRAIDLoaded executeJavaScript:jsStringExpression:completionHandler:]_block_invoke
+___copy_helper_block_e8_32s40s48b
+-[SASIA_MRAIDLoaded webView:createWebViewWithConfiguration:forNavigationAction:windowFeatures:]
+-[SASIA_MRAIDLoaded webView:decidePolicyForNavigationAction:decisionHandler:]
+___77-[SASIA_MRAIDLoaded webView:decidePolicyForNavigationAction:decisionHandler:]_block_invoke
+___copy_helper_block_e8_32b40s48s
+-[SASIA_MRAIDHidden closeState]
+-[SASIA_MRAIDHidden openLink:]
+-[SASIA_MRAIDHidden mraidStateValue]
+-[SASIA_MRAIDResizable expand:]
+-[SASIA_MRAIDResizable willResize]
+-[SASIA_MRAIDDefault enterFromState:]
+-[SASIA_MRAIDDefault showInterstitially:strongReference:]
+-[SASIA_MRAIDDefault resize]
+-[SASIA_MRAIDDefault willClose]
+-[SASIA_MRAIDDefault doClose]
+-[SASIA_MRAIDDefault positionChanged]
+-[SASIA_MRAIDDefault mraidStateValue]
+-[SASIA_MRAIDDefaultInterstitial initForController:strongReference:]
+-[SASIA_MRAIDDefaultInterstitial beginFromState:]
+___49-[SASIA_MRAIDDefaultInterstitial beginFromState:]_block_invoke
+___49-[SASIA_MRAIDDefaultInterstitial beginFromState:]_block_invoke.396
+-[SASIA_MRAIDDefaultInterstitial showInterstitially:strongReference:]
+-[SASIA_MRAIDDefaultInterstitial expand:]
+-[SASIA_MRAIDDefaultInterstitial resize]
+-[SASIA_MRAIDDefaultInterstitial doClose]
+-[SASIA_MRAIDDefaultInterstitial close]
+-[SASIA_MRAIDDefaultInterstitial setUseCustomClose:]
+-[SASIA_MRAIDDefaultInterstitial orientationPropertiesChanged]
+-[SASIA_MRAIDDefaultInterstitial hostController]
+-[SASIA_MRAIDDefaultInterstitial setHostController:]
+-[SASIA_MRAIDDefaultInterstitial strongReference]
+-[SASIA_MRAIDDefaultInterstitial setStrongReference:]
+-[SASIA_MRAIDDefaultInterstitial interstitial]
+-[SASIA_MRAIDDefaultInterstitial setInterstitial:]
+-[SASIA_MRAIDDefaultInterstitial .cxx_destruct]
+-[SASIA_MRAIDExpandedBase expansionAutoresizingMask]
+-[SASIA_MRAIDExpandedBase expansionFrame]
+-[SASIA_MRAIDExpandedBase resize]
+-[SASIA_MRAIDExpandedBase mraidStateValue]
+-[SASIA_MRAIDExpanded closeState]
+-[SASIA_MRAIDExpanded beginFromState:]
+___38-[SASIA_MRAIDExpanded beginFromState:]_block_invoke
+___38-[SASIA_MRAIDExpanded beginFromState:]_block_invoke_2
+-[SASIA_MRAIDExpanded doClose]
+-[SASIA_MRAIDExpanded close]
+-[SASIA_MRAIDExpanded setUseCustomClose:]
+-[SASIA_MRAIDExpanded orientationPropertiesChanged]
+-[SASIA_MRAIDExpanded hostController]
+-[SASIA_MRAIDExpanded formerState]
+-[SASIA_MRAIDExpanded setFormerState:]
+-[SASIA_MRAIDExpanded interstitial]
+-[SASIA_MRAIDExpanded setInterstitial:]
+-[SASIA_MRAIDExpanded .cxx_destruct]
+-[SASIA_MRAIDTwoPartExpandedParent initToLoad:]
+-[SASIA_MRAIDTwoPartExpandedParent closeState]
+-[SASIA_MRAIDTwoPartExpandedParent beginFromState:]
+-[SASIA_MRAIDTwoPartExpandedParent doClose]
+-[SASIA_MRAIDTwoPartExpandedParent hostController]
+-[SASIA_MRAIDTwoPartExpandedParent didFailLoad:error:failingUrl:]
+-[SASIA_MRAIDTwoPartExpandedParent willBeginAction:url:]
+-[SASIA_MRAIDTwoPartExpandedParent didFinishAction:]
+-[SASIA_MRAIDTwoPartExpandedParent didClose:]
+-[SASIA_MRAIDTwoPartExpandedParent formerState]
+-[SASIA_MRAIDTwoPartExpandedParent setFormerState:]
+-[SASIA_MRAIDTwoPartExpandedParent childMraidView]
+-[SASIA_MRAIDTwoPartExpandedParent setChildMraidView:]
+-[SASIA_MRAIDTwoPartExpandedParent .cxx_destruct]
+-[SASIA_MRAIDTwoPartExpandedChild initForController:]
+-[SASIA_MRAIDTwoPartExpandedChild beginFromState:]
+___50-[SASIA_MRAIDTwoPartExpandedChild beginFromState:]_block_invoke
+___50-[SASIA_MRAIDTwoPartExpandedChild beginFromState:]_block_invoke_2
+-[SASIA_MRAIDTwoPartExpandedChild doClose]
+-[SASIA_MRAIDTwoPartExpandedChild close]
+-[SASIA_MRAIDTwoPartExpandedChild setUseCustomClose:]
+-[SASIA_MRAIDTwoPartExpandedChild orientationPropertiesChanged]
+-[SASIA_MRAIDTwoPartExpandedChild hostController]
+-[SASIA_MRAIDTwoPartExpandedChild setHostController:]
+-[SASIA_MRAIDTwoPartExpandedChild interstitial]
+-[SASIA_MRAIDTwoPartExpandedChild setInterstitial:]
+-[SASIA_MRAIDTwoPartExpandedChild .cxx_destruct]
+-[SASIA_MRAIDResized closeState]
+-[SASIA_MRAIDResized beginFromState:]
+-[SASIA_MRAIDResized doClose]
+-[SASIA_MRAIDResized resize]
+-[SASIA_MRAIDResized hostController]
+-[SASIA_MRAIDResized mraidStateValue]
+-[SASIA_MRAIDResized formerState]
+-[SASIA_MRAIDResized setFormerState:]
+-[SASIA_MRAIDResized view]
+-[SASIA_MRAIDResized setView:]
+-[SASIA_MRAIDResized closeView]
+-[SASIA_MRAIDResized setCloseView:]
+-[SASIA_MRAIDResized .cxx_destruct]
+-[SASIA_MRAIDLinkOpened initToLoad:]
+-[SASIA_MRAIDLinkOpened closeState]
+-[SASIA_MRAIDLinkOpened beginFromState:]
+___40-[SASIA_MRAIDLinkOpened beginFromState:]_block_invoke
+-[SASIA_MRAIDLinkOpened willClose]
+-[SASIA_MRAIDLinkOpened doClose]
+-[SASIA_MRAIDLinkOpened closeLink]
+-[SASIA_MRAIDLinkOpened hostController]
+-[SASIA_MRAIDLinkOpened linkHostController]
+-[SASIA_MRAIDLinkOpened mraidStateValue]
+-[SASIA_MRAIDLinkOpened formerState]
+-[SASIA_MRAIDLinkOpened setFormerState:]
+-[SASIA_MRAIDLinkOpened browser]
+-[SASIA_MRAIDLinkOpened setBrowser:]
+-[SASIA_MRAIDLinkOpened .cxx_destruct]
++[SASIA_MRAIDWebView mraidJavaScript]
+-[SASIA_MRAIDWebView dealloc]
+-[SASIA_MRAIDWebView initWithFrame:]
+___36-[SASIA_MRAIDWebView initWithFrame:]_block_invoke
+-[SASIA_MRAIDWebView userContentController:didReceiveScriptMessage:]
+-[SASIA_MRAIDWebView allowContentCaching:]
+-[SASIA_MRAIDWebView loadContent:]
+-[SASIA_MRAIDWebView URLSession:dataTask:didReceiveResponse:completionHandler:]
+-[SASIA_MRAIDWebView URLSession:dataTask:didReceiveData:]
+-[SASIA_MRAIDWebView URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:]
+-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]
+___59-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]_block_invoke
+___59-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]_block_invoke_2
+___59-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]_block_invoke_3
+-[SASIA_MRAIDWebView delegateRespondsTo:]
++[SASIA_MRAIDWebView setMraidTracing:]
++[SASIA_MRAIDWebView mraidTracing]
+-[SASIA_MRAIDWebView isWebViewInContainer]
+-[SASIA_MRAIDWebView removeWebViewFromParent]
+-[SASIA_MRAIDWebView returnWebViewToContainer]
+-[SASIA_MRAIDWebView htmlContent:]
+-[SASIA_MRAIDWebView executeJavaScript:jsStringExpression:completionHandler:]
+-[SASIA_MRAIDWebView openLinkExternally:url:]
+___45-[SASIA_MRAIDWebView openLinkExternally:url:]_block_invoke
+-[SASIA_MRAIDWebView setState:]
+___31-[SASIA_MRAIDWebView setState:]_block_invoke
+-[SASIA_MRAIDWebView viewController]
+-[SASIA_MRAIDWebView load:]
+-[SASIA_MRAIDWebView showInterstitially:strongReference:]
+-[SASIA_MRAIDWebView loadChildExpansion:hostController:]
+-[SASIA_MRAIDWebView close]
+-[SASIA_MRAIDWebView adjustForRotation:]
+-[SASIA_MRAIDWebView needsRotationAdjustment]
+-[SASIA_MRAIDWebView orient]
+-[SASIA_MRAIDWebView orientationChanged:]
+-[SASIA_MRAIDWebView position]
+___30-[SASIA_MRAIDWebView position]_block_invoke
+-[SASIA_MRAIDWebView observeValueForKeyPath:ofObject:change:context:]
+-[SASIA_MRAIDWebView setOrientationProperties:forceOrientation:]
+-[SASIA_MRAIDWebView didChangeVisibility:]
+-[SASIA_MRAIDWebView setExpandProperties:]
+-[SASIA_MRAIDWebView setUseCustomClose:]
+-[SASIA_MRAIDWebView expand:]
+-[SASIA_MRAIDWebView clearResizeProperties]
+-[SASIA_MRAIDWebView setResizeProperties:customClosePosition:allowOffscreen:]
+-[SASIA_MRAIDWebView resize]
+-[SASIA_MRAIDWebView open:]
+-[SASIA_MRAIDWebView actionInProgress]
+-[SASIA_MRAIDWebView actionViewController]
+-[SASIA_MRAIDWebView cancelAction]
++[SASIA_MRAIDWebView supportSMSText:]
++[SASIA_MRAIDWebView supportsSMSText]
++[SASIA_MRAIDWebView supportTelephone:]
++[SASIA_MRAIDWebView supportsTelephone]
++[SASIA_MRAIDWebView supportPicture:]
++[SASIA_MRAIDWebView supportsPicture]
+-[SASIA_MRAIDWebView storePicture:]
++[SASIA_MRAIDWebView supportCalendar:]
++[SASIA_MRAIDWebView supportsCalendar]
+-[SASIA_MRAIDWebView createCalendarEvent:]
+-[SASIA_MRAIDWebView playVideo:]
+-[SASIA_MRAIDWebView mraidExecute:trace:]
+-[SASIA_MRAIDWebView mraidExecute:]
+-[SASIA_MRAIDWebView mraidSdkDone]
+-[SASIA_MRAIDWebView jsBoolValue:]
+-[SASIA_MRAIDWebView mraidOrient]
+-[SASIA_MRAIDWebView mraidSdkReady]
+-[SASIA_MRAIDWebView mraidSetTracing]
+-[SASIA_MRAIDWebView mraidError:message:]
+-[SASIA_MRAIDWebView mraidSetVisibility]
+-[SASIA_MRAIDWebView mraidSetPosition]
+-[SASIA_MRAIDWebView mraidSetDefaultPosition]
+-[SASIA_MRAIDWebView mraidSetState]
+-[SASIA_MRAIDWebView mraidTrace:message:]
+-[SASIA_MRAIDWebView mraidJsTrace:]
+-[SASIA_MRAIDWebView mraidAdTrace:]
+-[SASIA_MRAIDWebView mraidSdkTrace:]
+-[SASIA_MRAIDWebView mraidSdkError:]
+-[SASIA_MRAIDWebView parseInt:default:]
+-[SASIA_MRAIDWebView decode:]
+-[SASIA_MRAIDWebView processMraidCommand:parameters:]
+-[SASIA_MRAIDWebView delegate]
+-[SASIA_MRAIDWebView setDelegate:]
+-[SASIA_MRAIDWebView hostViewController]
+-[SASIA_MRAIDWebView setHostViewController:]
+-[SASIA_MRAIDWebView webView]
+-[SASIA_MRAIDWebView setWebView:]
+-[SASIA_MRAIDWebView isInterstitial]
+-[SASIA_MRAIDWebView setIsInterstitial:]
+-[SASIA_MRAIDWebView interstitialTransitionStyle]
+-[SASIA_MRAIDWebView setInterstitialTransitionStyle:]
+-[SASIA_MRAIDWebView visible]
+-[SASIA_MRAIDWebView setVisible:]
+-[SASIA_MRAIDWebView isActionInBrowser]
+-[SASIA_MRAIDWebView setActionInBrowser:]
+-[SASIA_MRAIDWebView actionTransitionStyle]
+-[SASIA_MRAIDWebView setActionTransitionStyle:]
+-[SASIA_MRAIDWebView modalPresentationStyle]
+-[SASIA_MRAIDWebView setModalPresentationStyle:]
+-[SASIA_MRAIDWebView isActionInProgress]
+-[SASIA_MRAIDWebView state]
+-[SASIA_MRAIDWebView mraidLoaded]
+-[SASIA_MRAIDWebView setMraidLoaded:]
+-[SASIA_MRAIDWebView numTraces]
+-[SASIA_MRAIDWebView setNumTraces:]
+-[SASIA_MRAIDWebView screenFrame]
+-[SASIA_MRAIDWebView setScreenFrame:]
+-[SASIA_MRAIDWebView appFrame]
+-[SASIA_MRAIDWebView setAppFrame:]
+-[SASIA_MRAIDWebView adFrame]
+-[SASIA_MRAIDWebView setAdFrame:]
+-[SASIA_MRAIDWebView expandFullScreen]
+-[SASIA_MRAIDWebView setExpandFullScreen:]
+-[SASIA_MRAIDWebView expandSize]
+-[SASIA_MRAIDWebView setExpandSize:]
+-[SASIA_MRAIDWebView useCustomClose]
+-[SASIA_MRAIDWebView resizeAdFrame]
+-[SASIA_MRAIDWebView setResizeAdFrame:]
+-[SASIA_MRAIDWebView resizeCloseFrame]
+-[SASIA_MRAIDWebView setResizeCloseFrame:]
+-[SASIA_MRAIDWebView resizeCloseAutoresizingMask]
+-[SASIA_MRAIDWebView setResizeCloseAutoresizingMask:]
+-[SASIA_MRAIDWebView allowOrientationChange]
+-[SASIA_MRAIDWebView setAllowOrientationChange:]
+-[SASIA_MRAIDWebView orientationMask]
+-[SASIA_MRAIDWebView setOrientationMask:]
+-[SASIA_MRAIDWebView session]
+-[SASIA_MRAIDWebView setSession:]
+-[SASIA_MRAIDWebView task]
+-[SASIA_MRAIDWebView setTask:]
+-[SASIA_MRAIDWebView bodyData]
+-[SASIA_MRAIDWebView setBodyData:]
+-[SASIA_MRAIDWebView allowCaching]
+-[SASIA_MRAIDWebView setAllowCaching:]
+-[SASIA_MRAIDWebView .cxx_destruct]
+__OBJC_METACLASS_RO_$_IAWebView
+__OBJC_$_INSTANCE_METHODS_IAWebView
+__OBJC_CLASS_RO_$_IAWebView
+__OBJC_$_PROTOCOL_REFS_SASIA_MRAIDStateProtocol
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SASIA_MRAIDStateProtocol
+__OBJC_$_PROP_LIST_SASIA_MRAIDStateProtocol
+__OBJC_$_PROTOCOL_METHOD_TYPES_SASIA_MRAIDStateProtocol
+__OBJC_PROTOCOL_$_SASIA_MRAIDStateProtocol
+__OBJC_LABEL_PROTOCOL_$_SASIA_MRAIDStateProtocol
+__OBJC_$_PROTOCOL_REFS_WKUIDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_WKUIDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_WKUIDelegate
+__OBJC_PROTOCOL_$_WKUIDelegate
+__OBJC_LABEL_PROTOCOL_$_WKUIDelegate
+__OBJC_CLASS_PROTOCOLS_$_SASIA_MRAIDNotLoaded
+__OBJC_METACLASS_RO_$_SASIA_MRAIDNotLoaded
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDNotLoaded
+_OBJC_IVAR_$_SASIA_MRAIDNotLoaded._mraidView
+_OBJC_IVAR_$_SASIA_MRAIDNotLoaded._url
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDNotLoaded
+__OBJC_$_PROP_LIST_SASIA_MRAIDNotLoaded
+__OBJC_CLASS_RO_$_SASIA_MRAIDNotLoaded
+_OBJC_SELECTOR_REFERENCES_.208
+_OBJC_IVAR_$_SASIA_MRAIDNestedState._nestedState
+_OBJC_IVAR_$_SASIA_MRAIDNestedState._nestedVisible
+_OBJC_SELECTOR_REFERENCES_.212
+_OBJC_SELECTOR_REFERENCES_.214
+_OBJC_SELECTOR_REFERENCES_.216
+__OBJC_METACLASS_RO_$_SASIA_MRAIDNestedState
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDNestedState
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDNestedState
+__OBJC_$_PROP_LIST_SASIA_MRAIDNestedState
+__OBJC_CLASS_RO_$_SASIA_MRAIDNestedState
+_ua
+___block_descriptor_40_e8_32bs_e20_v24?08"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.235
+_OBJC_SELECTOR_REFERENCES_.237
+_OBJC_SELECTOR_REFERENCES_.241
+_OBJC_SELECTOR_REFERENCES_.245
+_OBJC_CLASSLIST_REFERENCES_$_.246
+_OBJC_CLASSLIST_REFERENCES_$_.247
+_OBJC_SELECTOR_REFERENCES_.248
+_OBJC_SELECTOR_REFERENCES_.250
+_OBJC_SELECTOR_REFERENCES_.252
+_OBJC_SELECTOR_REFERENCES_.254
+_OBJC_SELECTOR_REFERENCES_.258
+_OBJC_SELECTOR_REFERENCES_.260
+_OBJC_CLASSLIST_REFERENCES_$_.264
+_OBJC_SELECTOR_REFERENCES_.265
+_OBJC_SELECTOR_REFERENCES_.268
+_OBJC_SELECTOR_REFERENCES_.270
+_OBJC_SELECTOR_REFERENCES_.272
+_OBJC_SELECTOR_REFERENCES_.274
+_OBJC_SELECTOR_REFERENCES_.276
+_OBJC_SELECTOR_REFERENCES_.278
+_OBJC_SELECTOR_REFERENCES_.282
+_OBJC_SELECTOR_REFERENCES_.286
+_OBJC_SELECTOR_REFERENCES_.288
+_OBJC_IVAR_$_SASIA_MRAIDLoading._successState
+_OBJC_SELECTOR_REFERENCES_.290
+_OBJC_SELECTOR_REFERENCES_.292
+__OBJC_$_CLASS_METHODS_SASIA_MRAIDLoading
+__OBJC_METACLASS_RO_$_SASIA_MRAIDLoading
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDLoading
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDLoading
+__OBJC_$_PROP_LIST_SASIA_MRAIDLoading
+__OBJC_CLASS_RO_$_SASIA_MRAIDLoading
+_OBJC_CLASSLIST_REFERENCES_$_.303
+_OBJC_CLASSLIST_REFERENCES_$_.306
+_OBJC_SELECTOR_REFERENCES_.308
+_OBJC_SELECTOR_REFERENCES_.312
+_OBJC_CLASSLIST_REFERENCES_$_.331
+_OBJC_SELECTOR_REFERENCES_.333
+___block_descriptor_56_e8_32s40s48bs_e20_v24?08"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.339
+_OBJC_SELECTOR_REFERENCES_.341
+_OBJC_SELECTOR_REFERENCES_.343
+___block_descriptor_56_e8_32bs40s48s_e8_v16?0q8l
+_OBJC_SELECTOR_REFERENCES_.347
+__OBJC_METACLASS_RO_$_SASIA_MRAIDLoaded
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDLoaded
+__OBJC_CLASS_RO_$_SASIA_MRAIDLoaded
+__OBJC_METACLASS_RO_$_SASIA_MRAIDHidden
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDHidden
+__OBJC_CLASS_RO_$_SASIA_MRAIDHidden
+_OBJC_SELECTOR_REFERENCES_.353
+_OBJC_CLASSLIST_REFERENCES_$_.358
+_OBJC_CLASSLIST_REFERENCES_$_.359
+_OBJC_SELECTOR_REFERENCES_.361
+_OBJC_SELECTOR_REFERENCES_.367
+__OBJC_METACLASS_RO_$_SASIA_MRAIDResizable
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDResizable
+__OBJC_CLASS_RO_$_SASIA_MRAIDResizable
+_OBJC_SELECTOR_REFERENCES_.373
+_OBJC_SELECTOR_REFERENCES_.378
+_OBJC_CLASSLIST_REFERENCES_$_.379
+_OBJC_SELECTOR_REFERENCES_.381
+__OBJC_METACLASS_RO_$_SASIA_MRAIDDefault
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDDefault
+__OBJC_CLASS_RO_$_SASIA_MRAIDDefault
+_OBJC_SELECTOR_REFERENCES_.393
+_OBJC_CLASSLIST_REFERENCES_$_.394
+_OBJC_IVAR_$_SASIA_MRAIDDefaultInterstitial._hostController
+_OBJC_IVAR_$_SASIA_MRAIDDefaultInterstitial._strongReference
+___block_descriptor_40_e8_32s_e8_v12?0B8l
+_OBJC_SELECTOR_REFERENCES_.398
+_OBJC_SELECTOR_REFERENCES_.402
+_OBJC_SELECTOR_REFERENCES_.404
+_OBJC_SELECTOR_REFERENCES_.406
+_OBJC_SELECTOR_REFERENCES_.408
+_OBJC_IVAR_$_SASIA_MRAIDDefaultInterstitial._interstitial
+_OBJC_SELECTOR_REFERENCES_.413
+__OBJC_METACLASS_RO_$_SASIA_MRAIDDefaultInterstitial
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDDefaultInterstitial
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDDefaultInterstitial
+__OBJC_$_PROP_LIST_SASIA_MRAIDDefaultInterstitial
+__OBJC_CLASS_RO_$_SASIA_MRAIDDefaultInterstitial
+__OBJC_METACLASS_RO_$_SASIA_MRAIDExpandedBase
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDExpandedBase
+__OBJC_CLASS_RO_$_SASIA_MRAIDExpandedBase
+_OBJC_IVAR_$_SASIA_MRAIDExpanded._formerState
+_OBJC_CLASSLIST_REFERENCES_$_.446
+_OBJC_SELECTOR_REFERENCES_.447
+_OBJC_SELECTOR_REFERENCES_.449
+_OBJC_SELECTOR_REFERENCES_.451
+_OBJC_SELECTOR_REFERENCES_.454
+_OBJC_SELECTOR_REFERENCES_.455
+_OBJC_SELECTOR_REFERENCES_.459
+_OBJC_SELECTOR_REFERENCES_.462
+_OBJC_IVAR_$_SASIA_MRAIDExpanded._interstitial
+_OBJC_SELECTOR_REFERENCES_.464
+__OBJC_METACLASS_RO_$_SASIA_MRAIDExpanded
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDExpanded
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDExpanded
+__OBJC_$_PROP_LIST_SASIA_MRAIDExpanded
+__OBJC_CLASS_RO_$_SASIA_MRAIDExpanded
+_OBJC_IVAR_$_SASIA_MRAIDTwoPartExpandedParent._formerState
+_OBJC_SELECTOR_REFERENCES_.474
+_OBJC_SELECTOR_REFERENCES_.476
+_OBJC_IVAR_$_SASIA_MRAIDTwoPartExpandedParent._childMraidView
+_OBJC_SELECTOR_REFERENCES_.478
+_OBJC_SELECTOR_REFERENCES_.480
+_OBJC_SELECTOR_REFERENCES_.482
+_OBJC_SELECTOR_REFERENCES_.484
+_OBJC_SELECTOR_REFERENCES_.487
+_OBJC_SELECTOR_REFERENCES_.489
+_OBJC_SELECTOR_REFERENCES_.493
+_OBJC_SELECTOR_REFERENCES_.495
+_OBJC_SELECTOR_REFERENCES_.497
+_OBJC_SELECTOR_REFERENCES_.501
+_OBJC_SELECTOR_REFERENCES_.503
+__OBJC_CLASS_PROTOCOLS_$_SASIA_MRAIDTwoPartExpandedParent
+__OBJC_METACLASS_RO_$_SASIA_MRAIDTwoPartExpandedParent
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDTwoPartExpandedParent
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDTwoPartExpandedParent
+__OBJC_$_PROP_LIST_SASIA_MRAIDTwoPartExpandedParent
+__OBJC_CLASS_RO_$_SASIA_MRAIDTwoPartExpandedParent
+_OBJC_IVAR_$_SASIA_MRAIDTwoPartExpandedChild._hostController
+_OBJC_IVAR_$_SASIA_MRAIDTwoPartExpandedChild._interstitial
+__OBJC_METACLASS_RO_$_SASIA_MRAIDTwoPartExpandedChild
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDTwoPartExpandedChild
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDTwoPartExpandedChild
+__OBJC_$_PROP_LIST_SASIA_MRAIDTwoPartExpandedChild
+__OBJC_CLASS_RO_$_SASIA_MRAIDTwoPartExpandedChild
+_OBJC_IVAR_$_SASIA_MRAIDResized._formerState
+_OBJC_CLASSLIST_REFERENCES_$_.523
+_OBJC_SELECTOR_REFERENCES_.525
+_OBJC_SELECTOR_REFERENCES_.527
+_OBJC_SELECTOR_REFERENCES_.529
+_OBJC_IVAR_$_SASIA_MRAIDResized._closeView
+_OBJC_SELECTOR_REFERENCES_.531
+_OBJC_CLASSLIST_REFERENCES_$_.532
+_OBJC_SELECTOR_REFERENCES_.534
+_OBJC_SELECTOR_REFERENCES_.536
+_OBJC_CLASSLIST_REFERENCES_$_.537
+_OBJC_IVAR_$_SASIA_MRAIDResized._view
+_OBJC_CLASSLIST_REFERENCES_$_.540
+_OBJC_SELECTOR_REFERENCES_.542
+_OBJC_SELECTOR_REFERENCES_.544
+_OBJC_SELECTOR_REFERENCES_.546
+_OBJC_CLASSLIST_REFERENCES_$_.547
+_OBJC_SELECTOR_REFERENCES_.553
+_OBJC_SELECTOR_REFERENCES_.559
+_OBJC_SELECTOR_REFERENCES_.561
+__OBJC_METACLASS_RO_$_SASIA_MRAIDResized
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDResized
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDResized
+__OBJC_$_PROP_LIST_SASIA_MRAIDResized
+__OBJC_CLASS_RO_$_SASIA_MRAIDResized
+_OBJC_IVAR_$_SASIA_MRAIDLinkOpened._formerState
+_OBJC_CLASSLIST_REFERENCES_$_.575
+_OBJC_IVAR_$_SASIA_MRAIDLinkOpened._browser
+_OBJC_SELECTOR_REFERENCES_.579
+_OBJC_SELECTOR_REFERENCES_.581
+_OBJC_SELECTOR_REFERENCES_.583
+__OBJC_METACLASS_RO_$_SASIA_MRAIDLinkOpened
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDLinkOpened
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDLinkOpened
+__OBJC_$_PROP_LIST_SASIA_MRAIDLinkOpened
+__OBJC_CLASS_RO_$_SASIA_MRAIDLinkOpened
+_mraidJS
+_OBJC_CLASSLIST_REFERENCES_$_.592
+_OBJC_SELECTOR_REFERENCES_.596
+_OBJC_SELECTOR_REFERENCES_.600
+_OBJC_SELECTOR_REFERENCES_.604
+_OBJC_CLASSLIST_REFERENCES_$_.605
+_OBJC_SELECTOR_REFERENCES_.607
+_OBJC_CLASSLIST_REFERENCES_$_.608
+_OBJC_SELECTOR_REFERENCES_.610
+_OBJC_SELECTOR_REFERENCES_.612
+_OBJC_CLASSLIST_REFERENCES_$_.613
+_OBJC_SELECTOR_REFERENCES_.617
+_OBJC_SELECTOR_REFERENCES_.621
+_OBJC_SELECTOR_REFERENCES_.626
+_OBJC_CLASSLIST_REFERENCES_$_.631
+_OBJC_SELECTOR_REFERENCES_.633
+_OBJC_CLASSLIST_REFERENCES_$_.634
+_OBJC_SELECTOR_REFERENCES_.636
+_OBJC_SELECTOR_REFERENCES_.638
+_OBJC_SELECTOR_REFERENCES_.643
+_OBJC_CLASSLIST_REFERENCES_$_.648
+_OBJC_CLASSLIST_REFERENCES_$_.649
+_OBJC_CLASSLIST_REFERENCES_$_.650
+_OBJC_SELECTOR_REFERENCES_.652
+_OBJC_SELECTOR_REFERENCES_.662
+_OBJC_SELECTOR_REFERENCES_.666
+_OBJC_SELECTOR_REFERENCES_.668
+_OBJC_CLASSLIST_REFERENCES_$_.671
+_OBJC_SELECTOR_REFERENCES_.679
+_OBJC_SELECTOR_REFERENCES_.681
+_OBJC_SELECTOR_REFERENCES_.683
+___block_descriptor_40_e8_32s_e39_v24?0"WKContentRuleList"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.686
+_OBJC_CLASSLIST_REFERENCES_$_.687
+_OBJC_SELECTOR_REFERENCES_.691
+_OBJC_SELECTOR_REFERENCES_.693
+_OBJC_IVAR_$_SASIA_MRAIDWebView._webView
+_OBJC_SELECTOR_REFERENCES_.695
+_OBJC_SELECTOR_REFERENCES_.697
+_OBJC_SELECTOR_REFERENCES_.699
+_OBJC_SELECTOR_REFERENCES_.701
+_OBJC_SELECTOR_REFERENCES_.703
+_OBJC_SELECTOR_REFERENCES_.705
+_OBJC_SELECTOR_REFERENCES_.707
+_OBJC_SELECTOR_REFERENCES_.709
+_OBJC_SELECTOR_REFERENCES_.711
+_OBJC_SELECTOR_REFERENCES_.713
+_OBJC_SELECTOR_REFERENCES_.715
+_OBJC_SELECTOR_REFERENCES_.717
+_OBJC_SELECTOR_REFERENCES_.719
+_OBJC_IVAR_$_SASIA_MRAIDWebView._allowCaching
+_OBJC_SELECTOR_REFERENCES_.735
+_OBJC_SELECTOR_REFERENCES_.743
+_OBJC_SELECTOR_REFERENCES_.747
+_OBJC_SELECTOR_REFERENCES_.749
+_OBJC_CLASSLIST_REFERENCES_$_.750
+_OBJC_SELECTOR_REFERENCES_.752
+_OBJC_CLASSLIST_REFERENCES_$_.753
+_OBJC_CLASSLIST_REFERENCES_$_.758
+_OBJC_SELECTOR_REFERENCES_.762
+_OBJC_SELECTOR_REFERENCES_.766
+_OBJC_SELECTOR_REFERENCES_.773
+_OBJC_SELECTOR_REFERENCES_.777
+_OBJC_SELECTOR_REFERENCES_.779
+_OBJC_SELECTOR_REFERENCES_.781
+_OBJC_CLASSLIST_REFERENCES_$_.782
+_OBJC_CLASSLIST_REFERENCES_$_.783
+_OBJC_SELECTOR_REFERENCES_.785
+_OBJC_SELECTOR_REFERENCES_.787
+_OBJC_SELECTOR_REFERENCES_.789
+_OBJC_SELECTOR_REFERENCES_.791
+_OBJC_SELECTOR_REFERENCES_.793
+_OBJC_IVAR_$_SASIA_MRAIDWebView._delegate
+_OBJC_SELECTOR_REFERENCES_.794
+_mraidTracing
+_OBJC_SELECTOR_REFERENCES_.796
+_OBJC_SELECTOR_REFERENCES_.799
+_OBJC_SELECTOR_REFERENCES_.803
+_OBJC_SELECTOR_REFERENCES_.805
+_OBJC_IVAR_$_SASIA_MRAIDWebView._state
+_OBJC_CLASSLIST_REFERENCES_$_.806
+_OBJC_SELECTOR_REFERENCES_.808
+_OBJC_CLASSLIST_REFERENCES_$_.809
+_OBJC_SELECTOR_REFERENCES_.810
+_OBJC_SELECTOR_REFERENCES_.812
+_OBJC_SELECTOR_REFERENCES_.814
+_OBJC_SELECTOR_REFERENCES_.816
+_OBJC_CLASSLIST_REFERENCES_$_.817
+_OBJC_SELECTOR_REFERENCES_.819
+_OBJC_SELECTOR_REFERENCES_.821
+_OBJC_SELECTOR_REFERENCES_.823
+_OBJC_SELECTOR_REFERENCES_.825
+_OBJC_SELECTOR_REFERENCES_.827
+_OBJC_SELECTOR_REFERENCES_.829
+_OBJC_IVAR_$_SASIA_MRAIDWebView._screenFrame
+_OBJC_IVAR_$_SASIA_MRAIDWebView._appFrame
+_OBJC_SELECTOR_REFERENCES_.831
+_OBJC_SELECTOR_REFERENCES_.833
+_OBJC_SELECTOR_REFERENCES_.835
+_OBJC_SELECTOR_REFERENCES_.837
+_OBJC_SELECTOR_REFERENCES_.839
+_OBJC_SELECTOR_REFERENCES_.841
+_OBJC_IVAR_$_SASIA_MRAIDWebView._visible
+_OBJC_SELECTOR_REFERENCES_.847
+_OBJC_IVAR_$_SASIA_MRAIDWebView._expandSize
+_OBJC_IVAR_$_SASIA_MRAIDWebView._useCustomClose
+_OBJC_SELECTOR_REFERENCES_.850
+_OBJC_SELECTOR_REFERENCES_.852
+_OBJC_IVAR_$_SASIA_MRAIDWebView._adFrame
+_OBJC_SELECTOR_REFERENCES_.874
+_OBJC_SELECTOR_REFERENCES_.876
+_OBJC_SELECTOR_REFERENCES_.880
+_supportSMSText
+_checkedSMS
+_OBJC_SELECTOR_REFERENCES_.885
+_hwSupportsSMSText
+_supportTelephone
+_checkedTelephone
+_hwSupportsTelephone
+_OBJC_SELECTOR_REFERENCES_.889
+_OBJC_SELECTOR_REFERENCES_.895
+_OBJC_IVAR_$_SASIA_MRAIDWebView._mraidLoaded
+_OBJC_SELECTOR_REFERENCES_.911
+_OBJC_SELECTOR_REFERENCES_.913
+_OBJC_IVAR_$_SASIA_MRAIDWebView._isInterstitial
+_OBJC_IVAR_$_SASIA_MRAIDWebView._numTraces
+_OBJC_SELECTOR_REFERENCES_.945
+_OBJC_CLASSLIST_REFERENCES_$_.952
+_OBJC_SELECTOR_REFERENCES_.954
+_OBJC_SELECTOR_REFERENCES_.956
+_OBJC_SELECTOR_REFERENCES_.958
+_OBJC_SELECTOR_REFERENCES_.966
+_OBJC_SELECTOR_REFERENCES_.968
+_OBJC_IVAR_$_SASIA_MRAIDWebView._resizeAdFrame
+_OBJC_SELECTOR_REFERENCES_.970
+_OBJC_SELECTOR_REFERENCES_.972
+_OBJC_SELECTOR_REFERENCES_.982
+_OBJC_SELECTOR_REFERENCES_.984
+_OBJC_SELECTOR_REFERENCES_.986
+_OBJC_SELECTOR_REFERENCES_.990
+_OBJC_SELECTOR_REFERENCES_.994
+_OBJC_IVAR_$_SASIA_MRAIDWebView._hostViewController
+_OBJC_IVAR_$_SASIA_MRAIDWebView._interstitialTransitionStyle
+_OBJC_IVAR_$_SASIA_MRAIDWebView._actionInBrowser
+_OBJC_IVAR_$_SASIA_MRAIDWebView._actionTransitionStyle
+_OBJC_IVAR_$_SASIA_MRAIDWebView._modalPresentationStyle
+_OBJC_IVAR_$_SASIA_MRAIDWebView._actionInProgress
+_OBJC_IVAR_$_SASIA_MRAIDWebView._expandFullScreen
+_OBJC_IVAR_$_SASIA_MRAIDWebView._resizeCloseFrame
+_OBJC_IVAR_$_SASIA_MRAIDWebView._resizeCloseAutoresizingMask
+_OBJC_IVAR_$_SASIA_MRAIDWebView._allowOrientationChange
+_OBJC_IVAR_$_SASIA_MRAIDWebView._orientationMask
+_OBJC_IVAR_$_SASIA_MRAIDWebView._session
+_OBJC_IVAR_$_SASIA_MRAIDWebView._task
+_OBJC_IVAR_$_SASIA_MRAIDWebView._bodyData
+__OBJC_$_CLASS_METHODS_SASIA_MRAIDWebView
+__OBJC_$_PROTOCOL_REFS_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSURLSessionDelegate
+__OBJC_PROTOCOL_$_NSURLSessionDelegate
+__OBJC_LABEL_PROTOCOL_$_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_REFS_NSURLSessionTaskDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLSessionTaskDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSURLSessionTaskDelegate
+__OBJC_PROTOCOL_$_NSURLSessionTaskDelegate
+__OBJC_LABEL_PROTOCOL_$_NSURLSessionTaskDelegate
+__OBJC_$_PROTOCOL_REFS_WKScriptMessageHandler
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_WKScriptMessageHandler
+__OBJC_$_PROTOCOL_METHOD_TYPES_WKScriptMessageHandler
+__OBJC_PROTOCOL_$_WKScriptMessageHandler
+__OBJC_LABEL_PROTOCOL_$_WKScriptMessageHandler
+__OBJC_CLASS_PROTOCOLS_$_SASIA_MRAIDWebView
+__OBJC_METACLASS_RO_$_SASIA_MRAIDWebView
+__OBJC_$_INSTANCE_METHODS_SASIA_MRAIDWebView
+__OBJC_$_INSTANCE_VARIABLES_SASIA_MRAIDWebView
+__OBJC_$_PROP_LIST_SASIA_MRAIDWebView
+__OBJC_CLASS_RO_$_SASIA_MRAIDWebView
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_MRAIDWebView.m
+SASCollector/SASIA/SASIA_MRAIDWebView.m
+SASCollector/SASIA/SASIA_MRAIDWebView.h
+__CGSizeEqualToSize
+/Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+__30-[SASIA_MRAIDWebView position]_block_invoke
+UIInterfaceOrientationIsLandscape
+/Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
+__31-[SASIA_MRAIDWebView setState:]_block_invoke
+__45-[SASIA_MRAIDWebView openLinkExternally:url:]_block_invoke
+__59-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]_block_invoke_3
+NSMakeRange
+/Applications/Xcode_13.2.1.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+__59-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]_block_invoke_2
+__59-[SASIA_MRAIDWebView URLSession:task:didCompleteWithError:]_block_invoke
+__36-[SASIA_MRAIDWebView initWithFrame:]_block_invoke
+__40-[SASIA_MRAIDLinkOpened beginFromState:]_block_invoke
+__50-[SASIA_MRAIDTwoPartExpandedChild beginFromState:]_block_invoke_2
+__50-[SASIA_MRAIDTwoPartExpandedChild beginFromState:]_block_invoke
+__38-[SASIA_MRAIDExpanded beginFromState:]_block_invoke_2
+__38-[SASIA_MRAIDExpanded beginFromState:]_block_invoke
+__49-[SASIA_MRAIDDefaultInterstitial beginFromState:]_block_invoke.396
+__49-[SASIA_MRAIDDefaultInterstitial beginFromState:]_block_invoke
+__copy_helper_block_e8_32b40s48s
+__77-[SASIA_MRAIDLoaded webView:decidePolicyForNavigationAction:decisionHandler:]_block_invoke
+__copy_helper_block_e8_32s40s48b
+__76-[SASIA_MRAIDLoaded executeJavaScript:jsStringExpression:completionHandler:]_block_invoke
+__51-[SASIA_MRAIDLoading webView:didFailLoadWithError:]_block_invoke
+__37-[SASIA_MRAIDLoading beginFromState:]_block_invoke
+__50+[SASIA_MRAIDLoading userAgent:completionHandler:]_block_invoke
+__39-[SASIA_MRAIDNotLoaded enterFromState:]_block_invoke
+runOnMainQueueWithoutDeadlocking
+-[SASCEventHandler initWithRequest:name:completionHandler:]
+-[SASCEventHandler initWithEvent:name:completionHandler:]
+-[SASCEventHandler isAsynchronous]
+-[SASCEventHandler start]
+___25-[SASCEventHandler start]_block_invoke
+-[SASCEventHandler request]
+-[SASCEventHandler setRequest:]
+-[SASCEventHandler event]
+-[SASCEventHandler setEvent:]
+-[SASCEventHandler completion]
+-[SASCEventHandler setCompletion:]
+-[SASCEventHandler deviceInfo]
+-[SASCEventHandler setDeviceInfo:]
+-[SASCEventHandler .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_SELECTOR_REFERENCES_.80
+_OBJC_SELECTOR_REFERENCES_.82
+_OBJC_CLASSLIST_REFERENCES_$_.134
+_OBJC_CLASSLIST_REFERENCES_$_.143
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_CLASSLIST_REFERENCES_$_.153
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.173
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_SELECTOR_REFERENCES_.185
+___block_descriptor_40_e8_32s_e46_v32?0"NSData"8"NSURLResponse"16"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.190
+_OBJC_IVAR_$_SASCEventHandler._request
+_OBJC_IVAR_$_SASCEventHandler._event
+_OBJC_IVAR_$_SASCEventHandler._completion
+_OBJC_IVAR_$_SASCEventHandler._deviceInfo
+__OBJC_METACLASS_RO_$_SASCEventHandler
+__OBJC_$_INSTANCE_METHODS_SASCEventHandler
+__OBJC_$_INSTANCE_VARIABLES_SASCEventHandler
+__OBJC_$_PROP_LIST_SASCEventHandler
+__OBJC_CLASS_RO_$_SASCEventHandler
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCEventHandler.m
+SASCollector/SASCollector/SASCEventHandler.m
+__25-[SASCEventHandler start]_block_invoke
+-[SASCollector_EventV2 initWithName:data:csi:loadID:]
+-[SASCollector_EventV2 initWithData:]
+-[SASCollector_EventV2 setLoadId:]
+-[SASCollector_EventV2 prepareForSendingByAppId:]
+-[SASCollector_EventV2 packetWithAppId:]
+-[SASCollector_EventV2 prepareForStorage]
+-[SASCollector_EventV2 updateEventWithFlag:]
+-[SASCollector_EventV2 updateEventDataURIUsingAppId:loadURI:]
+-[SASCollector_EventV2 addAdditionalAttributes:]
+-[SASCollector_EventV2 date]
+-[SASCollector_EventV2 setDate:]
+-[SASCollector_EventV2 name]
+-[SASCollector_EventV2 setName:]
+-[SASCollector_EventV2 clientSessionIdentifier]
+-[SASCollector_EventV2 setClientSessionIdentifier:]
+-[SASCollector_EventV2 loadId]
+-[SASCollector_EventV2 eventData]
+-[SASCollector_EventV2 setEventData:]
+-[SASCollector_EventV2 .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_CLASSLIST_REFERENCES_$_.26
+_OBJC_CLASSLIST_REFERENCES_$_.61
+_OBJC_CLASSLIST_REFERENCES_$_.119
+__OBJC_METACLASS_RO_$_SASCollector_EventV2
+__OBJC_$_INSTANCE_METHODS_SASCollector_EventV2
+_OBJC_IVAR_$_SASCollector_EventV2._date
+_OBJC_IVAR_$_SASCollector_EventV2._name
+_OBJC_IVAR_$_SASCollector_EventV2._clientSessionIdentifier
+_OBJC_IVAR_$_SASCollector_EventV2._loadId
+_OBJC_IVAR_$_SASCollector_EventV2._eventData
+__OBJC_$_INSTANCE_VARIABLES_SASCollector_EventV2
+__OBJC_$_PROP_LIST_SASCollector_EventV2
+__OBJC_CLASS_RO_$_SASCollector_EventV2
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollector_EventV2.m
+SASCollector/SASCollector/SASCollector_EventV2.m
+SASCollector/SASCollector/SASCollector_EventV2.h
+-[SASIA_OrientationController viewDidAppear:]
+-[SASIA_Interstitial initWithView:forController:strongReference:visibilityBlock:closeBlock:]
+-[SASIA_Interstitial prefersStatusBarHidden]
+-[SASIA_Interstitial shouldAutorotate]
+-[SASIA_Interstitial supportedInterfaceOrientations]
+-[SASIA_Interstitial setGenerateCloseArea:]
+-[SASIA_Interstitial setCloseImage]
+-[SASIA_Interstitial setUsesCloseIcon:]
+-[SASIA_Interstitial doOrient]
+-[SASIA_Interstitial orient]
+-[SASIA_Interstitial setOrientation:orientationMask:]
+-[SASIA_Interstitial show:]
+-[SASIA_Interstitial doClose]
+-[SASIA_Interstitial close]
+-[SASIA_Interstitial viewDidAppear:]
+-[SASIA_Interstitial viewWillDisappear:]
+-[SASIA_Interstitial isModalInPresentation]
+-[SASIA_Interstitial usesCloseIcon]
+-[SASIA_Interstitial generateCloseArea]
+-[SASIA_Interstitial isFullScreen]
+-[SASIA_Interstitial setIsFullScreen:]
+-[SASIA_Interstitial allowOrientationChange]
+-[SASIA_Interstitial setAllowOrientationChange:]
+-[SASIA_Interstitial orientationMask]
+-[SASIA_Interstitial setOrientationMask:]
+-[SASIA_Interstitial visibilityBlock]
+-[SASIA_Interstitial setVisibilityBlock:]
+-[SASIA_Interstitial closeBlock]
+-[SASIA_Interstitial setCloseBlock:]
+-[SASIA_Interstitial closeIconView]
+-[SASIA_Interstitial setCloseIconView:]
+-[SASIA_Interstitial statusBarWasHidden]
+-[SASIA_Interstitial setStatusBarWasHidden:]
+-[SASIA_Interstitial hostController]
+-[SASIA_Interstitial setHostController:]
+-[SASIA_Interstitial strongReference]
+-[SASIA_Interstitial setStrongReference:]
+-[SASIA_Interstitial state]
+-[SASIA_Interstitial setState:]
+-[SASIA_Interstitial orientationController]
+-[SASIA_Interstitial setOrientationController:]
+-[SASIA_Interstitial .cxx_destruct]
+__OBJC_METACLASS_RO_$_SASIA_OrientationController
+__OBJC_$_INSTANCE_METHODS_SASIA_OrientationController
+__OBJC_CLASS_RO_$_SASIA_OrientationController
+_OBJC_CLASSLIST_REFERENCES_$_.44
+_OBJC_IVAR_$_SASIA_Interstitial._closeIconView
+_OBJC_CLASSLIST_REFERENCES_$_.62
+_OBJC_IVAR_$_SASIA_Interstitial._allowOrientationChange
+_OBJC_IVAR_$_SASIA_Interstitial._orientationMask
+_OBJC_IVAR_$_SASIA_Interstitial._usesCloseIcon
+_OBJC_CLASSLIST_REFERENCES_$_.74
+_OBJC_IVAR_$_SASIA_Interstitial._state
+_OBJC_CLASSLIST_REFERENCES_$_.96
+_OBJC_IVAR_$_SASIA_Interstitial._hostController
+_OBJC_IVAR_$_SASIA_Interstitial._closeBlock
+_OBJC_IVAR_$_SASIA_Interstitial._visibilityBlock
+_OBJC_IVAR_$_SASIA_Interstitial._generateCloseArea
+_OBJC_IVAR_$_SASIA_Interstitial._isFullScreen
+_OBJC_IVAR_$_SASIA_Interstitial._statusBarWasHidden
+_OBJC_IVAR_$_SASIA_Interstitial._strongReference
+_OBJC_IVAR_$_SASIA_Interstitial._orientationController
+__OBJC_METACLASS_RO_$_SASIA_Interstitial
+__OBJC_$_INSTANCE_METHODS_SASIA_Interstitial
+__OBJC_$_INSTANCE_VARIABLES_SASIA_Interstitial
+__OBJC_$_PROP_LIST_SASIA_Interstitial
+__OBJC_CLASS_RO_$_SASIA_Interstitial
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_Interstitial.m
+SASCollector/SASIA/SASIA_Interstitial.m
+SASCollector/SASIA/SASIA_Interstitial.h
++[SASDeviceInfo sharedInstance]
+___31+[SASDeviceInfo sharedInstance]_block_invoke
+-[SASDeviceInfo getDeviceId]
+-[SASDeviceInfo getPublicDeviceId]
+-[SASDeviceInfo getDeviceForLoadID]
+-[SASDeviceInfo getVisitorState]
+-[SASDeviceInfo setVisitorState:]
+-[SASDeviceInfo resetDeviceId]
+-[SASDeviceInfo init]
+-[SASDeviceInfo eventName]
+-[SASDeviceInfo dictionary]
+-[SASDeviceInfo readDeviceID]
+-[SASDeviceInfo storeDeviceID:]
+-[SASDeviceInfo mobile_platform]
+-[SASDeviceInfo setMobile_platform:]
+-[SASDeviceInfo mobile_platform_version]
+-[SASDeviceInfo setMobile_platform_version:]
+-[SASDeviceInfo mobile_screen_width]
+-[SASDeviceInfo setMobile_screen_width:]
+-[SASDeviceInfo mobile_screen_height]
+-[SASDeviceInfo setMobile_screen_height:]
+-[SASDeviceInfo mobile_device_model]
+-[SASDeviceInfo setMobile_device_model:]
+-[SASDeviceInfo mobile_device_type]
+-[SASDeviceInfo setMobile_device_type:]
+-[SASDeviceInfo mobile_carrier_name]
+-[SASDeviceInfo setMobile_carrier_name:]
+-[SASDeviceInfo mobile_country_code]
+-[SASDeviceInfo setMobile_country_code:]
+-[SASDeviceInfo mobile_network_code]
+-[SASDeviceInfo setMobile_network_code:]
+-[SASDeviceInfo mobile_device_mfg]
+-[SASDeviceInfo setMobile_device_mfg:]
+-[SASDeviceInfo mobile_sdk_version]
+-[SASDeviceInfo setMobile_sdk_version:]
+-[SASDeviceInfo mobile_app_version]
+-[SASDeviceInfo setMobile_app_version:]
+-[SASDeviceInfo mobile_app_language]
+-[SASDeviceInfo setMobile_app_language:]
+-[SASDeviceInfo mobile_device_language]
+-[SASDeviceInfo setMobile_device_language:]
+-[SASDeviceInfo .cxx_destruct]
+_sharedInstance.devInfo
+_sharedInstance.predicate
+_OBJC_IVAR_$_SASDeviceInfo.localId
+_OBJC_IVAR_$_SASDeviceInfo.loadID
+_OBJC_IVAR_$_SASDeviceInfo.visitorState
+_OBJC_CLASSLIST_REFERENCES_$_.8
+_OBJC_IVAR_$_SASDeviceInfo._mobile_platform
+_OBJC_CLASSLIST_REFERENCES_$_.39
+_OBJC_IVAR_$_SASDeviceInfo._mobile_platform_version
+_OBJC_IVAR_$_SASDeviceInfo._mobile_device_model
+_OBJC_IVAR_$_SASDeviceInfo._mobile_device_type
+_OBJC_IVAR_$_SASDeviceInfo._mobile_screen_width
+_OBJC_IVAR_$_SASDeviceInfo._mobile_screen_height
+_OBJC_IVAR_$_SASDeviceInfo._mobile_device_mfg
+_OBJC_CLASSLIST_REFERENCES_$_.58
+_OBJC_IVAR_$_SASDeviceInfo._mobile_app_language
+_OBJC_CLASSLIST_REFERENCES_$_.65
+_OBJC_IVAR_$_SASDeviceInfo._mobile_device_language
+_OBJC_IVAR_$_SASDeviceInfo._mobile_sdk_version
+_OBJC_CLASSLIST_REFERENCES_$_.78
+_OBJC_IVAR_$_SASDeviceInfo._mobile_carrier_name
+_OBJC_IVAR_$_SASDeviceInfo._mobile_country_code
+_OBJC_IVAR_$_SASDeviceInfo._mobile_network_code
+_OBJC_IVAR_$_SASDeviceInfo._mobile_app_version
+_OBJC_IVAR_$_SASDeviceInfo.savedDictionary
+_OBJC_CLASSLIST_REFERENCES_$_.92
+_OBJC_CLASSLIST_REFERENCES_$_.99
+_OBJC_CLASSLIST_REFERENCES_$_.111
+_OBJC_IVAR_$_SASDeviceInfo.savedArray
+__OBJC_$_CLASS_METHODS_SASDeviceInfo
+__OBJC_METACLASS_RO_$_SASDeviceInfo
+__OBJC_$_INSTANCE_METHODS_SASDeviceInfo
+__OBJC_$_INSTANCE_VARIABLES_SASDeviceInfo
+__OBJC_$_PROP_LIST_SASDeviceInfo
+__OBJC_CLASS_RO_$_SASDeviceInfo
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASDeviceInfo.m
+SASCollector/SASCollector/SASDeviceInfo.m
+SASCollector/SASCollector/SASDeviceInfo.h
+__31+[SASDeviceInfo sharedInstance]_block_invoke
++[SASReachabilityManager sharedManager]
+___39+[SASReachabilityManager sharedManager]_block_invoke
+___copy_helper_block_e8_
+___destroy_helper_block_e8_
+-[SASReachabilityManager dealloc]
++[SASReachabilityManager isReachable]
++[SASReachabilityManager isUnreachable]
++[SASReachabilityManager isReachableViaWWAN]
++[SASReachabilityManager isReachableViaWiFi]
++[SASReachabilityManager setReachabilityHost:]
+-[SASReachabilityManager init]
+-[SASReachabilityManager resetHost:]
+-[SASReachabilityManager reachability]
+-[SASReachabilityManager setReachability:]
+-[SASReachabilityManager currentHost]
+-[SASReachabilityManager setCurrentHost:]
+-[SASReachabilityManager .cxx_destruct]
+_sharedManager._sharedManager
+_sharedManager.onceReachableToken
+___block_descriptor_40_e8__e5_v8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.19
+__OBJC_$_CLASS_METHODS_SASReachabilityManager
+__OBJC_METACLASS_RO_$_SASReachabilityManager
+__OBJC_$_INSTANCE_METHODS_SASReachabilityManager
+_OBJC_IVAR_$_SASReachabilityManager._reachability
+_OBJC_IVAR_$_SASReachabilityManager._currentHost
+__OBJC_$_INSTANCE_VARIABLES_SASReachabilityManager
+__OBJC_$_PROP_LIST_SASReachabilityManager
+__OBJC_CLASS_RO_$_SASReachabilityManager
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASReachabilityManager.m
+SASCollector/SASCollector/SASReachabilityManager.m
+__destroy_helper_block_e8_
+__copy_helper_block_e8_
+__39+[SASReachabilityManager sharedManager]_block_invoke
++[SASCollector_EventV3 contentType]
++[SASCollector_EventV3 useV2]
++[SASCollector_EventV3 useV3]
+-[SASCollector_EventV3 initWithSASCollectorEvent:csi:loadID:]
+-[SASCollector_EventV3 initWithName:attributes:csi:loadID:]
+-[SASCollector_EventV3 initWithData:]
+-[SASCollector_EventV3 setLoadId:]
+-[SASCollector_EventV3 prepareForSendingByAppId:]
+-[SASCollector_EventV3 packetWithAppId:]
+-[SASCollector_EventV3 prepareForStorage]
+-[SASCollector_EventV3 updateEventWithFlag:]
+-[SASCollector_EventV3 updateEventDataURIUsingAppId:loadURI:]
+-[SASCollector_EventV3 addAdditionalAttributes:]
+-[SASCollector_EventV3 date]
+-[SASCollector_EventV3 setDate:]
+-[SASCollector_EventV3 name]
+-[SASCollector_EventV3 setName:]
+-[SASCollector_EventV3 clientSessionIdentifier]
+-[SASCollector_EventV3 setClientSessionIdentifier:]
+-[SASCollector_EventV3 loadId]
+-[SASCollector_EventV3 sessionID]
+-[SASCollector_EventV3 setSessionID:]
+-[SASCollector_EventV3 sessionCandidate]
+-[SASCollector_EventV3 setSessionCandidate:]
+-[SASCollector_EventV3 offlineEvent]
+-[SASCollector_EventV3 setOfflineEvent:]
+-[SASCollector_EventV3 newSessionNotAllowed]
+-[SASCollector_EventV3 setNewSessionNotAllowed:]
+-[SASCollector_EventV3 attributes]
+-[SASCollector_EventV3 setAttributes:]
+-[SASCollector_EventV3 .cxx_destruct]
+_useV2
+_OBJC_CLASSLIST_REFERENCES_$_.28
+_OBJC_CLASSLIST_REFERENCES_$_.68
+_OBJC_CLASSLIST_REFERENCES_$_.71
+_OBJC_CLASSLIST_REFERENCES_$_.80
+_OBJC_CLASSLIST_REFERENCES_$_.105
+_OBJC_CLASSLIST_REFERENCES_$_.110
+_OBJC_SELECTOR_REFERENCES_.122
+_OBJC_CLASSLIST_REFERENCES_$_.127
+_OBJC_CLASSLIST_REFERENCES_$_.130
+_OBJC_CLASSLIST_REFERENCES_$_.137
+_OBJC_SELECTOR_REFERENCES_.153
+_OBJC_SELECTOR_REFERENCES_.171
+__OBJC_$_CLASS_METHODS_SASCollector_EventV3
+__OBJC_METACLASS_RO_$_SASCollector_EventV3
+__OBJC_$_INSTANCE_METHODS_SASCollector_EventV3
+_OBJC_IVAR_$_SASCollector_EventV3._sessionCandidate
+_OBJC_IVAR_$_SASCollector_EventV3._offlineEvent
+_OBJC_IVAR_$_SASCollector_EventV3._newSessionNotAllowed
+_OBJC_IVAR_$_SASCollector_EventV3._date
+_OBJC_IVAR_$_SASCollector_EventV3._name
+_OBJC_IVAR_$_SASCollector_EventV3._clientSessionIdentifier
+_OBJC_IVAR_$_SASCollector_EventV3._loadId
+_OBJC_IVAR_$_SASCollector_EventV3._sessionID
+_OBJC_IVAR_$_SASCollector_EventV3._attributes
+__OBJC_$_INSTANCE_VARIABLES_SASCollector_EventV3
+__OBJC_$_PROP_LIST_SASCollector_EventV3
+__OBJC_CLASS_RO_$_SASCollector_EventV3
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollector_EventV3.m
+SASCollector/SASCollector/SASCollector_EventV3.m
+SASCollector/SASCollector/SASCollector_EventV3.h
++[SASLocationProvider setMockProvider:]
+-[SASLocationProvider init]
+-[SASLocationProvider setDelegate:]
+-[SASLocationProvider monitoredRegions]
+-[SASLocationProvider location]
+-[SASLocationProvider maximumRegionMonitoringDistance]
+-[SASLocationProvider authorizationStatus]
+-[SASLocationProvider isMonitoringAvailableForClass:]
+-[SASLocationProvider requestAlwaysAuthorization]
+-[SASLocationProvider requestWhenInUseAuthorization]
+-[SASLocationProvider startUpdatingLocation]
+-[SASLocationProvider stopUpdatingLocation]
+-[SASLocationProvider startMonitoringSignificantLocationChanges]
+-[SASLocationProvider startMonitoringForRegion:]
+-[SASLocationProvider stopMonitoringForRegion:]
+-[SASLocationProvider startRangingBeaconsInRegion:]
+-[SASLocationProvider stopRangingBeaconsInRegion:]
+-[SASLocationProvider locManager]
+-[SASLocationProvider setLocManager:]
+-[SASLocationProvider delegate]
+-[SASLocationProvider .cxx_destruct]
+_mockProvider
+__OBJC_$_CLASS_METHODS_SASLocationProvider
+__OBJC_METACLASS_RO_$_SASLocationProvider
+__OBJC_$_INSTANCE_METHODS_SASLocationProvider
+_OBJC_IVAR_$_SASLocationProvider._locManager
+_OBJC_IVAR_$_SASLocationProvider._delegate
+__OBJC_$_INSTANCE_VARIABLES_SASLocationProvider
+__OBJC_$_PROP_LIST_SASLocationProvider
+__OBJC_CLASS_RO_$_SASLocationProvider
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASLocationProvider.m
+SASCollector/SASCollector/SASLocationProvider.m
+SASCollector/SASCollector/SASLocationProvider.h
+-[SASGEOFence initWithEvent:coordinate:region:]
+-[SASGEOFence initWithEvent:region:]
+-[SASGEOFence eventName]
+-[SASGEOFence _eventName]
+-[SASGEOFence set_eventName:]
+-[SASGEOFence geo_latitude]
+-[SASGEOFence setGeo_latitude:]
+-[SASGEOFence geo_longitude]
+-[SASGEOFence setGeo_longitude:]
+-[SASGEOFence geofence_id]
+-[SASGEOFence setGeofence_id:]
+-[SASGEOFence .cxx_destruct]
+_OBJC_IVAR_$_SASGEOFence.__eventName
+_OBJC_IVAR_$_SASGEOFence._geo_latitude
+_OBJC_IVAR_$_SASGEOFence._geo_longitude
+_OBJC_IVAR_$_SASGEOFence._geofence_id
+__OBJC_METACLASS_RO_$_SASGEOFence
+__OBJC_$_INSTANCE_METHODS_SASGEOFence
+__OBJC_$_INSTANCE_VARIABLES_SASGEOFence
+__OBJC_$_PROP_LIST_SASGEOFence
+__OBJC_CLASS_RO_$_SASGEOFence
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASGEOFence.m
+SASCollector/SASCollector/SASGEOFence.m
+SASCollector/SASCollector/SASGEOFence.h
+-[SASCollectorUIAdView initForController:withFrame:withSpotId:withTags:]
+-[SASCollectorUIAdView setSpotAttributes:]
+-[SASCollectorUIAdView addSpotAttributeName:value:]
+-[SASCollectorUIAdView removeSpotAttribute:]
+-[SASCollectorUIAdView base64encode:]
+-[SASCollectorUIAdView load]
+___28-[SASCollectorUIAdView load]_block_invoke
+___28-[SASCollectorUIAdView load]_block_invoke_2
+___28-[SASCollectorUIAdView load]_block_invoke_3
+___28-[SASCollectorUIAdView load]_block_invoke.87
+___28-[SASCollectorUIAdView load]_block_invoke.89
+-[SASCollectorUIAdView description]
+-[SASCollectorUIAdView gatherAdParameters:]
+-[SASCollectorUIAdView adEventAttributes]
+-[SASCollectorUIAdView didFailLoad:error:failingUrl:]
+-[SASCollectorUIAdView didClose:]
+-[SASCollectorUIAdView willBeginAction:url:]
+-[SASCollectorUIAdView spotID]
+-[SASCollectorUIAdView setSpotID:]
+-[SASCollectorUIAdView adRequest]
+-[SASCollectorUIAdView tags]
+-[SASCollectorUIAdView setTags:]
+-[SASCollectorUIAdView tagAttributes]
+-[SASCollectorUIAdView setTagAttributes:]
+-[SASCollectorUIAdView .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.40
+_OBJC_CLASSLIST_REFERENCES_$_.49
+_OBJC_IVAR_$_SASCollectorUIAdView._spotID
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_IVAR_$_SASCollectorUIAdView._tags
+_OBJC_IVAR_$_SASCollectorUIAdView._adRequest
+_OBJC_SELECTOR_REFERENCES_.131
+_OBJC_IVAR_$_SASCollectorUIAdView._tagAttributes
+__OBJC_METACLASS_RO_$_SASCollectorUIAdView
+__OBJC_$_INSTANCE_METHODS_SASCollectorUIAdView
+_OBJC_IVAR_$_SASCollectorUIAdView.inIB
+__OBJC_$_INSTANCE_VARIABLES_SASCollectorUIAdView
+__OBJC_$_PROP_LIST_SASCollectorUIAdView
+__OBJC_CLASS_RO_$_SASCollectorUIAdView
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollectorUIAdView.m
+SASCollector/SASCollector/SASCollectorUIAdView.m
+SASCollector/SASCollector/SASCollectorUIAdView.h
+__28-[SASCollectorUIAdView load]_block_invoke.89
+__28-[SASCollectorUIAdView load]_block_invoke.87
+__28-[SASCollectorUIAdView load]_block_invoke_3
+__28-[SASCollectorUIAdView load]_block_invoke_2
+__28-[SASCollectorUIAdView load]_block_invoke
+-[SASCOfflineEventHandler initWithName:eventBlock:completionHandler:failureHandler:]
+-[SASCOfflineEventHandler isAsynchronous]
+-[SASCOfflineEventHandler start]
+___32-[SASCOfflineEventHandler start]_block_invoke
+-[SASCOfflineEventHandler eventBlock]
+-[SASCOfflineEventHandler setEventBlock:]
+-[SASCOfflineEventHandler completion]
+-[SASCOfflineEventHandler setCompletion:]
+-[SASCOfflineEventHandler failure]
+-[SASCOfflineEventHandler setFailure:]
+-[SASCOfflineEventHandler deviceInfo]
+-[SASCOfflineEventHandler setDeviceInfo:]
+-[SASCOfflineEventHandler .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.86
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_CLASSLIST_REFERENCES_$_.146
+_OBJC_CLASSLIST_REFERENCES_$_.147
+_OBJC_CLASSLIST_REFERENCES_$_.156
+_OBJC_CLASSLIST_REFERENCES_$_.163
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_CLASSLIST_REFERENCES_$_.188
+_OBJC_CLASSLIST_REFERENCES_$_.191
+___block_descriptor_40_e8_32r_e46_v32?0"NSData"8"NSURLResponse"16"NSError"24l
+_OBJC_IVAR_$_SASCOfflineEventHandler._eventBlock
+_OBJC_IVAR_$_SASCOfflineEventHandler._completion
+_OBJC_IVAR_$_SASCOfflineEventHandler._failure
+_OBJC_IVAR_$_SASCOfflineEventHandler._deviceInfo
+__OBJC_METACLASS_RO_$_SASCOfflineEventHandler
+__OBJC_$_INSTANCE_METHODS_SASCOfflineEventHandler
+__OBJC_$_INSTANCE_VARIABLES_SASCOfflineEventHandler
+__OBJC_$_PROP_LIST_SASCOfflineEventHandler
+__OBJC_CLASS_RO_$_SASCOfflineEventHandler
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCOfflineEventHandler.m
+SASCollector/SASCollector/SASCOfflineEventHandler.m
+__32-[SASCOfflineEventHandler start]_block_invoke
+-[SASIA_InterstitialAd init]
+-[SASIA_InterstitialAd showFromController:]
+-[SASIA_InterstitialAd interstitialTransitionStyle]
+-[SASIA_InterstitialAd setInterstitialTransitionStyle:]
+_OBJC_IVAR_$_SASIA_InterstitialAd._interstitialTransitionStyle
+__OBJC_METACLASS_RO_$_SASIA_InterstitialAd
+__OBJC_$_INSTANCE_METHODS_SASIA_InterstitialAd
+__OBJC_$_INSTANCE_VARIABLES_SASIA_InterstitialAd
+__OBJC_$_PROP_LIST_SASIA_InterstitialAd
+__OBJC_CLASS_RO_$_SASIA_InterstitialAd
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_InterstitialAd.m
+SASCollector/SASIA/SASIA_InterstitialAd.h
+SASCollector/SASIA/SASIA_InterstitialAd.m
+-[SASURLService init]
+-[SASURLService URLSession:didReceiveChallenge:completionHandler:]
+-[SASURLService URLSession:didBecomeInvalidWithError:]
+-[SASURLService URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:]
+__OBJC_CLASS_PROTOCOLS_$_SASURLService
+__OBJC_METACLASS_RO_$_SASURLService
+__OBJC_$_INSTANCE_METHODS_SASURLService
+__OBJC_$_PROP_LIST_SASURLService
+__OBJC_CLASS_RO_$_SASURLService
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASURLService.m
+SASCollector/SASCollector/SASURLService.m
+-[SASCollectorViewController initWithNibName:bundle:]
+-[SASCollectorViewController viewDidLoad]
+-[SASCollectorViewController viewDidAppear:]
+-[SASCollectorViewController cisdkPageName]
+-[SASCollectorViewController setCisdkPageName:]
+-[SASCollectorViewController .cxx_destruct]
+_OBJC_IVAR_$_SASCollectorViewController._cisdkPageName
+__OBJC_METACLASS_RO_$_SASCollectorViewController
+__OBJC_$_INSTANCE_METHODS_SASCollectorViewController
+__OBJC_$_INSTANCE_VARIABLES_SASCollectorViewController
+__OBJC_$_PROP_LIST_SASCollectorViewController
+__OBJC_CLASS_RO_$_SASCollectorViewController
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCollectorViewController.m
+SASCollector/SASCollector/SASCollectorViewController.m
+SASCollector/SASCollector/SASCollectorViewController.h
+-[Font initWithDictionary:defaultSize:]
+-[Font description]
+-[Font colorFromHexString:]
+-[Font size]
+-[Font setSize:]
+-[Font style]
+-[Font setStyle:]
+-[Font color]
+-[Font setColor:]
+-[Font font]
+-[Font setFont:]
+-[Font .cxx_destruct]
++[SASFullScreenMsgViewController viewControllerWithFullScreenMsg:appId:delegate2:]
++[SASFullScreenMsgViewController viewControllerWithBannerMsg:appId:delegate2:]
+-[SASFullScreenMsgViewController dismissPopup]
+-[SASFullScreenMsgViewController close:]
+-[SASFullScreenMsgViewController initWithNibName:bundle:msg:banner:appId:delegate2:]
+-[SASFullScreenMsgViewController initWithNibName:bundle:msg:banner:appId:]
+-[SASFullScreenMsgViewController messageActionHandler:]
+-[SASFullScreenMsgViewController limitString:toLength:]
+-[SASFullScreenMsgViewController viewDidLoad]
+___45-[SASFullScreenMsgViewController viewDidLoad]_block_invoke
+-[SASFullScreenMsgViewController viewDidLayoutSubviews]
+-[SASFullScreenMsgViewController makeButtonWithAction:withColor:index:]
+-[SASFullScreenMsgViewController addButton:toContainer:withPreviousButton:]
+-[SASFullScreenMsgViewController didReceiveMemoryWarning]
+-[SASFullScreenMsgViewController colorFromHexString:]
+-[SASFullScreenMsgViewController colorFromHexString:alpha:]
+-[SASFullScreenMsgViewController imageWithColor:]
+-[SASFullScreenMsgViewController downloadImage:onCompletion:]
+___61-[SASFullScreenMsgViewController downloadImage:onCompletion:]_block_invoke
+___61-[SASFullScreenMsgViewController downloadImage:onCompletion:]_block_invoke_2
+-[SASFullScreenMsgViewController mobileMessageDictionary]
+-[SASFullScreenMsgViewController setMobileMessageDictionary:]
+-[SASFullScreenMsgViewController imageView]
+-[SASFullScreenMsgViewController setImageView:]
+-[SASFullScreenMsgViewController titleLabel]
+-[SASFullScreenMsgViewController setTitleLabel:]
+-[SASFullScreenMsgViewController bodyLabel]
+-[SASFullScreenMsgViewController setBodyLabel:]
+-[SASFullScreenMsgViewController btnContainer]
+-[SASFullScreenMsgViewController setBtnContainer:]
+-[SASFullScreenMsgViewController titleLabel2]
+-[SASFullScreenMsgViewController setTitleLabel2:]
+-[SASFullScreenMsgViewController bodyLabel2]
+-[SASFullScreenMsgViewController setBodyLabel2:]
+-[SASFullScreenMsgViewController btnContainer2]
+-[SASFullScreenMsgViewController setBtnContainer2:]
+-[SASFullScreenMsgViewController msgContainer]
+-[SASFullScreenMsgViewController setMsgContainer:]
+-[SASFullScreenMsgViewController isBanner]
+-[SASFullScreenMsgViewController setIsBanner:]
+-[SASFullScreenMsgViewController gr]
+-[SASFullScreenMsgViewController setGr:]
+-[SASFullScreenMsgViewController delegate2]
+-[SASFullScreenMsgViewController setDelegate2:]
+-[SASFullScreenMsgViewController actions]
+-[SASFullScreenMsgViewController setActions:]
+-[SASFullScreenMsgViewController closeButton]
+-[SASFullScreenMsgViewController setCloseButton:]
+-[SASFullScreenMsgViewController spotID]
+-[SASFullScreenMsgViewController setSpotID:]
+-[SASFullScreenMsgViewController taskID]
+-[SASFullScreenMsgViewController setTaskID:]
+-[SASFullScreenMsgViewController eventID]
+-[SASFullScreenMsgViewController setEventID:]
+-[SASFullScreenMsgViewController creativeID]
+-[SASFullScreenMsgViewController setCreativeID:]
+-[SASFullScreenMsgViewController dismissEvent]
+-[SASFullScreenMsgViewController setDismissEvent:]
+-[SASFullScreenMsgViewController landscapeImageSpace]
+-[SASFullScreenMsgViewController setLandscapeImageSpace:]
+-[SASFullScreenMsgViewController imageLandscapeLeading]
+-[SASFullScreenMsgViewController setImageLandscapeLeading:]
+-[SASFullScreenMsgViewController imageWidth]
+-[SASFullScreenMsgViewController setImageWidth:]
+-[SASFullScreenMsgViewController imageHeight]
+-[SASFullScreenMsgViewController setImageHeight:]
+-[SASFullScreenMsgViewController imageViewTop]
+-[SASFullScreenMsgViewController setImageViewTop:]
+-[SASFullScreenMsgViewController imageViewLeading]
+-[SASFullScreenMsgViewController setImageViewLeading:]
+-[SASFullScreenMsgViewController imageViewTrailing]
+-[SASFullScreenMsgViewController setImageViewTrailing:]
+-[SASFullScreenMsgViewController lastButton]
+-[SASFullScreenMsgViewController setLastButton:]
+-[SASFullScreenMsgViewController lastButtonLandscape]
+-[SASFullScreenMsgViewController setLastButtonLandscape:]
+-[SASFullScreenMsgViewController safeAreaBottom]
+-[SASFullScreenMsgViewController setSafeAreaBottom:]
+-[SASFullScreenMsgViewController safeAreaTop]
+-[SASFullScreenMsgViewController setSafeAreaTop:]
+-[SASFullScreenMsgViewController centerVertically]
+-[SASFullScreenMsgViewController setCenterVertically:]
+-[SASFullScreenMsgViewController .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.70
+_OBJC_CLASSLIST_REFERENCES_$_.75
+__OBJC_METACLASS_RO_$_Font
+__OBJC_$_INSTANCE_METHODS_Font
+_OBJC_IVAR_$_Font._size
+_OBJC_IVAR_$_Font._style
+_OBJC_IVAR_$_Font._color
+_OBJC_IVAR_$_Font._font
+__OBJC_$_INSTANCE_VARIABLES_Font
+__OBJC_$_PROP_LIST_Font
+__OBJC_CLASS_RO_$_Font
+_OBJC_CLASSLIST_REFERENCES_$_.103
+_OBJC_CLASSLIST_REFERENCES_$_.108
+_OBJC_CLASSLIST_REFERENCES_$_.115
+_OBJC_IVAR_$_SASFullScreenMsgViewController._spotID
+_OBJC_IVAR_$_SASFullScreenMsgViewController._taskID
+_OBJC_IVAR_$_SASFullScreenMsgViewController._creativeID
+_OBJC_IVAR_$_SASFullScreenMsgViewController._eventID
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_CLASSLIST_REFERENCES_$_.183
+_OBJC_SELECTOR_REFERENCES_.203
+_OBJC_CLASSLIST_REFERENCES_$_.235
+_OBJC_SELECTOR_REFERENCES_.240
+_OBJC_CLASSLIST_REFERENCES_$_.251
+_OBJC_SELECTOR_REFERENCES_.255
+___block_descriptor_40_e8_32s_e16_v16?0"NSData"8l
+_OBJC_SELECTOR_REFERENCES_.262
+_OBJC_SELECTOR_REFERENCES_.264
+_OBJC_SELECTOR_REFERENCES_.266
+_OBJC_SELECTOR_REFERENCES_.279
+_OBJC_SELECTOR_REFERENCES_.287
+_OBJC_SELECTOR_REFERENCES_.289
+_OBJC_SELECTOR_REFERENCES_.293
+_OBJC_SELECTOR_REFERENCES_.295
+_OBJC_SELECTOR_REFERENCES_.297
+_OBJC_SELECTOR_REFERENCES_.299
+_OBJC_SELECTOR_REFERENCES_.301
+_OBJC_SELECTOR_REFERENCES_.303
+_OBJC_IVAR_$_SASFullScreenMsgViewController._actions
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_SELECTOR_REFERENCES_.313
+_OBJC_SELECTOR_REFERENCES_.315
+_OBJC_SELECTOR_REFERENCES_.317
+_OBJC_SELECTOR_REFERENCES_.319
+_OBJC_CLASSLIST_REFERENCES_$_.322
+_OBJC_CLASSLIST_REFERENCES_$_.333
+_OBJC_SELECTOR_REFERENCES_.335
+_OBJC_SELECTOR_REFERENCES_.337
+_OBJC_CLASSLIST_REFERENCES_$_.344
+_OBJC_SELECTOR_REFERENCES_.368
+_OBJC_SELECTOR_REFERENCES_.372
+_OBJC_SELECTOR_REFERENCES_.376
+_OBJC_SELECTOR_REFERENCES_.380
+_OBJC_SELECTOR_REFERENCES_.382
+_OBJC_SELECTOR_REFERENCES_.384
+_OBJC_SELECTOR_REFERENCES_.388
+_OBJC_SELECTOR_REFERENCES_.390
+_OBJC_CLASSLIST_REFERENCES_$_.407
+_OBJC_SELECTOR_REFERENCES_.419
+_OBJC_SELECTOR_REFERENCES_.421
+_OBJC_SELECTOR_REFERENCES_.423
+_OBJC_SELECTOR_REFERENCES_.425
+_OBJC_SELECTOR_REFERENCES_.427
+_OBJC_SELECTOR_REFERENCES_.429
+_OBJC_SELECTOR_REFERENCES_.439
+_OBJC_SELECTOR_REFERENCES_.443
+_OBJC_SELECTOR_REFERENCES_.445
+_OBJC_SELECTOR_REFERENCES_.453
+_OBJC_CLASSLIST_REFERENCES_$_.456
+_OBJC_CLASSLIST_REFERENCES_$_.457
+_OBJC_SELECTOR_REFERENCES_.461
+_OBJC_SELECTOR_REFERENCES_.465
+_OBJC_CLASSLIST_REFERENCES_$_.468
+_OBJC_SELECTOR_REFERENCES_.470
+_OBJC_IVAR_$_SASFullScreenMsgViewController._mobileMessageDictionary
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageView
+_OBJC_IVAR_$_SASFullScreenMsgViewController._titleLabel
+_OBJC_IVAR_$_SASFullScreenMsgViewController._bodyLabel
+_OBJC_IVAR_$_SASFullScreenMsgViewController._btnContainer
+_OBJC_IVAR_$_SASFullScreenMsgViewController._titleLabel2
+_OBJC_IVAR_$_SASFullScreenMsgViewController._bodyLabel2
+_OBJC_IVAR_$_SASFullScreenMsgViewController._btnContainer2
+_OBJC_IVAR_$_SASFullScreenMsgViewController._msgContainer
+_OBJC_IVAR_$_SASFullScreenMsgViewController._isBanner
+_OBJC_IVAR_$_SASFullScreenMsgViewController._gr
+_OBJC_IVAR_$_SASFullScreenMsgViewController._delegate2
+_OBJC_IVAR_$_SASFullScreenMsgViewController._closeButton
+_OBJC_IVAR_$_SASFullScreenMsgViewController._dismissEvent
+_OBJC_IVAR_$_SASFullScreenMsgViewController._landscapeImageSpace
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageLandscapeLeading
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageWidth
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageHeight
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageViewTop
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageViewLeading
+_OBJC_IVAR_$_SASFullScreenMsgViewController._imageViewTrailing
+_OBJC_IVAR_$_SASFullScreenMsgViewController._lastButton
+_OBJC_IVAR_$_SASFullScreenMsgViewController._lastButtonLandscape
+_OBJC_IVAR_$_SASFullScreenMsgViewController._safeAreaBottom
+_OBJC_IVAR_$_SASFullScreenMsgViewController._safeAreaTop
+_OBJC_IVAR_$_SASFullScreenMsgViewController._centerVertically
+__OBJC_$_CLASS_METHODS_SASFullScreenMsgViewController
+__OBJC_METACLASS_RO_$_SASFullScreenMsgViewController
+__OBJC_$_INSTANCE_METHODS_SASFullScreenMsgViewController
+__OBJC_$_INSTANCE_VARIABLES_SASFullScreenMsgViewController
+__OBJC_$_PROP_LIST_SASFullScreenMsgViewController
+__OBJC_CLASS_RO_$_SASFullScreenMsgViewController
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASFullScreenMsgViewController.m
+SASCollector/SASCollector/SASFullScreenMsgViewController.m
+__61-[SASFullScreenMsgViewController downloadImage:onCompletion:]_block_invoke_2
+__61-[SASFullScreenMsgViewController downloadImage:onCompletion:]_block_invoke
+__45-[SASFullScreenMsgViewController viewDidLoad]_block_invoke
++[SASNetReachability reachabilityWithHostName:]
++[SASNetReachability reachabilityWithAddress:]
++[SASNetReachability reachabilityForInternetConnection]
++[SASNetReachability reachabilityForLocalWiFi]
+-[SASNetReachability startNotifier]
+_ReachabilityCallback
+-[SASNetReachability stopNotifier]
+-[SASNetReachability dealloc]
+-[SASNetReachability localWiFiStatusForFlags:]
+_PrintReachabilityFlags
+-[SASNetReachability networkStatusForFlags:]
+-[SASNetReachability connectionRequired]
+-[SASNetReachability currentReachabilityStatus]
+-[SASNetReachability isReachableWithFlags:]
+-[SASNetReachability isReachable]
+-[SASNetReachability isReachableViaWWAN]
+-[SASNetReachability isReachableViaWiFi]
+-[SASNetReachability isConnectionRequired]
+-[SASNetReachability isConnectionOnDemand]
+-[SASNetReachability isInterventionRequired]
+__OBJC_$_CLASS_METHODS_SASNetReachability
+__OBJC_METACLASS_RO_$_SASNetReachability
+__OBJC_$_INSTANCE_METHODS_SASNetReachability
+_OBJC_IVAR_$_SASNetReachability._alwaysReturnLocalWiFiStatus
+_OBJC_IVAR_$_SASNetReachability._reachabilityRef
+__OBJC_$_INSTANCE_VARIABLES_SASNetReachability
+__OBJC_CLASS_RO_$_SASNetReachability
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASNetReachability.m
+SASCollector/SASCollector/SASNetReachability.m
+PrintReachabilityFlags
+ReachabilityCallback
++[SASCNetworkOperationQueueManager sharedInstance]
+___50+[SASCNetworkOperationQueueManager sharedInstance]_block_invoke
+-[SASCNetworkOperationQueueManager init]
+-[SASCNetworkOperationQueueManager addOperation:]
+-[SASCNetworkOperationQueueManager cancelOperationClass:]
+-[SASCNetworkOperationQueueManager queue]
+-[SASCNetworkOperationQueueManager setQueue:]
+-[SASCNetworkOperationQueueManager .cxx_destruct]
+_sharedInstance.sharedInstance
+_sharedInstance.onceQueueToken
+__OBJC_$_CLASS_METHODS_SASCNetworkOperationQueueManager
+__OBJC_METACLASS_RO_$_SASCNetworkOperationQueueManager
+__OBJC_$_INSTANCE_METHODS_SASCNetworkOperationQueueManager
+_OBJC_IVAR_$_SASCNetworkOperationQueueManager._queue
+__OBJC_$_INSTANCE_VARIABLES_SASCNetworkOperationQueueManager
+__OBJC_$_PROP_LIST_SASCNetworkOperationQueueManager
+__OBJC_CLASS_RO_$_SASCNetworkOperationQueueManager
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASCNetworkOperationQueueManager.m
+SASCollector/SASCollector/SASCNetworkOperationQueueManager.m
+__50+[SASCNetworkOperationQueueManager sharedInstance]_block_invoke
++[SASLogger initialize]
++[SASLogger setLevel:]
++[SASLogger setFormatter:]
++[SASLogger logLevel:file:function:line:format:]
++[SASLogger error:]
++[SASLogger warn:]
++[SASLogger info:]
++[SASLogger debug:]
++[SASLogger verbose:]
+-[SASLoggerSimpleFormatter formatLevel:file:function:line:msg:]
+-[SASLoggerFullFormatter formatLevel:file:function:line:msg:]
+__formatter
+__level
+__OBJC_$_CLASS_METHODS_SASLogger
+__OBJC_METACLASS_RO_$_SASLogger
+__OBJC_CLASS_RO_$_SASLogger
+__OBJC_$_PROTOCOL_REFS_SASLoggerFormatter
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SASLoggerFormatter
+__OBJC_$_PROTOCOL_METHOD_TYPES_SASLoggerFormatter
+__OBJC_PROTOCOL_$_SASLoggerFormatter
+__OBJC_LABEL_PROTOCOL_$_SASLoggerFormatter
+__OBJC_CLASS_PROTOCOLS_$_SASLoggerSimpleFormatter
+__OBJC_METACLASS_RO_$_SASLoggerSimpleFormatter
+__OBJC_$_INSTANCE_METHODS_SASLoggerSimpleFormatter
+__OBJC_$_PROP_LIST_SASLoggerSimpleFormatter
+__OBJC_CLASS_RO_$_SASLoggerSimpleFormatter
+__OBJC_CLASS_PROTOCOLS_$_SASLoggerFullFormatter
+__OBJC_METACLASS_RO_$_SASLoggerFullFormatter
+__OBJC_$_INSTANCE_METHODS_SASLoggerFullFormatter
+__OBJC_$_PROP_LIST_SASLoggerFullFormatter
+__OBJC_CLASS_RO_$_SASLoggerFullFormatter
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/SASLogger.m
+SASCollector/SASCollector/SASLogger.m
+levelString
+SASLoggerExtractFileNameWithoutExtension
+-[SASIA_Ad initForController:withFrame:]
+-[SASIA_Ad view]
+__OBJC_METACLASS_RO_$_SASIA_Ad
+__OBJC_$_INSTANCE_METHODS_SASIA_Ad
+__OBJC_$_PROP_LIST_SASIA_Ad
+__OBJC_CLASS_RO_$_SASIA_Ad
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASIA/SASIA_Ad.m
+SASCollector/SASIA/SASIA_Ad.m
+/Users/runner/work/ci360-webmobile-ios-sdk/ci360-webmobile-ios-sdk/SASCollector/SASCollector/Constants.m

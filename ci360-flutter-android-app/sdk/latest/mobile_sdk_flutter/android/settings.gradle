@@ -1,0 +1,3 @@
+rootProject.name = 'mobile_sdk_flutter'
+
+include ':android:mobile_sdk_android'

@@ -1,0 +1,12 @@
+
+#ifdef RCT_NEW_ARCH_ENABLED
+#import "RNMobileSdkReactNativeSpec.h"
+
+@interface MobileSdkReactNative : NSObject <NativeMobileSdkReactNativeSpec>
+#else
+#import <React/RCTBridgeModule.h>
+
+@interface MobileSdkReactNative : NSObject <RCTBridgeModule>
+#endif
+
+@end
