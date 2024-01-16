@@ -50,8 +50,8 @@ State the versions of Native iOS and React Native frameworks that you're using f
 ## Functionality Comparisons
 
 ### Example: Enable SDK internal Logging
-<details><summary>Click to expand</summary>
 <a name="expand-enable-sdk-internal-logging"></a>
+<details><summary>Click to expand</summary>
 
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.m` files.
 
@@ -112,9 +112,8 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.m` and a
 ---
 
 ### Example: Return the Mobile SDK Version
-
-<details><summary>Click to expand</summary>
 <a name="expand-return-the-mobile-sdk-version"></a>
+<details><summary>Click to expand</summary>
 
 This example provides guidance on how to obtain the SDK version in both native iOS using Objective-C and React Native iOS using TypeScript.
 
@@ -184,9 +183,8 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
 ---
 
 ### Example: Retrieving the Session ID
-
-<details><summary>Click to expand</summary>
 <a name="expand-return-session-id"></a>
+<details><summary>Click to expand</summary>
 
 This example provides guidance on how to obtain the session ID in both native iOS using Objective-C and React Native iOS using TypeScript.
 
@@ -258,9 +256,8 @@ To retrieve the Session ID in React Native using TypeScript, follow these steps:
 ---
 
 ### Example: Retrieving the Device ID
-
-<details><summary>Click to expand</summary>
 <a name="expand-return-session-id"></a>
+<details><summary>Click to expand</summary>
 
 This example provides guidance on how to obtain the Device ID in both native iOS using Objective-C and React Native iOS using TypeScript.
 
@@ -328,9 +325,8 @@ To retrieve the Device ID in React Native using TypeScript, follow these steps:
 ---
 
 ### Example: Track User Navigation in the App
-
-<details><summary>Click to expand</summary>
 <a name="expand-track-user-navigation-in-the-app"></a>
+<details><summary>Click to expand</summary>
 
 This example illustrates the process of using the `newPage` API from the React Native SDK to track user navigation within your app.
 
@@ -377,9 +373,8 @@ Follow these steps to monitor user navigation within your app:
 ---
 
 ### Example: Bind a Device ID to and Identity
-
-<details><summary>Click to expand</summary>
 <a name="expand-bind-a-device-id-to-and-identity"></a>
+<details><summary>Click to expand</summary>
 
 This example demonstrates how to use the `identity:withType:completion:` API from the React Native SDK to associate a user's identity with a device ID. This association is performed after the user signs in to your app, allowing you to uniquely identify the user. The `type` parameter specifies the type of identity (customer ID or login), while the `value` parameter holds the corresponding identifier. The supported identity types are `SASCOLLECTOR_IDENTITY_TYPE_CUSTOMER_ID` and `SASCOLLECTOR_IDENTITY_TYPE_LOGIN`, which are constants defined in `SASCollectorEvents.h`.
 
@@ -474,9 +469,8 @@ Follow these steps to retrieve the SDK version:
 ---
 
 ### Example: Detach Identity from Device
-
-<details><summary>Click to expand</summary>
 <a name="expand-detach-identitiy-from-device"></a>
+<details><summary>Click to expand</summary>
 
 Use the `detachIdentity` method to allow users to sign out from your app. This action:
 
@@ -551,9 +545,8 @@ Follow these steps to retrieve the SDK version:
 ---
 
 ### Example: Working with Events
-
-<details><summary>Click to expand</summary>
 <a name="expand-working-with-events"></a>
+<details><summary>Click to expand</summary>
 
 When working with events, utilize the `addAppEvent` API to send customized event data to the mobile SDK. This API involves:
 
@@ -633,9 +626,8 @@ Follow these steps:
 
 ---
 ### Example: Working with Spots: Add an Inline Spot
-
-<details><summary>Click to expand</summary>
 <a name="expand-working-with-spots-inline"></a>
+<details><summary>Click to expand</summary>
 
 When define `Inline` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`, `src\InlineAdView.tsx`, `Constants.m`. 
 
@@ -742,9 +734,9 @@ Follow these steps:
 
 ---
 ### Example: Working with Spots: Add an Interstitial Spot
-
-<details><summary>Click to expand</summary>
 <a name="expand-working-with-spots-interstitials"></a>
+<details><summary>Click to expand</summary>
+
 
 When utilizing the `Interstitial` spot in a React Native project, it should be initilized during the screen display and similar to Inline Spot which require the spotID.
 
@@ -840,9 +832,8 @@ Follow these steps:
 
 ---
 ### Example: Enable Mobile Messages: Push Notification
-
-<details><summary>Click to expand</summary>
 <a name="enable-mobile-messages-push-notification"></a>
+<details><summary>Click to expand</summary>
 
 ## Prerequisites
 - Generate APNS authentication key
@@ -1041,9 +1032,8 @@ Replace the content in `AppDelegate.h` with the following code:
 
 ---
 ### Example: Enable Mobile Messages: Rich Push Notification
-
-<details><summary>Click to expand</summary>
 <a name="enable-mobile-messages-rich-push-notification"></a>
+<details><summary>Click to expand</summary>
 
 ### Step 1: Create Notification Service Extension
 
