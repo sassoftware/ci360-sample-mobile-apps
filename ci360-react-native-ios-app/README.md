@@ -51,7 +51,7 @@ State the versions of Native iOS and React Native frameworks that you're using f
 
 ### Example: Enable SDK internal Logging
 
-<details><summary id="expand-enable-sdk-internal-logging">Click to expand</summary>
+<details><!--open--><summary id="expand-enable-sdk-internal-logging">Click to expand</summary>
 
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.m` files.
 
