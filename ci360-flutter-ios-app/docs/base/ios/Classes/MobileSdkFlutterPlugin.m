@@ -133,6 +133,9 @@
     [SASCollector setApplicationVersion:newVersion];
     result(nil);
   } 
+  else if([call.method isEqualToString:@"getSDKVersion"]) {
+    result([SASCollector getSDKVersion]);
+  } 
   else if([call.method isEqualToString:@"setTenant"]) {
       NSString *tenantId = call.arguments[@"tenantId"];
       NSString *tagServer = call.arguments[@"tagServer"];
