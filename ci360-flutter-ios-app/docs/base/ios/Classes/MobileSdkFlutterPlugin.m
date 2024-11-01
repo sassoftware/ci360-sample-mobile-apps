@@ -82,6 +82,9 @@
       } failureHandler:^{
           SLogError(@"registerForMobileMessages failed.");
       }];
+       dispatch_async(dispatch_get_main_queue(), ^{
+           result(nil);
+      });
   }
   else if ([call.method isEqualToString:@"handleMobileMessage"]) {
     NSDictionary* msgData = call.arguments[@"data"];
@@ -129,9 +132,6 @@
     NSString* newVersion = call.arguments[@"appVersion"];
     [SASCollector setApplicationVersion:newVersion];
     result(nil);
-  } 
-  else if([call.method isEqualToString:@"getSDKVersion"]) {
-    result([SASCollector getSDKVersion]);
   } 
   else if([call.method isEqualToString:@"setTenant"]) {
       NSString *tenantId = call.arguments[@"tenantId"];

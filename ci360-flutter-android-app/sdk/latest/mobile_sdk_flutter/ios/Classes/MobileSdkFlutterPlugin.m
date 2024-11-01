@@ -82,6 +82,9 @@
       } failureHandler:^{
           SLogError(@"registerForMobileMessages failed.");
       }];
+       dispatch_async(dispatch_get_main_queue(), ^{
+           result(nil);
+      });
   }
   else if ([call.method isEqualToString:@"handleMobileMessage"]) {
     NSDictionary* msgData = call.arguments[@"data"];
