@@ -2,6 +2,7 @@
 
 @interface InterstitialAdView() {
     NSString *_spotId;
+    NSString* _viewID;
 }
 @end
 
@@ -33,6 +34,14 @@
     _spotId = spotID;
     self.spotID = spotID;
      [self load];
+}
+
+-(NSString*)viewId {
+    return _viewID;
+}
+
+-(void)setViewId:(NSString *)viewId {
+    _viewID = viewId;
 }
 
 

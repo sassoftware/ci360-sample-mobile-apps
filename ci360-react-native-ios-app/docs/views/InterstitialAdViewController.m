@@ -25,11 +25,11 @@
 
 - (void)didLoad:(SASIA_AbstractAd *)ad {
     [_interstitialAdView showFromController:self];
-    [AdDelegateEvent emitAdLoadedEventWithType:TYPE_INTERSTITIAL_AD];
+    [AdDelegateEvent emitAdLoadedEventWithType:TYPE_INTERSTITIAL_AD withSpotId:_interstitialAdView.spotId withViewId:_interstitialAdView.viewId];
 }
 
 - (void)didLoadDefault:(SASIA_AbstractAd *)ad {
-    [AdDelegateEvent emitAdDefaultLoadedEventWithType:TYPE_INTERSTITIAL_AD];
+    [AdDelegateEvent emitAdDefaultLoadedEventWithType:TYPE_INTERSTITIAL_AD withSpotId:_interstitialAdView.spotId withViewId:_interstitialAdView.viewId];
 }
 
 - (void)didFailLoad:(SASIA_AbstractAd *)ad error:(NSError *)error failingUrl:(NSString *)failingUrl {

@@ -3,8 +3,8 @@
 
 @interface AdDelegateEvent : RCTEventEmitter<RCTBridgeModule>
 
-+(void)emitAdLoadedEventWithType:(NSString*)adType;
-+(void)emitAdDefaultLoadedEventWithType:(NSString*)adType;
++(void)emitAdLoadedEventWithType:(NSString*)adType withSpotId:(NSString*)spotId withViewId:(NSString*)viewId;
++(void)emitAdDefaultLoadedEventWithType:(NSString*)adType withSpotId:(NSString*)spotId withViewId:(NSString*)viewId;
 +(void)emitAdLoadFailedEventWithType:(NSString*)adType;
 +(void)emitAdWillBeginActionEventWithType:(NSString*)adType;
 +(void)emitAdActionFinishedEventWithType:(NSString*)adType;

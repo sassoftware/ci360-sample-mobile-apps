@@ -1,43 +1,40 @@
 //
-//  InlineAdViewManager.m
-//  Pods
+//  InlineAdViewManagerLocalResources.m
+//  mobile-sdk-react-native
 //
-//  Created by Wei Wen on 9/6/22.
+//  Created by Wei Wen on 3/8/24.
 //
-
 #import <Foundation/Foundation.h>
 #import <React/RCTUIManager.h>
-#import "InlineAdView.h"
-#import "InlineAdViewManager.h"
+#import "InlineAdViewWithLocalResourcesManager.h"
+#import "InlineAdViewWithLocalResources.h"
 #import "AdDelegateEvent.h"
 #import "Constants.h"
 
-@implementation InlineAdViewManager {
-//    InlineAdView *adView;
-}
+@implementation InlineAdViewWithLocalResourcesManager
 
 RCT_EXPORT_MODULE()
 
--(InlineAdView *)view {
-    InlineAdView *adView = [InlineAdView new];
+-(InlineAdViewWithLocalResources *)view {
+    InlineAdViewWithLocalResources *adView = [InlineAdViewWithLocalResources new];
     adView.delegate = self;
-    adView.actionInBrowser = YES;
     return adView;
 }
 
 RCT_EXPORT_VIEW_PROPERTY(spotId, NSString)
+RCT_EXPORT_VIEW_PROPERTY(useLocResources, BOOL)
+RCT_EXPORT_VIEW_PROPERTY(resourcePath, NSString)
 RCT_EXPORT_VIEW_PROPERTY(viewId, NSString)
 RCT_EXPORT_VIEW_PROPERTY(notVisible, BOOL)
 
-
 /* SASIA_AdDelegate delegate methods */
 - (void)didLoad:(SASIA_AbstractAd *)ad {
-    InlineAdView *adView = (InlineAdView*)ad;
+    InlineAdViewWithLocalResources *adView = (InlineAdViewWithLocalResources*)ad;
     [AdDelegateEvent emitAdLoadedEventWithType:TYPE_INLINE_AD withSpotId:adView.spotId withViewId:adView.viewId];
 }
 
 - (void)didLoadDefault:(SASIA_AbstractAd *)ad {
-    InlineAdView *adView = (InlineAdView*)ad;
+    InlineAdViewWithLocalResources *adView = (InlineAdViewWithLocalResources*)ad;
     [AdDelegateEvent emitAdDefaultLoadedEventWithType:TYPE_INLINE_AD withSpotId:adView.spotId withViewId:adView.viewId];
 }
 
@@ -80,5 +77,4 @@ RCT_EXPORT_VIEW_PROPERTY(notVisible, BOOL)
 - (void)didClose:(SASIA_AbstractAd *)ad {
     [AdDelegateEvent emitAdClosedEventWithType:TYPE_INLINE_AD];
 }
-
 @end

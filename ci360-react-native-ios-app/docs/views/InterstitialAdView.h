@@ -7,5 +7,6 @@
 
 @interface InterstitialAdView : SASCollectorInterstitialAd
   @property (nonatomic, copy) NSString *spotId;
+@property (nonatomic, copy) NSString *viewId;
   @property (nonatomic, strong) InterstitialAdViewController *hostingController;
 @end

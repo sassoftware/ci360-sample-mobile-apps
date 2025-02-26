@@ -13,6 +13,7 @@
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_VIEW_PROPERTY(spotId, NSString)
+RCT_EXPORT_VIEW_PROPERTY(viewId, NSString)
 
 -(InterstitialAdView *)view {
     adView = [InterstitialAdView new];

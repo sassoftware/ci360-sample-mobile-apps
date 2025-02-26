@@ -957,8 +957,12 @@ Use [SASCollector registerSpotClickWith:@"your_spot_id"] to register a click eve
 
 - UIManager: No pre-built UI component; rendering is custom (e.g., via WebView).
 
-6. Example Code: [addDataOnlySpotExample.tsx](./docs/addDatatOnlySpotExample.tsx)
+6. Example Code:
+   - html code in WebView: [addDataOnlySpotExample.tsx](./docs/addDatatOnlySpotExample.tsx)
+   - json / text in JsonCreativeView (custom built): [addDataOnlySpotJSONExample.tsx](./docs/addDatatOnlySpotJSONExample.tsx)
 
+[Back to Top](#back-to-top)
+</details>
 ---
 ### Example: Enable Mobile Messages: Push Notification
 

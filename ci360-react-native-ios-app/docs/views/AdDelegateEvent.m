@@ -9,12 +9,12 @@ RCT_EXPORT_MODULE();
     return @[@"onAdLoaded", @"onAdDefaultLoaded", @"onAdLoadFailed",@"onAdWillBeginAction", @"onAdActionFinished", @"onAdWillResize", @"onAdResizeFinished", @"onAdWillExpand", @"onAdExpandFinished", @"onAdWillClose", @"onAdClosed"];
 }
 
-+(void)emitAdLoadedEventWithType:(NSString*)adType {
-    [[NSNotificationCenter defaultCenter] postNotificationName:AD_LOADED object:nil userInfo:@{@"type": adType}];
++(void)emitAdLoadedEventWithType:(NSString*)adType withSpotId:(NSString *)spotId withViewId:(NSString *)viewId{
+    [[NSNotificationCenter defaultCenter] postNotificationName:AD_LOADED object:nil userInfo:@{@"type": adType, @"spotId": spotId, @"viewId": viewId}];
 }
 
-+(void)emitAdDefaultLoadedEventWithType:(NSString*)adType {
-    [[NSNotificationCenter defaultCenter] postNotificationName:AD_DEFAULT_LOADED object:nil userInfo:@{@"type": adType}];
++(void)emitAdDefaultLoadedEventWithType:(NSString*)adType withSpotId:(NSString *)spotId withViewId:(NSString *)viewId {
+    [[NSNotificationCenter defaultCenter] postNotificationName:AD_DEFAULT_LOADED object:nil userInfo:@{@"type": adType, @"spotId": spotId, @"viewId": viewId}];
 }
 
 +(void)emitAdLoadFailedEventWithType:(NSString*)adType {
@@ -54,18 +54,16 @@ RCT_EXPORT_MODULE();
 }
 
 -(void)onAdLoaded:(NSNotification*)notification {
-    NSString *type = [notification.userInfo objectForKey:@"type"];
-    [self sendEventWithName:AD_LOADED body:type];
+    [self composeAndSendEvent:notification withEventName:AD_LOADED];
+}
+
+-(void)onAdDefaultLoaded:(NSNotification*)notification {
+    [self composeAndSendEvent:notification withEventName:AD_DEFAULT_LOADED];
 }
 
 -(void)onAdClosed:(NSNotification*)notification {
     NSString *type = [notification.userInfo objectForKey:@"type"];
     [self sendEventWithName:AD_CLOSED body:type];
-}
-
--(void)onAdDefaultLoaded:(NSNotification*)notification {
-    NSString *type = [notification.userInfo objectForKey:@"type"];
-    [self sendEventWithName:AD_DEFAULT_LOADED body:type];
 }
 
 -(void)onAdLoadFailed:(NSNotification*)notification {
@@ -124,6 +122,22 @@ RCT_EXPORT_MODULE();
 
 - (void)stopObserving {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+-(void)composeAndSendEvent:(NSNotification *)notification withEventName:(NSString*)eventName {
+    NSString *type = [notification.userInfo objectForKey:@"type"]; // can be inline or interstitial
+    NSString *spotId = [notification.userInfo objectForKey:@"spotId"];
+    NSString *viewId = [notification.userInfo objectForKey:@"viewId"];
+    if (!spotId)
+        spotId = @"";
+
+    if (!viewId)
+        viewId = @"";
+
+    if (![eventName isEqualToString:AD_DEFAULT_LOADED] && ![eventName isEqualToString:AD_LOADED]) {
+        return;
+    }
+    [self sendEventWithName:eventName body:@{@"eventType": type, @"spotId": spotId, @"viewId": viewId}];
 }
 
 @end
