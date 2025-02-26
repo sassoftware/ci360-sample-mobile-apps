@@ -34,7 +34,8 @@ Before proceeding, ensure that you have successfully installed the React-Native 
     - [Example: Track User Navigation in the App](#expand-track-user-navigation-in-the-app)
     - [Example: Working with Events](#expand-working-with-events)
     - [Example: Working with Spots: Add an Inline Spot](#expand-working-with-spots-inline)
-    - [Example: Working with Spots: Add an Interstitial Spot](#enable-mobile-messages-push-notification)
+    - [Example: Working with Spots: Add an Interstitial Spot](#expand-working-with-spots-interstitials)
+    - [Example: Working with Spots: Add a Data Only / API Spot](#expand-working-with-spots-data-only)
     - [Example: Enable Mobile Messages: Push Notification](#enable-mobile-messages-push-notification)
     - [Example: Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification)
     - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
@@ -45,12 +46,13 @@ Before proceeding, ensure that you have successfully installed the React-Native 
 State the versions of Native iOS and React Native frameworks that you're using for these examples.
 
 - Native iOS: iOS 12.4+
-- React Native: 0.71+
+- React Native: 0.76+  (Turbo Module)
 
 ## Functionality Comparisons
 
 ### Example: Enable SDK internal Logging
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-enable-sdk-internal-logging"></a>
 
 This example illustrates how to set up SAS Collector and Logger in a Native iOS application. **Note: The setup for Native iOS and React Native iOS projects is the same for this functionality.** You will need to modify your `AppDelegate.h` and `AppDelegate.m` files.
@@ -113,7 +115,8 @@ Locate the `didFinishLaunchingWithOptions:` method in your `AppDelegate.m` and a
 
 ### Example: Return the Mobile SDK Version
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-return-the-mobile-sdk-version"></a>
 
 This example provides guidance on how to obtain the SDK version in both native iOS using Objective-C and React Native iOS using TypeScript.
@@ -185,7 +188,8 @@ To retrieve the SDK version in React Native using TypeScript, follow these steps
 
 ### Example: Retrieving the Session ID
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-return-session-id"></a>
 
 This example provides guidance on how to obtain the session ID in both native iOS using Objective-C and React Native iOS using TypeScript.
@@ -259,7 +263,8 @@ To retrieve the Session ID in React Native using TypeScript, follow these steps:
 
 ### Example: Retrieving the Device ID
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-return-session-id"></a>
 
 This example provides guidance on how to obtain the Device ID in both native iOS using Objective-C and React Native iOS using TypeScript.
@@ -329,7 +334,8 @@ To retrieve the Device ID in React Native using TypeScript, follow these steps:
 
 ### Example: Track User Navigation in the App
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-track-user-navigation-in-the-app"></a>
 
 This example illustrates the process of using the `newPage` API from the React Native SDK to track user navigation within your app.
@@ -378,7 +384,8 @@ Follow these steps to monitor user navigation within your app:
 
 ### Example: Bind a Device ID to and Identity
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-bind-a-device-id-to-and-identity"></a>
 
 This example demonstrates how to use the `identity:withType:completion:` API from the React Native SDK to associate a user's identity with a device ID. This association is performed after the user signs in to your app, allowing you to uniquely identify the user. The `type` parameter specifies the type of identity (customer ID or login), while the `value` parameter holds the corresponding identifier. The supported identity types are `SASCOLLECTOR_IDENTITY_TYPE_CUSTOMER_ID` and `SASCOLLECTOR_IDENTITY_TYPE_LOGIN`, which are constants defined in `SASCollectorEvents.h`.
@@ -475,7 +482,8 @@ Follow these steps to retrieve the SDK version:
 
 ### Example: Detach Identity from Device
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-detach-identitiy-from-device"></a>
 
 Use the `detachIdentity` method to allow users to sign out from your app. This action:
@@ -552,7 +560,8 @@ Follow these steps to retrieve the SDK version:
 
 ### Example: Working with Events
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-working-with-events"></a>
 
 When working with events, utilize the `addAppEvent` API to send customized event data to the mobile SDK. This API involves:
@@ -634,7 +643,8 @@ Follow these steps:
 ---
 ### Example: Working with Spots: Add an Inline Spot
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-working-with-spots-inline"></a>
 
 When define `Inline` spot in a React Native project, there's no need to define the view within the app's ViewController. This aspect is seamlessly managed by pre-built functions available in our React Native SDK, located in `ios\views`, `src\InlineAdView.tsx`, `Constants.m`. 
@@ -743,7 +753,8 @@ Follow these steps:
 ---
 ### Example: Working with Spots: Add an Interstitial Spot
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="expand-working-with-spots-interstitials"></a>
 
 When utilizing the `Interstitial` spot in a React Native project, it should be initilized during the screen display and similar to Inline Spot which require the spotID.
@@ -838,10 +849,121 @@ Follow these steps:
 [Back to Top](#back-to-top)
 </details>
 
+### Example: Working with Spots: Add a Data Only / API Spot
+<details>
+<summary>Click to expand</summary>
+
+<a name="expand-working-with-spots-data-only"></a>
+
+The `Data Only / API` spot in a React Native project allows you to retrieve creative content (e.g., text, JSON, or HTML) directly from the SASCollector SDK without requiring a predefined UI component like `SASCollectorUIAdView`. This approach leverages the `loadSpotData` API to fetch spot content programmatically, making it ideal for custom rendering scenarios. Similar to other spots, it requires a `spotId` and supports optional attributes for personalized content delivery.
+
+#### Using the Native iOS SDK:
+
+To fetch and handle spot data in native iOS using Objective-C, use the following method:
+
+1. Define a class (e.g., `YourViewController`) that conforms to the `SpotDataHandler` protocol:
+
+   ```objective-c
+   @interface YourViewController : UIViewController <SpotDataHandler>
+   @end
+   ```
+
+2. Implement the API call and SpotDataHandler methods:
+
+   ```objective-c
+   @implementation YourViewController
+      - (void)loadSpotData {
+         [SASCollector loadSpotData:@"your_spot_id" withCompletionHandler:self];
+         // Optional: Include attributes
+         NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+         [attributes setObject:@"your_value" forKey:@"your_attribute"];
+         [SASCollector loadSpotData:@"your_spot_id" withAttributes:attributes withCompletionHandler:self];
+      }
+
+      - (void)dataForSpotId:(NSString *)spotId withContent:(NSString *)content {
+         SLogInfo(@"Received content: %@", content);
+         [SASCollector registerSpotViewableWith:spotId];
+      }
+
+      - (void)failureForSpotId:(NSString *)spotId withErrorCode:(long)errorCode andErrorMessage:(NSString *)errorMessage {
+         SLogInfo(@"Error code: %ld", errorCode);
+         SLogInfo(@"Error message: %@", errorMessage);
+      }
+
+      - (void)noDataForSpotId:(NSString *)spotId {
+         SLogInfo(@"No spot data available for %@", spotId);
+      }
+
+   @end
+   ```
+Use [SASCollector registerSpotClickWith:@"your_spot_id"] to register a click event when the user interacts with the content.
+
+**Using React Native with TypeScript:**
+
+1. Import necessary modules and functions:
+
+   ```typescript
+      import React, { useState, useEffect } from 'react';
+      import { View, Text, WebView } from 'react-native';
+      import { loadSpotData, registerSpotViewable, registerSpotClicked } from 'mobile-sdk-react-native';
+   ```
+
+2. Set up state to store the spot data:
+
+   ```typescript
+      const [spotData, setSpotData] = useState<string>('');
+      const spotId = 'snzrle_data_spot';   
+   ```
+
+3. Utilize the useEffect hook to fetch spot data and register it as viewable:
+
+   ```typescript
+      useEffect(() => {
+         const fetchSpotData = async () => {
+            try {
+                  const data = await loadSpotData(spotId, null);
+                  setSpotData(data);
+                  registerSpotViewable(spotId);
+            } catch (error) {
+                  console.error('Error loading spot data:', error);
+            }
+         };
+         fetchSpotData();
+      }, []);
+   ```
+
+4. Render the spot content (e.g., as HTML in a WebView) and handle clicks:
+
+   ```typescript
+      return (
+         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            {spotData ? (
+                  <WebView
+                     source={{ html: spotData }}
+                     style={{ width: 300, height: 250 }}
+                     onTouchStart={() => registerSpotClicked(spotId)}
+                  />
+            ) : (
+                  <Text>Loading spot data...</Text>
+            )}
+            <Text>Data Only Spot Content</Text>
+         </View>
+      );
+   ```
+
+5. As a reference, working with the Data Only / API spot involves:
+
+- Bridging: The `loadSpotData`, `registerSpotViewable`, and `registerSpotClicked` methods are implemented in mobile-sdk-react-native.mm, wrapping native SASCollector calls.
+
+- UIManager: No pre-built UI component; rendering is custom (e.g., via WebView).
+
+6. Example Code: [addDataOnlySpotExample.tsx](./docs/addDatatOnlySpotExample.tsx)
+
 ---
 ### Example: Enable Mobile Messages: Push Notification
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="enable-mobile-messages-push-notification"></a>
 
 ## Prerequisites
@@ -1042,7 +1164,8 @@ Replace the content in `AppDelegate.h` with the following code:
 ---
 ### Example: Enable Mobile Messages: Rich Push Notification
 
-<details><summary>Click to expand</summary>
+<details>
+<summary>Click to expand</summary>
 <a name="enable-mobile-messages-rich-push-notification"></a>
 
 ### Step 1: Create Notification Service Extension
