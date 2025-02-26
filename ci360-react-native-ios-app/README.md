@@ -963,6 +963,7 @@ Use [SASCollector registerSpotClickWith:@"your_spot_id"] to register a click eve
 
 [Back to Top](#back-to-top)
 </details>
+
 ---
 ### Example: Enable Mobile Messages: Push Notification
 
