@@ -52,50 +52,11 @@ State the versions of React Native frameworks that you're using for these exampl
 State the versions of React Native frameworks that you're using for these examples.
 
 #### Upgrade to V2 with r=react-native 0.76.5
-
 See references from [cookbook](#https://support.sas.com/documentation/onlinedoc/ci/ci360-mobile-sdks/ci360-react-native-cookbook.pdf) for React Native Version Update with [code](#https://support.sas.com/documentation/onlinedoc/ci/ci360-mobile-sdks/mobile-sdk-react-native.zip)
 
 ##### Note: This repository already includes the changes from cookbook please skip next step if using this repository
 
-The current react native version of the example project is old and caused build errors on Mac
-OS Sequoia. In addition, Android adb server cannot start with the old react native version
-(possibility related to VPN). Due to these reasons, the project is updated with react native
-version 0.76.5. Other packages are also updated to be compatible.
-
-Please check out package.json and example/package.json in the project for details.
-
-The top level package.json set yarn as the package manager. So please use yarn when installing the packages.
-
-A new file turbo.json is created in the top project level, and it makes use of the TurboModule
-system and generates code in both native android/ios and typescript/javascript based on given
-inputs.
-
-Please refer to the project for details. There are more configuration changes, and I will
-list a few here:
-
-1.  mobile-sdk-react-native.podspec
-2.  .yarnrc.yml (new)
-3.  tsconfig.json
-4.  android/build.gradle
-5.  android/gradle.properties
-6.  example/android/gradle.properties
-7.  example/android/settings.gradle
-8.  example/android/build.gradle
-9.  example/metro.config.js
-10. example/react-native.config.js
-11. example/app.json (new)
-12. example/index.tsx
-13. example/babel.config.js
-14. Example/Gemfile
-15. Turbo.json (new)
-16. Package.json
-17. example/package.json
-
-In addition, react native 0.76.5 needs a newer Android Gradle Plugin (AGP 8.6) than the
-previous version. For this update, Android Studio Ladybug 2024.2.1 which includes AGP 8.6 is
-used for development. IOS development tool, in addition to VS Code, is Xcode 16.
-
-#### Follow instructions from cookbook for more information.
+#### Follow the instructions from cookbook.
 
 Create a new library from npx
 
@@ -103,27 +64,27 @@ create-react-native-library@latest mobile-sdk-react-native
 
 After successful creation of library using nitro module copy the below resources from cook book's code.
 
-- android/
-- ios/
-- example/
-- scripts/
-- src/
-- mobile-sdk-react-native.podspec
-- package.json
+* android/
+* ios/
+* example/
+* scripts/
+* src/
+* mobile-sdk-react-native.podspec
+* package.json
 
 #### go to root directory
 
-- yarn root directory
+* yarn root directory
 
-- yarn example/
-- bundle install ios/
-- pod install ios/
+* yarn example/
+* bundle install ios/
+* pod install ios/
 
 ### for Android
 
-- yarn install
-- cd example
-- npm run start and then press a for android
+* yarn install
+* cd example
+* npm run start and then press a for android
 
 ### Note:
 
