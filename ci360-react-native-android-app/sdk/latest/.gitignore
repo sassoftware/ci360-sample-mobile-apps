@@ -40,7 +40,7 @@ project.xcworkspace
 local.properties
 android.iml
 example/android/app/google-services.json
-ci360-react-native-android-app/sdk/latest/example/android/app/google-services.json
+
 
 # Cocoapods
 #
