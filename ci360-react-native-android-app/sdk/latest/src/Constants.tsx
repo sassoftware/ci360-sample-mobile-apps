@@ -8,6 +8,7 @@ export const IDENTITY_TYPE_CUSTOMER_ID = "customer_id";
 
 // These are used in inline/interstitial ad view's delegate methods
 export const AD_LOADED = "onAdLoaded";
+export const AD_DEFAULT_LOADED = "onAdDefaultLoaded";
 export const AD_LOAD_FAILED = "onAdLoadFailed";
 export const AD_WILL_BEGIN_ACTION = "onAdWillBeginAction";
 export const AD_ACTION_FINISHED = "onAdActionFinished";
@@ -21,4 +22,5 @@ export const AD_CLOSED = "onAdClosed";
 // These are used in mobile message methods
 export const MESSAGE_OPENED = "onMessageOpened";
 export const MESSAGE_DISMISSED = "onMessageDismissed";
-export const MESSAGE_NOTIFICATION_LINK_RECEIVED ="onNotificationLinkReceived";
+export const MESSAGE_NOTIFICATION_LINK_RECEIVED = "onNotificationLinkReceived";
+export const REGISTER_DEVICE_TOKEN = "onRegisterDeviceToken";

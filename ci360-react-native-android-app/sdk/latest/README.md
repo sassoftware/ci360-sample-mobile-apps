@@ -1,7 +1,5 @@
 # mobile-sdk-react-native
-
-A react native project
-
+CI360 mobile SDK for React Native
 ## Installation
 
 ```sh
@@ -11,7 +9,7 @@ npm install mobile-sdk-react-native
 ## Usage
 
 ```js
-import { multiply } from 'mobile-sdk-react-native';
+import { multiply } from "mobile-sdk-react-native";
 
 // ...
 

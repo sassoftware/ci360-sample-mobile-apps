@@ -1,11 +1,9 @@
-const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
 const path = require('path');
-const escape = require('escape-string-regexp');
-const exclusionList = require('metro-config/src/defaults/exclusionList');
-const pak = require('../package.json');
+const { getDefaultConfig } = require('@react-native/metro-config');
+const { getConfig } = require('react-native-builder-bob/metro-config');
+const pkg = require('../package.json');
 
 const root = path.resolve(__dirname, '..');
-const modules = Object.keys({ ...pak.peerDependencies });
 
 /**
  * Metro configuration
@@ -13,33 +11,70 @@ const modules = Object.keys({ ...pak.peerDependencies });
  *
  * @type {import('metro-config').MetroConfig}
  */
-const config = {
-  watchFolders: [root],
+module.exports = getConfig(getDefaultConfig(__dirname), {
+  root,
+  pkg,
+  project: __dirname,
+});
 
-  // We need to make sure that only one version is loaded for peerDependencies
-  // So we block them at the root, and alias them to the versions in example's node_modules
-  resolver: {
-    blacklistRE: exclusionList(
-      modules.map(
-        (m) =>
-          new RegExp(`^${escape(path.join(root, 'node_modules', m))}\\/.*$`)
-      )
-    ),
+// const path = require('path');
+// const { getDefaultConfig } = require('@react-native/metro-config');
+// const { getConfig } = require('react-native-builder-bob/metro-config');
+// // const escape = require('escape-string-regexp');
+// const exclusionList = require('metro-config/src/defaults/exclusionList');
+// const pkg = require('../package.json');
 
-    extraNodeModules: modules.reduce((acc, name) => {
-      acc[name] = path.join(__dirname, 'node_modules', name);
-      return acc;
-    }, {}),
-  },
+// const root = path.resolve(__dirname, '..');
+// const parent = path.resolve(__dirname, '../src');
+// const appProj = path.resolve(__dirname, './src');
+// const config = getConfig(getDefaultConfig(__dirname), {
+//   root,
+//   pkg,
+//   project: __dirname,
+// });
+// config.watchFolders = [parent, appProj];
+// config.resolver = {
+//   blacklistRE: exclusionList([/node_modules\/.*/, /build\/.*/]),
+//   useWatchman: true,
+// };
+// module.exports = config;
 
-  transformer: {
-    getTransformOptions: async () => ({
-      transform: {
-        experimentalimportSupport: false,
-        inlineRequires: true,
-      },
-    }),
-  },
-};
+// module.exports = getConfig(getDefaultConfig(__dirname), {
+//   root,
+//   pkg,
+//   project: __dirname,
+// });
 
-module.exports = mergeConfig(getDefaultConfig(__dirname), config);
+// const modules = Object.keys({
+//   ...pkg.peerDependencies,
+// });
+
+// module.exports = {
+//   projectRoot: __dirname,
+//   watchFolders: [parent, appProj],
+
+//   // We need to make sure that only one version is loaded for peerDependencies
+//   // So we block them at the root, and alias them to the versions in example's node_modules
+// resolver: {
+//   blacklistRE: exclusionList(
+//     modules.map(
+//       (m) =>
+//         new RegExp(`^${escape(path.join(root, 'node_modules', m))}\\/.*$`)
+//     )
+//   ),
+
+//   extraNodeModules: modules.reduce((acc, name) => {
+//     acc[name] = path.join(__dirname, 'node_modules', name);
+//     return acc;
+//   }, {}),
+// },
+
+//   transformer: {
+//     getTransformOptions: async () => ({
+//       transform: {
+//         experimentalImportSupport: false,
+//         inlineRequires: true,
+//       },
+//     }),
+//   },
+// };
