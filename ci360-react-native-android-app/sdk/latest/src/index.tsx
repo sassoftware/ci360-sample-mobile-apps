@@ -1,124 +1,114 @@
-import { NativeModules, Platform } from 'react-native';
-import * as Constants from './Constants';
+import NativeMobileSdkReactNative from './NativeMobileSdkReactNative';
+import { NativeModules } from 'react-native';
 import InlineAdView from './views/InlineAdView';
+import InlineAdViewWithLocalResources from './views/InlineAdViewWithLocalResources';
 import InterstitialAdView from './views/InterstitialAdView';
+import * as Constants from './Constants';
 
-const LINKING_ERROR =
-  `The package 'mobile-sdk-react-native' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
-
-const MobileSdkReactNative = NativeModules.MobileSdkReactNative
-  ? NativeModules.MobileSdkReactNative
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
-
-export function multiply(a: number, b: number): Promise<number> {
-  return MobileSdkReactNative.multiply(a, b);
-}
-export function newPage(uri: string) {
-  MobileSdkReactNative.newPage(uri);
-}
-export function addAppEvent(eventKey: string, data: Object) {
-  MobileSdkReactNative.addAppEvent(eventKey, data);
+export function setAppVersionAndInitSDK(appVersion: string): void {
+  NativeMobileSdkReactNative.setAppVersionAndInitSDK(appVersion);
 }
 
-export async function identity(value: string, type: string) {
+export function newPage(uri: string): void {
+  NativeMobileSdkReactNative.newPage(uri);
+}
+
+export function addAppEvent(eventKey: string, data: Object|null): void {
+  NativeMobileSdkReactNative.addAppEvent(eventKey, data);
+}
+
+export async function identity(value: string, type: string): Promise<boolean> {
   try {
-    console.log('awaiting for identity in index', value, type);
-    const isSuccess: boolean = await MobileSdkReactNative.identity(value, type);
-    console.log('isSuccess for identity in index', isSuccess);
+    const isSuccess: boolean = await NativeMobileSdkReactNative.identity(value, type);
     return isSuccess;
-  } catch (e: any) {
-    console.log('error from identity in index', e);
+  } catch (e) {
     return false;
   }
 }
-export async function detachIdentity() {
+
+export async function detachIdentity(): Promise<boolean> {
   try {
-    const isSuccess = await MobileSdkReactNative.detachIdentity();
+    const isSuccess = await NativeMobileSdkReactNative.detachIdentity();
     return isSuccess;
-  } catch (e: any) {
-    console.log(e);
+  } catch (e) {
     return false;
   }
 }
-export function startMonitoringLocation() {
-  MobileSdkReactNative.startMonitoringLocation();
+
+export function startMonitoringLocation(): void {
+  NativeMobileSdkReactNative.startMonitoringLocation();
 }
-export function disableLocationMonitoring() {
-  MobileSdkReactNative.disableLocationMonitoring();
+
+export function disableLocationMonitoring(): void {
+  NativeMobileSdkReactNative.disableLocationMonitoring();
 }
-export function getAppVersion(callback: (version: string) => void) {
-  MobileSdkReactNative.getAppVersion((appVersion: string) => {
-    callback(appVersion);
-  });
-}
-export function getTenantID(callback: (id: string) => void) {
-  MobileSdkReactNative.getTenantID((tenantID: string) => {
+
+export function getTenantID(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getTenantID((tenantID: string) => {
     callback(tenantID);
   });
 }
 
-export function getDeviceID(callback: (id: string) => void) {
-  MobileSdkReactNative.getDeviceID((deviceID: string) => {
+export function getDeviceID(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getDeviceID((deviceID: string) => {
     callback(deviceID);
   });
 }
 
-export function getTagServer(callback: (id: string) => void) {
-  MobileSdkReactNative.getTagServer((serverID: string) => {
+export function getTagServer(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getTagServer((serverID: string) => {
     callback(serverID);
   });
 }
 
-export function getSessionId(callback: (sessionId: string) => void) {
-  MobileSdkReactNative.getSessionId((sessionId: string) => {
-    console.log('index :: ', sessionId);
-    callback(sessionId);
+export function getApplicationVersion(
+  callback: (version: string) => void
+): void {
+  NativeMobileSdkReactNative.getApplicationVersion((appVersion: string) => {
+    callback(appVersion);
   });
 }
 
-export function resetDeviceID() {
-  MobileSdkReactNative.resetDeviceID();
+export function setApplicationVersion(version: string): void {
+  NativeMobileSdkReactNative.setApplicationVersion(version);
 }
 
-export function registerForMobileMessage(token: string) {
-  MobileSdkReactNative.registerForMobileMessage(token);
+export function registerForMobileMessage(token: string): void {
+  NativeMobileSdkReactNative.registerForMobileMessage(token);
 }
 
 export function handleMobileMessage(
   data: Object,
   callback: (success: boolean) => void
-) {
-  MobileSdkReactNative.handleMobileMessage(data, (isSuccess: boolean) => {
+): void {
+  NativeMobileSdkReactNative.handleMobileMessage(data, (isSuccess: boolean) => {
     callback(isSuccess);
   });
 }
-export function defineAppId(appId: string) {
-  MobileSdkReactNative.defineAppId(appId);
+
+export async function loadSpotData(
+  spotId: string,
+  attributes: Object | null
+): Promise<string> {
+  try {
+    return await NativeMobileSdkReactNative.loadSpotData(spotId, attributes);
+  } catch (e) {
+    return e;
+  }
 }
 
-export function defineAppVersion(appVersion: string) {
-  MobileSdkReactNative.defineAppVersion(appVersion);
+export function registerSpotViewable(spotId: string): void {
+  NativeMobileSdkReactNative.registerSpotViewable(spotId);
 }
 
-export function defineTenantID(tenantID: string) {
-  MobileSdkReactNative.defineTenantID(tenantID);
+export function registerSpotClicked(spotId: string): void {
+  NativeMobileSdkReactNative.registerSpotClicked(spotId);
 }
 
-export function defineTagServer(tagServer: string) {
-  MobileSdkReactNative.defineTagServer(tagServer);
-}
-
-export { InlineAdView, InterstitialAdView };
+export { InlineAdView };
+export { InlineAdViewWithLocalResources };
+export { InterstitialAdView };
 const SASMobileMessagingEvent = NativeModules.SASMobileMessagingEvent;
 const AdDelegateEvent = NativeModules.AdDelegateEvent;
-export { AdDelegateEvent, Constants, SASMobileMessagingEvent };
+export { SASMobileMessagingEvent, AdDelegateEvent };
+export { Constants };

@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "rootDir": ".",
     "paths": {
       "mobile-sdk-react-native": ["./src/index"]
     },
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
-    "lib": ["esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": false,
+    "jsx": "react-jsx",
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitUseStrict": false,
@@ -20,9 +21,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "resolveJsonModule": true,
+    "resolvePackageJsonImports": false,
     "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "verbatimModuleSyntax": true
+    "strict": false,
+    "target": "ESNext"
   }
 }

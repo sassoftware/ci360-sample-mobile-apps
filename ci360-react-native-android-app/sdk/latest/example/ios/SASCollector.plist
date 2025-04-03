@@ -1,0 +1,8 @@
+{
+	tagServer = "https://ingest-master.cidev.sas.us/t/mobile";
+	developerInitialized = true;
+	tenantId = "5f301a8a070001019cc023d7";
+	"locationMonitoringDisabled" = true;
+	applicationId = "react_native_demo_app";
+	disableFocusTracking = false;
+}

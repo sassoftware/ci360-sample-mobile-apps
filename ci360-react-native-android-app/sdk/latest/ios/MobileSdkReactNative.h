@@ -1,12 +1,14 @@
-
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "RNMobileSdkReactNativeSpec.h"
+#import "generated/RNMobileSdkReactNativeSpec/RNMobileSdkReactNativeSpec.h"
+#import <SASCollector/SASCollector.h>
+#import "SasSpotDataHandler.h"
 
 @interface MobileSdkReactNative : NSObject <NativeMobileSdkReactNativeSpec>
-#else
-#import <React/RCTBridgeModule.h>
-
-@interface MobileSdkReactNative : NSObject <RCTBridgeModule>
-#endif
 
 @end
+
+// #import <React/RCTBridgeModule.h>
+// #import <SASCollector/SASCollector.h>
+
+// @interface MobileSdkReactNative : NSObject <RCTBridgeModule>
+
+// @end
