@@ -132,4 +132,23 @@ class MethodChannelMobileSdkFlutter extends MobileSdkFlutterPlatform {
   Future<void> setMobileMessagingDelegate2() async {
     return await methodChannel.invokeMethod('setMobileMessagingDelegate2');
   }
+
+  @override
+  Future<String> loadSpotData(
+      String spotId, Map<String, dynamic>? attributes) async {
+    return await methodChannel.invokeMethod(
+        'loadSpotData', {'spotId': spotId, 'attributes': attributes});
+  }
+
+  @override
+  Future<void> registerSpotViewable(String spotId) async {
+    return await methodChannel
+        .invokeMethod('registerSpotViewable', {'spotId': spotId});
+  }
+
+  @override
+  Future<void> registerSpotClicked(String spotId) async {
+    return await methodChannel
+        .invokeMethod('registerSpotClicked', {'spotId': spotId});
+  }
 }

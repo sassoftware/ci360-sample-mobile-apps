@@ -1,6 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
 import 'package:mobile_sdk_flutter/views/sas_collector_interstitial_ad_view_controller.dart';
 
 typedef OnInterstitialAdViewCreatedCallback = void Function(
@@ -30,12 +32,39 @@ class _SASCollectorInterstitialAdViewState
 
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return AndroidView(
-          viewType: viewType,
-          onPlatformViewCreated: onPlatformViewCreated,
-          creationParams: creationParams,
-          creationParamsCodec: const StandardMessageCodec(),
-        );
+        return PlatformViewLink(
+            surfaceFactory: (context, controller) {
+              return AndroidViewSurface(
+                controller: controller as AndroidViewController,
+                hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+                gestureRecognizers: const <
+                    Factory<OneSequenceGestureRecognizer>>{},
+              );
+            },
+            onCreatePlatformView: (params) {
+              onPlatformViewCreated(params.id);
+
+              return PlatformViewsService.initSurfaceAndroidView(
+                  id: params.id,
+                  viewType: viewType,
+                  layoutDirection: TextDirection.ltr,
+                  creationParams: creationParams,
+                  creationParamsCodec: const StandardMessageCodec(),
+                  onFocus: () {
+                    params.onFocusChanged(true);
+                  })
+                ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
+                ..create();
+            },
+            viewType: viewType);
+
+      // return AndroidView(
+      //   viewType: viewType,
+      //   onPlatformViewCreated: onPlatformViewCreated,
+      //   creationParams: creationParams,
+      //   creationParamsCodec: const StandardMessageCodec(),
+      // );
+
       case TargetPlatform.iOS:
         return UiKitView(
           viewType: viewType,

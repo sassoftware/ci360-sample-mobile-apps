@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'sas_collector_inline_ad_view_controller.dart';
 
@@ -28,12 +30,36 @@ class _SASCollectorInlineAdViewState extends State<SASCollectorInlineAdView> {
 
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return AndroidView(
-          viewType: viewType,
-          creationParams: creationParams,
-          onPlatformViewCreated: onPlatformViewCreated,
-          creationParamsCodec: const StandardMessageCodec(),
-        );
+        return PlatformViewLink(
+            surfaceFactory: (context, controller) {
+              return AndroidViewSurface(
+                controller: controller as AndroidViewController,
+                hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+                gestureRecognizers: const <
+                    Factory<OneSequenceGestureRecognizer>>{},
+              );
+            },
+            onCreatePlatformView: (params) {
+              return PlatformViewsService.initSurfaceAndroidView(
+                  id: params.id,
+                  viewType: viewType,
+                  layoutDirection: TextDirection.ltr,
+                  creationParams: creationParams,
+                  creationParamsCodec: const StandardMessageCodec(),
+                  onFocus: () {
+                    params.onFocusChanged(true);
+                  })
+                ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
+                ..create();
+            },
+            viewType: viewType);
+
+      // return AndroidView(
+      //   viewType: viewType,
+      //   creationParams: creationParams,
+      //   onPlatformViewCreated: onPlatformViewCreated,
+      //   creationParamsCodec: const StandardMessageCodec(),
+      // );
       case TargetPlatform.iOS:
         return UiKitView(
           viewType: viewType,

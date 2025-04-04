@@ -77,4 +77,16 @@ class MobileSdkFlutter {
     return MobileSdkFlutterPlatform.instance
         .setTenant(tenantId, tagServer, appId);
   }
+
+  Future<String> loadSpotData(String spotId, Map<String, dynamic>? attributes) {
+    return MobileSdkFlutterPlatform.instance.loadSpotData(spotId, attributes);
+  }
+
+  Future<void> registerSpotViewable(String spotId) {
+    return MobileSdkFlutterPlatform.instance.registerSpotViewable(spotId);
+  }
+
+  Future<void> registerSpotClicked(String spotId) {
+    return MobileSdkFlutterPlatform.instance.registerSpotClicked(spotId);
+  }
 }

@@ -105,6 +105,10 @@ abstract class MobileSdkFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('setApplicationVersion is not implemented');
   }
 
+  Future<void> setAppVersionAndInitSDK(String appVersion) {
+    throw UnimplementedError('setAppVersionAndInitSDK is not implemented');
+  }
+
   Future<String> getSDKVersion() {
     throw UnimplementedError('getSDKVersion is not implemented');
   }
@@ -115,5 +119,17 @@ abstract class MobileSdkFlutterPlatform extends PlatformInterface {
 
   Future<void> setMobileMessagingDelegate2() {
     throw UnimplementedError('setMobileMessagingDelegate2 not implemented');
+  }
+
+  Future<String> loadSpotData(String spotId, Map<String, dynamic>? attributes) {
+    throw UnimplementedError('loadSpotData is not implemented');
+  }
+
+  Future<void> registerSpotViewable(String spotId) {
+    throw UnimplementedError('registerSpotViewable is not implemented');
+  }
+
+  Future<void> registerSpotClicked(String spotId) {
+    throw UnimplementedError('registerSpotClicked is not implemented');
   }
 }
