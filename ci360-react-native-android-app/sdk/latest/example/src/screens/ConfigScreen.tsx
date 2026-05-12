@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import Toast from 'react-native-simple-toast';
+import { SelectList } from 'react-native-dropdown-select-list';
 const {
   setAppId,
   setTagServer,
@@ -19,6 +20,42 @@ import styles from './Styles/style';
 
 const appVersion = '1.0';
 
+interface TenantConfig {
+  tenantId: string;
+  tagServer: string;
+  appId: string;
+}
+
+const TENANT_PRESETS: Array<{ key: string; value: string; config: TenantConfig }> = [
+  {
+    key: '1',
+    value: 'SAS Demo Tenant',
+    config: {
+      tenantId: 'snzrle',
+      tagServer: 'https://agent.ci360.sas.com',
+      appId: 'demo-mobile-app',
+    },
+  },
+  {
+    key: '2',
+    value: 'Development Tenant',
+    config: {
+      tenantId: '',
+      tagServer: '',
+      appId: '',
+    },
+  },
+  {
+    key: '3',
+    value: 'Custom (manual entry)',
+    config: {
+      tenantId: '',
+      tagServer: '',
+      appId: '',
+    },
+  },
+];
+
 interface ConfigScreenProps {
   navigation: any;
 }
@@ -28,6 +65,18 @@ const ConfigScreen: React.FC<ConfigScreenProps> = ({ navigation }) => {
   const [tagServer, defineTagServer] = React.useState('');
   const [, defineDeviceID] = React.useState('');
   const [tenantID, defineTenantId] = React.useState('');
+  const [selectedPresetKey, setSelectedPresetKey] = React.useState('');
+
+  const handleTenantPresetSelect = (key: string) => {
+    setSelectedPresetKey(key);
+    const preset = TENANT_PRESETS.find(p => p.key === key);
+    if (preset && preset.config.tenantId) {
+      defineTenantId(preset.config.tenantId);
+      defineTagServer(preset.config.tagServer);
+      defineAppId(preset.config.appId);
+    }
+  };
+
   const handleApplyConfig = () => {
     console.log('Executed handleApplyConfig');
     setAppId(appId);
@@ -55,6 +104,24 @@ const ConfigScreen: React.FC<ConfigScreenProps> = ({ navigation }) => {
     <View style={styles.container}>
         <Text style={styles.title}>Config CI360 SDK</Text>
         <View style={styles.bar} />
+
+        <View style={styles.inputContainer}>
+          <Text style={styles.inputLabel}>Select Tenant Preset:</Text>
+        </View>
+        <SelectList
+          setSelected={handleTenantPresetSelect}
+          data={TENANT_PRESETS.map(p => ({ key: p.key, value: p.value }))}
+          save="key"
+          placeholder="Choose a tenant preset..."
+          boxStyles={{ marginBottom: 10, borderColor: '#ccc' }}
+          dropdownStyles={{ borderColor: '#ccc' }}
+          defaultOption={
+            selectedPresetKey
+              ? { key: selectedPresetKey, value: TENANT_PRESETS.find(p => p.key === selectedPresetKey)?.value ?? '' }
+              : undefined
+          }
+        />
+
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Tenant ID:</Text>
         </View>

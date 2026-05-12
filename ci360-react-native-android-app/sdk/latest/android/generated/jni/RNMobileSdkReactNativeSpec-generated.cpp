@@ -102,6 +102,16 @@ static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_reg
   return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "registerSpotClicked", "(Ljava/lang/String;)V", args, count, cachedMethodId);
 }
 
+static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+  static jmethodID cachedMethodId = nullptr;
+  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "getSessionID", "(Lcom/facebook/react/bridge/Callback;)V", args, count, cachedMethodId);
+}
+
+static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getLoadID(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+  static jmethodID cachedMethodId = nullptr;
+  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "getLoadID", "(Lcom/facebook/react/bridge/Callback;)V", args, count, cachedMethodId);
+}
+
 NativeMobileSdkReactNativeSpecJSI::NativeMobileSdkReactNativeSpecJSI(const JavaTurboModule::InitParams &params)
   : JavaTurboModule(params) {
   methodMap_["multiply"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeSpecJSI_multiply};
@@ -122,6 +132,8 @@ NativeMobileSdkReactNativeSpecJSI::NativeMobileSdkReactNativeSpecJSI(const JavaT
   methodMap_["loadSpotData"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeSpecJSI_loadSpotData};
   methodMap_["registerSpotViewable"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewable};
   methodMap_["registerSpotClicked"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClicked};
+  methodMap_["getSessionID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID};
+  methodMap_["getLoadID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getLoadID};
 }
 
 std::shared_ptr<TurboModule> RNMobileSdkReactNativeSpec_ModuleProvider(const std::string &moduleName, const JavaTurboModule::InitParams &params) {

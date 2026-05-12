@@ -2,7 +2,7 @@ import { createNavigationContainerRef } from "@react-navigation/native";
 
 export type RootTabParameterList = {
   Home: {
-    screen?: 'HomeStack' | 'ProfileStack' | 'Notifications' | 'Content' | 'Search';
+    screen?: 'HomeStack' | 'ProfileStack' | 'Notifications' | 'Content' | 'Search' | 'ServerSideContent';
     params?: any;
   };
   Profile: undefined;

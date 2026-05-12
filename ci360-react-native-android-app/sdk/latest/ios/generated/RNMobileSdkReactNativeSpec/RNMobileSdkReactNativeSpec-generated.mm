@@ -98,6 +98,14 @@ namespace facebook::react {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "registerSpotClicked", @selector(registerSpotClicked:), args, count);
     }
 
+    static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getSessionID", @selector(getSessionID:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getLoadID(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getLoadID", @selector(getLoadID:), args, count);
+    }
+
   NativeMobileSdkReactNativeSpecJSI::NativeMobileSdkReactNativeSpecJSI(const ObjCTurboModule::InitParams &params)
     : ObjCTurboModule(params) {
       
@@ -153,6 +161,12 @@ namespace facebook::react {
         
         
         methodMap_["registerSpotClicked"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClicked};
+        
+        
+        methodMap_["getSessionID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID};
+        
+        
+        methodMap_["getLoadID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getLoadID};
         
   }
 } // namespace facebook::react

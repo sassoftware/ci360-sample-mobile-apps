@@ -105,6 +105,18 @@ export function registerSpotClicked(spotId: string): void {
   NativeMobileSdkReactNative.registerSpotClicked(spotId);
 }
 
+export function getSessionID(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getSessionID((sessionID: string) => {
+    callback(sessionID);
+  });
+}
+
+export function getLoadID(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getLoadID((loadID: string) => {
+    callback(loadID);
+  });
+}
+
 export { InlineAdView };
 export { InlineAdViewWithLocalResources };
 export { InterstitialAdView };

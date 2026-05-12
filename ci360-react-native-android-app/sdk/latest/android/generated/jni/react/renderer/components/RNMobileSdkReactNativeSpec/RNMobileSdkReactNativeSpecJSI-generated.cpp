@@ -135,6 +135,20 @@ static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSp
   );
   return jsi::Value::undefined();
 }
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getSessionID(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->getSessionID(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asObject(rt).asFunction(rt)
+  );
+  return jsi::Value::undefined();
+}
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getLoadID(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->getLoadID(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asObject(rt).asFunction(rt)
+  );
+  return jsi::Value::undefined();
+}
 
 NativeMobileSdkReactNativeCxxSpecJSI::NativeMobileSdkReactNativeCxxSpecJSI(std::shared_ptr<CallInvoker> jsInvoker)
   : TurboModule("MobileSdkReactNative", jsInvoker) {
@@ -156,6 +170,8 @@ NativeMobileSdkReactNativeCxxSpecJSI::NativeMobileSdkReactNativeCxxSpecJSI(std::
   methodMap_["loadSpotData"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_loadSpotData};
   methodMap_["registerSpotViewable"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotViewable};
   methodMap_["registerSpotClicked"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotClicked};
+  methodMap_["getSessionID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getSessionID};
+  methodMap_["getLoadID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getLoadID};
 }
 
 

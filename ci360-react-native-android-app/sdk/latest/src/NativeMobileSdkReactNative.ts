@@ -20,6 +20,8 @@ export interface Spec extends TurboModule {
   loadSpotData(spotId: string, attributes: Object | null): Promise<string>;
   registerSpotViewable(spotId: string): void;
   registerSpotClicked(spotId: string): void;
+  getSessionID(callback: (id: string) => void): void;
+  getLoadID(callback: (id: string) => void): void;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('MobileSdkReactNative');

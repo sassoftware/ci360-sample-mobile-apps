@@ -61,6 +61,8 @@
               reject:(RCTPromiseRejectBlock)reject;
 - (void)registerSpotViewable:(NSString *)spotId;
 - (void)registerSpotClicked:(NSString *)spotId;
+- (void)getSessionID:(RCTResponseSenderBlock)callback;
+- (void)getLoadID:(RCTResponseSenderBlock)callback;
 
 @end
 

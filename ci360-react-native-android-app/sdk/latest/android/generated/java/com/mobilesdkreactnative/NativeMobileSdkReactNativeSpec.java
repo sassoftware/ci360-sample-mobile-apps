@@ -106,4 +106,12 @@ public abstract class NativeMobileSdkReactNativeSpec extends ReactContextBaseJav
   @ReactMethod
   @DoNotStrip
   public abstract void registerSpotClicked(String spotId);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void getSessionID(Callback callback);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void getLoadID(Callback callback);
 }

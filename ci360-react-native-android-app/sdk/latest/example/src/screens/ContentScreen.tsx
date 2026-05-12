@@ -16,6 +16,9 @@ import {
   InterstitialAdView,
   AdDelegateEvent,
   Constants,
+  loadSpotData,
+  registerSpotViewable,
+  registerSpotClicked,
 } from 'mobile-sdk-react-native';
 import CustomButton from '../components/CustomButton';
 
@@ -25,8 +28,10 @@ const ContentScreen: React.FC<ContentScreenProps> = () => {
   const [showInterstitial, setShowInterstitial] = useState<boolean>(false);
   const [inlineViewNotVisible, setInlineViewNotVisible] =
     useState<boolean>(false);
+  const [dataSpotContent, setDataSpotContent] = useState<string>('');
   const inline_spotId = 'gp_inlineAd';
   const interstitial_spotId = 'gp_interstitialAd';
+  const data_spotId = 'snzrle_data_spot';
 
   let iOSMessagingEvent: NativeEventEmitter | undefined;
   if (Platform.OS === 'ios') {
@@ -118,6 +123,18 @@ const ContentScreen: React.FC<ContentScreenProps> = () => {
     };
   }, []);
 
+  const loadDataOnlySpot = async () => {
+    try {
+      const data = await loadSpotData(data_spotId, null);
+      setDataSpotContent(data);
+      registerSpotViewable(data_spotId);
+      Toast.show('Data Only Spot loaded', Toast.SHORT);
+    } catch (error) {
+      console.error('Error loading Data Only Spot:', error);
+      Toast.show('Failed to load Data Only Spot', Toast.SHORT);
+    }
+  };
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -149,6 +166,25 @@ const ContentScreen: React.FC<ContentScreenProps> = () => {
               spotId={interstitial_spotId}
               viewId="interstitialViewId1"
             />
+          )}
+        </View>
+
+        <View style={styles.dataSpotContainer}>
+          <Text style={styles.text}>Data Only Spot</Text>
+          <CustomButton
+            title="Load Data Only Spot"
+            onPress={loadDataOnlySpot}
+            width={{ width: 200 }}
+          />
+          <CustomButton
+            title="Register Click"
+            onPress={() => registerSpotClicked(data_spotId)}
+            width={{ width: 200 }}
+          />
+          {dataSpotContent ? (
+            <Text style={styles.dataSpotContent}>{dataSpotContent}</Text>
+          ) : (
+            <Text style={styles.dataSpotPlaceholder}>No data loaded yet</Text>
           )}
         </View>
       </View>
@@ -199,6 +235,29 @@ const styles = StyleSheet.create({
     marginTop: 10,
     textAlign: 'center',
     fontWeight: 'bold',
+  },
+  dataSpotContainer: {
+    alignItems: 'center',
+    borderColor: 'lightgrey',
+    borderWidth: 2,
+    borderRadius: 5,
+    margin: 5,
+    marginTop: 20,
+    padding: 10,
+    width: 350,
+  },
+  dataSpotContent: {
+    marginTop: 10,
+    padding: 8,
+    backgroundColor: '#f5f5f5',
+    borderRadius: 4,
+    fontSize: 12,
+    color: '#333',
+  },
+  dataSpotPlaceholder: {
+    marginTop: 10,
+    color: '#999',
+    fontStyle: 'italic',
   },
 });
 

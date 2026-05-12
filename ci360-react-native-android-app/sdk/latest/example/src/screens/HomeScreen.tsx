@@ -59,6 +59,14 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
         <TouchableOpacity
           style={styles.button}
+          onPress={() => navigation.navigate('ServerSideContent')}
+        >
+          <Icon name="cloud-download-outline" size={iconSize} style={styles.icon} />
+          <Text style={styles.buttonText}>Server-Side Content</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
           onPress={() => navigation.navigate('Settings')}
         >
           <Icon name="settings-outline" size={iconSize} style={styles.icon} />

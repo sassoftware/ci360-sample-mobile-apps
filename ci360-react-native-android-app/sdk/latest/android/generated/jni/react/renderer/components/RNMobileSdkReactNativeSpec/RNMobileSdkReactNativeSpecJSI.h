@@ -38,6 +38,8 @@ public:
   virtual jsi::Value loadSpotData(jsi::Runtime &rt, jsi::String spotId, std::optional<jsi::Object> attributes) = 0;
   virtual void registerSpotViewable(jsi::Runtime &rt, jsi::String spotId) = 0;
   virtual void registerSpotClicked(jsi::Runtime &rt, jsi::String spotId) = 0;
+  virtual void getSessionID(jsi::Runtime &rt, jsi::Function callback) = 0;
+  virtual void getLoadID(jsi::Runtime &rt, jsi::Function callback) = 0;
 
 };
 
@@ -207,6 +209,22 @@ private:
 
       return bridging::callFromJs<void>(
           rt, &T::registerSpotClicked, jsInvoker_, instance_, std::move(spotId));
+    }
+    void getSessionID(jsi::Runtime &rt, jsi::Function callback) override {
+      static_assert(
+          bridging::getParameterCount(&T::getSessionID) == 2,
+          "Expected getSessionID(...) to have 2 parameters");
+
+      return bridging::callFromJs<void>(
+          rt, &T::getSessionID, jsInvoker_, instance_, std::move(callback));
+    }
+    void getLoadID(jsi::Runtime &rt, jsi::Function callback) override {
+      static_assert(
+          bridging::getParameterCount(&T::getLoadID) == 2,
+          "Expected getLoadID(...) to have 2 parameters");
+
+      return bridging::callFromJs<void>(
+          rt, &T::getLoadID, jsInvoker_, instance_, std::move(callback));
     }
 
   private:
