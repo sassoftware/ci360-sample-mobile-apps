@@ -18,8 +18,24 @@ export interface Spec extends TurboModule {
   registerForMobileMessage(token: string): void;
   handleMobileMessage(data: Object, callback: (success: boolean) => void): void;
   loadSpotData(spotId: string, attributes: Object | null): Promise<string>;
+  setCi360Id(ci360Id: string): void;
+  getCi360Id(callback: (id: string) => void): void;
   registerSpotViewable(spotId: string): void;
   registerSpotClicked(spotId: string): void;
+  registerSpotViewableWithIds(
+    spotId: string,
+    taskId: string,
+    creativeId: string,
+    recGroup: string | null,
+    requestId: string | null
+  ): void;
+  registerSpotClickedWithIds(
+    spotId: string,
+    taskId: string,
+    creativeId: string,
+    recGroup: string | null,
+    requestId: string | null
+  ): void;
   getSessionID(callback: (id: string) => void): void;
   getLoadID(callback: (id: string) => void): void;
 }

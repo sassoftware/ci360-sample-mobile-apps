@@ -1,8 +1,6 @@
 import * as MobileSdk from 'mobile-sdk-react-native';
 import React, { useEffect } from 'react';
 import {
-  ScrollView,
-  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
@@ -10,10 +8,9 @@ import {
 } from 'react-native';
 import Toast from 'react-native-simple-toast';
 import { SelectList } from 'react-native-dropdown-select-list';
+import { updateCi360Settings } from '../services/Ci360SettingsStore';
 const {
-  setAppId,
-  setTagServer,
-  setTenantId,
+  setAppVersionAndInitSDK,
   getDeviceID,
 } = MobileSdk;
 import styles from './Styles/style';  
@@ -29,31 +26,22 @@ interface TenantConfig {
 const TENANT_PRESETS: Array<{ key: string; value: string; config: TenantConfig }> = [
   {
     key: '1',
-    value: 'SAS Demo Tenant',
+    value: 'SAS Tenant 5 Sandbox',
     config: {
-      tenantId: 'snzrle',
-      tagServer: 'https://agent.ci360.sas.com',
-      appId: 'demo-mobile-app',
+      tenantId: 'da1a105f5300013b4dde1b18',
+        tagServer: 'https://execution-training.ci360.sas.com/t/mobile',
+      appId: 'react_native_demo_app_v1',
     },
   },
   {
     key: '2',
-    value: 'Development Tenant',
+    value: 'Development Tenant 30',
     config: {
-      tenantId: '',
-      tagServer: '',
-      appId: '',
+      tenantId: 'aee85757e600010b868fd8f5',
+      tagServer: 'https://execution-training.ci360.sas.com/t/mobile',
+      appId: 'react_native_demo_app_v3',
     },
-  },
-  {
-    key: '3',
-    value: 'Custom (manual entry)',
-    config: {
-      tenantId: '',
-      tagServer: '',
-      appId: '',
-    },
-  },
+  }
 ];
 
 interface ConfigScreenProps {
@@ -67,6 +55,15 @@ const ConfigScreen: React.FC<ConfigScreenProps> = ({ navigation }) => {
   const [tenantID, defineTenantId] = React.useState('');
   const [selectedPresetKey, setSelectedPresetKey] = React.useState('');
 
+  const getGatewayHostFromTagServer = (tagServerUrl: string): string => {
+    try {
+      const parsed = new URL(tagServerUrl.trim());
+      return `${parsed.protocol}//${parsed.host}`;
+    } catch {
+      return tagServerUrl.trim().replace(/\/t\/mobile\/?$/, '').replace(/\/$/, '');
+    }
+  };
+
   const handleTenantPresetSelect = (key: string) => {
     setSelectedPresetKey(key);
     const preset = TENANT_PRESETS.find(p => p.key === key);
@@ -79,16 +76,21 @@ const ConfigScreen: React.FC<ConfigScreenProps> = ({ navigation }) => {
 
   const handleApplyConfig = () => {
     console.log('Executed handleApplyConfig');
-    setAppId(appId);
-    setTenantId(tenantID);
-    setTagServer(tagServer);
+
+    updateCi360Settings({
+      externalTenantId: tenantID,
+      gatewayHost: getGatewayHostFromTagServer(tagServer),
+      appId,
+    });
+
+    setAppVersionAndInitSDK('1.0.0');
     console.log(
-      'Config set properly, login now',
+      'SDK initialized. Tenant/App/Tag values come from SASCollector.properties.',
       appId,
       tenantID,
       tagServer
     );
-    Toast.show('Config set properly, login now', Toast.LONG);
+    Toast.show('SDK initialized. Update SASCollector.properties for tenant config.', Toast.LONG);
     setTimeout(() => {
       navigation.navigate('Profile');
     }, 3000);

@@ -74,3 +74,12 @@ ios/SASCollector.xcframework
 
 .yarn/*
 example/.yarn/*
+
+android/app/build/*
+android/app/generated/*
+
+example/android/app/build/*
+example/android/app/generated/*
+
+ios/Pods/*
+sdk/latest/ios/*

@@ -26,6 +26,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import ContentScreen from './screens/ContentScreen';
 import SearchScreen from './screens/SearchScreen';
 import ServerSideContentScreen from './screens/ServerSideContentScreen';
+import ServerSideEventsScreen from './screens/ServerSideEventsScreen';
 import ConfigScreen from './screens/ConfigScreen';
 import {
   navigate,
@@ -62,6 +63,7 @@ const HomeStackNavigator = () => (
     <HomeStack.Screen name="Content" component={ContentScreen} />
     <HomeStack.Screen name="Search" component={SearchScreen} />
     <HomeStack.Screen name="ServerSideContent" component={ServerSideContentScreen} />
+    <HomeStack.Screen name="ServerSideEvents" component={ServerSideEventsScreen} />
   </HomeStack.Navigator>
 );
 

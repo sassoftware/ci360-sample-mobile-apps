@@ -97,12 +97,54 @@ export async function loadSpotData(
   }
 }
 
+export function setCi360Id(ci360Id: string): void {
+  NativeMobileSdkReactNative.setCi360Id(ci360Id);
+}
+
+export function getCi360Id(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getCi360Id((ci360Id: string) => {
+    callback(ci360Id);
+  });
+}
+
 export function registerSpotViewable(spotId: string): void {
   NativeMobileSdkReactNative.registerSpotViewable(spotId);
 }
 
 export function registerSpotClicked(spotId: string): void {
   NativeMobileSdkReactNative.registerSpotClicked(spotId);
+}
+
+export function registerSpotViewableWithIds(
+  spotId: string,
+  taskId: string,
+  creativeId: string,
+  recGroup: string | null = null,
+  requestId: string | null = null
+): void {
+  NativeMobileSdkReactNative.registerSpotViewableWithIds(
+    spotId,
+    taskId,
+    creativeId,
+    recGroup,
+    requestId
+  );
+}
+
+export function registerSpotClickedWithIds(
+  spotId: string,
+  taskId: string,
+  creativeId: string,
+  recGroup: string | null = null,
+  requestId: string | null = null
+): void {
+  NativeMobileSdkReactNative.registerSpotClickedWithIds(
+    spotId,
+    taskId,
+    creativeId,
+    recGroup,
+    requestId
+  );
 }
 
 export function getSessionID(callback: (id: string) => void): void {

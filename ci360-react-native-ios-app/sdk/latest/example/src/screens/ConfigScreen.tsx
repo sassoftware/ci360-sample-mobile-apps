@@ -29,7 +29,7 @@ const ConfigScreen: React.FC<ConfigScreenProps> = ({ navigation }) => {
   const [, defineDeviceID] = React.useState('');
   const [tenantID, defineTenantId] = React.useState('');
   const handleApplyConfig = () => {
-    console.log('Executed handleApplyConfig');
+    console.log('Executed handleApplyConfig', appId, tenantID, tagServer);
     setAppId(appId);
     setTenantId(tenantID);
     setTagServer(tagServer);

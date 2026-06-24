@@ -4,8 +4,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import * as MobileSdk from 'mobile-sdk-react-native';
 import styles from './Styles/style';
 
-const { initializeCollection, shutDown } = MobileSdk;
+const { setAppVersionAndInitSDK } = MobileSdk;
 const iconSize = 24;
+const appVersion = '1.0.0';
 
 interface HomeScreenProps {
   navigation: any; 
@@ -57,12 +58,20 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           <Text style={styles.buttonText}>Search</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity
+        {/* <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('ServerSideContent')}
         >
           <Icon name="cloud-download-outline" size={iconSize} style={styles.icon} />
           <Text style={styles.buttonText}>Server-Side Content</Text>
+        </TouchableOpacity> */}
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('ServerSideEvents')}
+        >
+          <Icon name="cloud-download-outline" size={iconSize} style={styles.icon} />
+          <Text style={styles.buttonText}>SSE Events API</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -79,7 +88,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => initializeCollection}
+          onPress={() => setAppVersionAndInitSDK(appVersion)}
         >
           <Icon name="extension-puzzle-outline" size={iconSize} style={styles.icon} />
           <Text style={styles.buttonText}>Initialize CI360</Text>
@@ -90,11 +99,12 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity
-          style={styles.button}
-          onPress={() => shutDown()}
+          style={[styles.button, { opacity: 0.5 }]}
+          onPress={() => {}}
+          disabled={true}
         >
           <Icon name="albums-outline" size={iconSize} style={styles.icon} />
-          <Text style={styles.buttonText}>Disable SDK</Text>
+          <Text style={styles.buttonText}>Disable SDK (Not Available)</Text>
         </TouchableOpacity>
       </View>
 

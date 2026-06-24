@@ -31,3 +31,11 @@ buildscript {
 
 apply plugin: "com.facebook.react.rootproject"
 
+allprojects {
+    repositories {
+        maven {
+            url 'https://sdk.ci360.sas.com/android'
+        }
+    }
+}
+
