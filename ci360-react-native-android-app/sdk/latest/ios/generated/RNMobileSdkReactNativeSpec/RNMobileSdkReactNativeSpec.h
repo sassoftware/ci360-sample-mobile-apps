@@ -59,8 +59,20 @@
           attributes:(NSDictionary * _Nullable)attributes
              resolve:(RCTPromiseResolveBlock)resolve
               reject:(RCTPromiseRejectBlock)reject;
+- (void)setCi360Id:(NSString *)ci360Id;
+- (void)getCi360Id:(RCTResponseSenderBlock)callback;
 - (void)registerSpotViewable:(NSString *)spotId;
 - (void)registerSpotClicked:(NSString *)spotId;
+- (void)registerSpotViewableWithIds:(NSString *)spotId
+                             taskId:(NSString *)taskId
+                         creativeId:(NSString *)creativeId
+                           recGroup:(NSString * _Nullable)recGroup
+                          requestId:(NSString * _Nullable)requestId;
+- (void)registerSpotClickedWithIds:(NSString *)spotId
+                            taskId:(NSString *)taskId
+                        creativeId:(NSString *)creativeId
+                          recGroup:(NSString * _Nullable)recGroup
+                         requestId:(NSString * _Nullable)requestId;
 - (void)getSessionID:(RCTResponseSenderBlock)callback;
 - (void)getLoadID:(RCTResponseSenderBlock)callback;
 

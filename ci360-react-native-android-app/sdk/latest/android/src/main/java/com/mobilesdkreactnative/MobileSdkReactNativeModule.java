@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: MobileSdkReactNativeModule.java                                                                                   #
+//# File Description: Implements the React Native bridge module exposing CI360 SDK initialization, identity, push, and event APIs. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 package com.mobilesdkreactnative;
 
 import android.app.Activity;

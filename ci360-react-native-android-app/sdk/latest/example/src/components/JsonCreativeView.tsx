@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: JsonCreativeView.tsx                                                                                   #
+//# File Description: Renderer component for JSON-based CI360 creative content and click handling. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 import { FC } from 'react';
 import { View, Button, Text, StyleSheet } from 'react-native';
 import JsonCreative from '../models/JsonCreative';

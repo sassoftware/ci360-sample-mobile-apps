@@ -92,6 +92,16 @@ static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_loa
   return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, PromiseKind, "loadSpotData", "(Ljava/lang/String;Lcom/facebook/react/bridge/ReadableMap;Lcom/facebook/react/bridge/Promise;)V", args, count, cachedMethodId);
 }
 
+static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_setCi360Id(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+  static jmethodID cachedMethodId = nullptr;
+  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "setCi360Id", "(Ljava/lang/String;)V", args, count, cachedMethodId);
+}
+
+static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getCi360Id(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+  static jmethodID cachedMethodId = nullptr;
+  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "getCi360Id", "(Lcom/facebook/react/bridge/Callback;)V", args, count, cachedMethodId);
+}
+
 static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewable(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
   static jmethodID cachedMethodId = nullptr;
   return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "registerSpotViewable", "(Ljava/lang/String;)V", args, count, cachedMethodId);
@@ -100,6 +110,16 @@ static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_reg
 static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClicked(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
   static jmethodID cachedMethodId = nullptr;
   return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "registerSpotClicked", "(Ljava/lang/String;)V", args, count, cachedMethodId);
+}
+
+static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewableWithIds(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+  static jmethodID cachedMethodId = nullptr;
+  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "registerSpotViewableWithIds", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", args, count, cachedMethodId);
+}
+
+static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClickedWithIds(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+  static jmethodID cachedMethodId = nullptr;
+  return static_cast<JavaTurboModule &>(turboModule).invokeJavaMethod(rt, VoidKind, "registerSpotClickedWithIds", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", args, count, cachedMethodId);
 }
 
 static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -130,8 +150,12 @@ NativeMobileSdkReactNativeSpecJSI::NativeMobileSdkReactNativeSpecJSI(const JavaT
   methodMap_["registerForMobileMessage"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerForMobileMessage};
   methodMap_["handleMobileMessage"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeSpecJSI_handleMobileMessage};
   methodMap_["loadSpotData"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeSpecJSI_loadSpotData};
+  methodMap_["setCi360Id"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_setCi360Id};
+  methodMap_["getCi360Id"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getCi360Id};
   methodMap_["registerSpotViewable"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewable};
   methodMap_["registerSpotClicked"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClicked};
+  methodMap_["registerSpotViewableWithIds"] = MethodMetadata {5, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewableWithIds};
+  methodMap_["registerSpotClickedWithIds"] = MethodMetadata {5, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClickedWithIds};
   methodMap_["getSessionID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID};
   methodMap_["getLoadID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getLoadID};
 }

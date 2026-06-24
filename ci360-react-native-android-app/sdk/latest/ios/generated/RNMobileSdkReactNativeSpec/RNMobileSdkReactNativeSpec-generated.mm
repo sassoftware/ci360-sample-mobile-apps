@@ -90,12 +90,28 @@ namespace facebook::react {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, PromiseKind, "loadSpotData", @selector(loadSpotData:attributes:resolve:reject:), args, count);
     }
 
+    static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_setCi360Id(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "setCi360Id", @selector(setCi360Id:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getCi360Id(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "getCi360Id", @selector(getCi360Id:), args, count);
+    }
+
     static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewable(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "registerSpotViewable", @selector(registerSpotViewable:), args, count);
     }
 
     static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClicked(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
       return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "registerSpotClicked", @selector(registerSpotClicked:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewableWithIds(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "registerSpotViewableWithIds", @selector(registerSpotViewableWithIds:taskId:creativeId:recGroup:requestId:), args, count);
+    }
+
+    static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClickedWithIds(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
+      return static_cast<ObjCTurboModule&>(turboModule).invokeObjCMethod(rt, VoidKind, "registerSpotClickedWithIds", @selector(registerSpotClickedWithIds:taskId:creativeId:recGroup:requestId:), args, count);
     }
 
     static facebook::jsi::Value __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID(facebook::jsi::Runtime& rt, TurboModule &turboModule, const facebook::jsi::Value* args, size_t count) {
@@ -157,10 +173,22 @@ namespace facebook::react {
         methodMap_["loadSpotData"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeSpecJSI_loadSpotData};
         
         
+        methodMap_["setCi360Id"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_setCi360Id};
+        
+        
+        methodMap_["getCi360Id"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getCi360Id};
+        
+        
         methodMap_["registerSpotViewable"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewable};
         
         
         methodMap_["registerSpotClicked"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClicked};
+        
+        
+        methodMap_["registerSpotViewableWithIds"] = MethodMetadata {5, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotViewableWithIds};
+        
+        
+        methodMap_["registerSpotClickedWithIds"] = MethodMetadata {5, __hostFunction_NativeMobileSdkReactNativeSpecJSI_registerSpotClickedWithIds};
         
         
         methodMap_["getSessionID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeSpecJSI_getSessionID};

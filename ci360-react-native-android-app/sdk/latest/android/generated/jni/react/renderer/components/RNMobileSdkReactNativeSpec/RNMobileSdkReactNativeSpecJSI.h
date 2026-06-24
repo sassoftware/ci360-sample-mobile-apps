@@ -36,8 +36,12 @@ public:
   virtual void registerForMobileMessage(jsi::Runtime &rt, jsi::String token) = 0;
   virtual void handleMobileMessage(jsi::Runtime &rt, jsi::Object data, jsi::Function callback) = 0;
   virtual jsi::Value loadSpotData(jsi::Runtime &rt, jsi::String spotId, std::optional<jsi::Object> attributes) = 0;
+  virtual void setCi360Id(jsi::Runtime &rt, jsi::String ci360Id) = 0;
+  virtual void getCi360Id(jsi::Runtime &rt, jsi::Function callback) = 0;
   virtual void registerSpotViewable(jsi::Runtime &rt, jsi::String spotId) = 0;
   virtual void registerSpotClicked(jsi::Runtime &rt, jsi::String spotId) = 0;
+  virtual void registerSpotViewableWithIds(jsi::Runtime &rt, jsi::String spotId, jsi::String taskId, jsi::String creativeId, std::optional<jsi::String> recGroup, std::optional<jsi::String> requestId) = 0;
+  virtual void registerSpotClickedWithIds(jsi::Runtime &rt, jsi::String spotId, jsi::String taskId, jsi::String creativeId, std::optional<jsi::String> recGroup, std::optional<jsi::String> requestId) = 0;
   virtual void getSessionID(jsi::Runtime &rt, jsi::Function callback) = 0;
   virtual void getLoadID(jsi::Runtime &rt, jsi::Function callback) = 0;
 
@@ -194,6 +198,22 @@ private:
       return bridging::callFromJs<jsi::Value>(
           rt, &T::loadSpotData, jsInvoker_, instance_, std::move(spotId), std::move(attributes));
     }
+    void setCi360Id(jsi::Runtime &rt, jsi::String ci360Id) override {
+      static_assert(
+          bridging::getParameterCount(&T::setCi360Id) == 2,
+          "Expected setCi360Id(...) to have 2 parameters");
+
+      return bridging::callFromJs<void>(
+          rt, &T::setCi360Id, jsInvoker_, instance_, std::move(ci360Id));
+    }
+    void getCi360Id(jsi::Runtime &rt, jsi::Function callback) override {
+      static_assert(
+          bridging::getParameterCount(&T::getCi360Id) == 2,
+          "Expected getCi360Id(...) to have 2 parameters");
+
+      return bridging::callFromJs<void>(
+          rt, &T::getCi360Id, jsInvoker_, instance_, std::move(callback));
+    }
     void registerSpotViewable(jsi::Runtime &rt, jsi::String spotId) override {
       static_assert(
           bridging::getParameterCount(&T::registerSpotViewable) == 2,
@@ -209,6 +229,22 @@ private:
 
       return bridging::callFromJs<void>(
           rt, &T::registerSpotClicked, jsInvoker_, instance_, std::move(spotId));
+    }
+    void registerSpotViewableWithIds(jsi::Runtime &rt, jsi::String spotId, jsi::String taskId, jsi::String creativeId, std::optional<jsi::String> recGroup, std::optional<jsi::String> requestId) override {
+      static_assert(
+          bridging::getParameterCount(&T::registerSpotViewableWithIds) == 6,
+          "Expected registerSpotViewableWithIds(...) to have 6 parameters");
+
+      return bridging::callFromJs<void>(
+          rt, &T::registerSpotViewableWithIds, jsInvoker_, instance_, std::move(spotId), std::move(taskId), std::move(creativeId), std::move(recGroup), std::move(requestId));
+    }
+    void registerSpotClickedWithIds(jsi::Runtime &rt, jsi::String spotId, jsi::String taskId, jsi::String creativeId, std::optional<jsi::String> recGroup, std::optional<jsi::String> requestId) override {
+      static_assert(
+          bridging::getParameterCount(&T::registerSpotClickedWithIds) == 6,
+          "Expected registerSpotClickedWithIds(...) to have 6 parameters");
+
+      return bridging::callFromJs<void>(
+          rt, &T::registerSpotClickedWithIds, jsInvoker_, instance_, std::move(spotId), std::move(taskId), std::move(creativeId), std::move(recGroup), std::move(requestId));
     }
     void getSessionID(jsi::Runtime &rt, jsi::Function callback) override {
       static_assert(

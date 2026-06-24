@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: InlineAdViewWithLocalResourcesManager.java                                                                                   #
+//# File Description: Manages inline ad rendering with local resources and coordinates gated loading based on required props. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 package com.mobilesdkreactnative.views;
 
 import android.content.Context;
