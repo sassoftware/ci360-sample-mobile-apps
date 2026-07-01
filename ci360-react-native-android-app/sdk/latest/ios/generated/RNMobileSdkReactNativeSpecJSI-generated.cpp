@@ -121,6 +121,20 @@ static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_loadSpotDa
     count <= 1 || args[1].isNull() || args[1].isUndefined() ? std::nullopt : std::make_optional(args[1].asObject(rt))
   );
 }
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_setCi360Id(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->setCi360Id(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asString(rt)
+  );
+  return jsi::Value::undefined();
+}
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getCi360Id(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->getCi360Id(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asObject(rt).asFunction(rt)
+  );
+  return jsi::Value::undefined();
+}
 static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotViewable(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
   static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->registerSpotViewable(
     rt,
@@ -132,6 +146,42 @@ static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSp
   static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->registerSpotClicked(
     rt,
     count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asString(rt)
+  );
+  return jsi::Value::undefined();
+}
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotViewableWithIds(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->registerSpotViewableWithIds(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asString(rt),
+    count <= 1 ? throw jsi::JSError(rt, "Expected argument in position 1 to be passed") : args[1].asString(rt),
+    count <= 2 ? throw jsi::JSError(rt, "Expected argument in position 2 to be passed") : args[2].asString(rt),
+    count <= 3 || args[3].isNull() || args[3].isUndefined() ? std::nullopt : std::make_optional(args[3].asString(rt)),
+    count <= 4 || args[4].isNull() || args[4].isUndefined() ? std::nullopt : std::make_optional(args[4].asString(rt))
+  );
+  return jsi::Value::undefined();
+}
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotClickedWithIds(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->registerSpotClickedWithIds(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asString(rt),
+    count <= 1 ? throw jsi::JSError(rt, "Expected argument in position 1 to be passed") : args[1].asString(rt),
+    count <= 2 ? throw jsi::JSError(rt, "Expected argument in position 2 to be passed") : args[2].asString(rt),
+    count <= 3 || args[3].isNull() || args[3].isUndefined() ? std::nullopt : std::make_optional(args[3].asString(rt)),
+    count <= 4 || args[4].isNull() || args[4].isUndefined() ? std::nullopt : std::make_optional(args[4].asString(rt))
+  );
+  return jsi::Value::undefined();
+}
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getSessionID(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->getSessionID(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asObject(rt).asFunction(rt)
+  );
+  return jsi::Value::undefined();
+}
+static jsi::Value __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getLoadID(jsi::Runtime &rt, TurboModule &turboModule, const jsi::Value* args, size_t count) {
+  static_cast<NativeMobileSdkReactNativeCxxSpecJSI *>(&turboModule)->getLoadID(
+    rt,
+    count <= 0 ? throw jsi::JSError(rt, "Expected argument in position 0 to be passed") : args[0].asObject(rt).asFunction(rt)
   );
   return jsi::Value::undefined();
 }
@@ -154,8 +204,14 @@ NativeMobileSdkReactNativeCxxSpecJSI::NativeMobileSdkReactNativeCxxSpecJSI(std::
   methodMap_["registerForMobileMessage"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerForMobileMessage};
   methodMap_["handleMobileMessage"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_handleMobileMessage};
   methodMap_["loadSpotData"] = MethodMetadata {2, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_loadSpotData};
+  methodMap_["setCi360Id"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_setCi360Id};
+  methodMap_["getCi360Id"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getCi360Id};
   methodMap_["registerSpotViewable"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotViewable};
   methodMap_["registerSpotClicked"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotClicked};
+  methodMap_["registerSpotViewableWithIds"] = MethodMetadata {5, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotViewableWithIds};
+  methodMap_["registerSpotClickedWithIds"] = MethodMetadata {5, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_registerSpotClickedWithIds};
+  methodMap_["getSessionID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getSessionID};
+  methodMap_["getLoadID"] = MethodMetadata {1, __hostFunction_NativeMobileSdkReactNativeCxxSpecJSI_getLoadID};
 }
 
 

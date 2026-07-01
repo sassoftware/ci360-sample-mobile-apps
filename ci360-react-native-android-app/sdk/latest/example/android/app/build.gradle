@@ -342,11 +342,10 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-
     //noinspection GradleDynamicVersion
     // implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation "com.facebook.react:react-android"
+    implementation "com.sas.mkt:mobile-sdk-android:1.89.1"
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
@@ -356,12 +355,11 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     implementation 'com.google.code.gson:gson:2.8.9'
-    implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.google.android.gms:play-services-location:21.0.0'
     implementation platform('com.google.firebase:firebase-bom:30.3.1')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-core'
     implementation 'com.google.firebase:firebase-messaging'
-    implementation files('../../../android/libs/SASCollector.jar')
     implementation project(':react-native-vector-icons')
 
     // debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {

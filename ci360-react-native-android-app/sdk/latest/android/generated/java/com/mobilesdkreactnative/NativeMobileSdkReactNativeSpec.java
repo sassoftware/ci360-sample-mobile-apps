@@ -101,9 +101,33 @@ public abstract class NativeMobileSdkReactNativeSpec extends ReactContextBaseJav
 
   @ReactMethod
   @DoNotStrip
+  public abstract void setCi360Id(String ci360Id);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void getCi360Id(Callback callback);
+
+  @ReactMethod
+  @DoNotStrip
   public abstract void registerSpotViewable(String spotId);
 
   @ReactMethod
   @DoNotStrip
   public abstract void registerSpotClicked(String spotId);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void registerSpotViewableWithIds(String spotId, String taskId, String creativeId, @Nullable String recGroup, @Nullable String requestId);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void registerSpotClickedWithIds(String spotId, String taskId, String creativeId, @Nullable String recGroup, @Nullable String requestId);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void getSessionID(Callback callback);
+
+  @ReactMethod
+  @DoNotStrip
+  public abstract void getLoadID(Callback callback);
 }

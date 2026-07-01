@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: index.tsx                                                                                        #
+//# File Description: Exports SDK functions and components for mobile messaging, location monitoring, spot tracking, and ad management. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 import NativeMobileSdkReactNative from './NativeMobileSdkReactNative';
 import { NativeModules } from 'react-native';
 import InlineAdView from './views/InlineAdView';
@@ -97,12 +108,66 @@ export async function loadSpotData(
   }
 }
 
+export function setCi360Id(ci360Id: string): void {
+  NativeMobileSdkReactNative.setCi360Id(ci360Id);
+}
+
+export function getCi360Id(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getCi360Id((ci360Id: string) => {
+    callback(ci360Id);
+  });
+}
+
 export function registerSpotViewable(spotId: string): void {
   NativeMobileSdkReactNative.registerSpotViewable(spotId);
 }
 
 export function registerSpotClicked(spotId: string): void {
   NativeMobileSdkReactNative.registerSpotClicked(spotId);
+}
+
+export function registerSpotViewableWithIds(
+  spotId: string,
+  taskId: string,
+  creativeId: string,
+  recGroup: string | null = null,
+  requestId: string | null = null
+): void {
+  NativeMobileSdkReactNative.registerSpotViewableWithIds(
+    spotId,
+    taskId,
+    creativeId,
+    recGroup,
+    requestId
+  );
+}
+
+export function registerSpotClickedWithIds(
+  spotId: string,
+  taskId: string,
+  creativeId: string,
+  recGroup: string | null = null,
+  requestId: string | null = null
+): void {
+  NativeMobileSdkReactNative.registerSpotClickedWithIds(
+    spotId,
+    taskId,
+    creativeId,
+    recGroup,
+    requestId
+  );
+}
+
+export function getSessionID(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getSessionID((sessionID: string) => {
+    callback(sessionID);
+  });
+}
+
+export function getLoadID(callback: (id: string) => void): void {
+  NativeMobileSdkReactNative.getLoadID((loadID: string) => {
+    callback(loadID);
+  });
 }
 
 export { InlineAdView };

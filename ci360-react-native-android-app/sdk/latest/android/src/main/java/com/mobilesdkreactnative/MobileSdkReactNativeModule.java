@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: MobileSdkReactNativeModule.java                                                                                   #
+//# File Description: Implements the React Native bridge module exposing CI360 SDK initialization, identity, push, and event APIs. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 package com.mobilesdkreactnative;
 
 import android.app.Activity;
@@ -135,8 +146,28 @@ public class MobileSdkReactNativeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
+    public void getCi360Id(Callback callback) {
+      callback.invoke(SASCollector.getInstance().getCi360Id());
+    }
+
+    @ReactMethod
+    public void setCi360Id(String ci360Id) {
+      SASCollector.getInstance().setCi360Id(ci360Id);
+    }
+
+    @ReactMethod
     public void getTenantID(Callback callback) {
       callback.invoke(SASCollector.getInstance().getTenantID());
+    }
+
+    @ReactMethod
+    public void getSessionID(Callback callback) {
+      callback.invoke(SASCollector.getInstance().getSessionID());
+    }
+
+    @ReactMethod
+    public void getLoadID(Callback callback) {
+      callback.invoke(SASCollector.getInstance().getLoadID());
     }
 
     @ReactMethod
@@ -212,6 +243,28 @@ public class MobileSdkReactNativeModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void registerSpotClicked(String spotId) {
       SASCollector.getInstance().registerSpotClicked(spotId);
+  }
+
+  @ReactMethod
+  public void registerSpotViewableWithIds(
+    String spotId,
+    String taskId,
+    String creativeId,
+    String recGroup,
+    String requestId
+  ) {
+      SASCollector.getInstance().registerSpotViewable(spotId, taskId, creativeId, recGroup, requestId);
+  }
+
+  @ReactMethod
+  public void registerSpotClickedWithIds(
+    String spotId,
+    String taskId,
+    String creativeId,
+    String recGroup,
+    String requestId
+  ) {
+      SASCollector.getInstance().registerSpotClicked(spotId, taskId, creativeId, recGroup, requestId);
   }
 
   @RequiresApi(api = Build.VERSION_CODES.O)

@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: MobileSdkReactNativePackage.java                                                                                   #
+//# File Description: Registers native module and custom ad view managers for integration with the React Native runtime. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 package com.mobilesdkreactnative;
 
 import androidx.annotation.NonNull;

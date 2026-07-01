@@ -40,12 +40,13 @@ Before proceeding, ensure that you have successfully installed the React-Native 
    - [Example: Enable Mobile Messages: Push Notification](#enable-mobile-messages-push-notification)
    - [Example: Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification)
    - [Example: Reset the Mobile Device ID](#expand-reset-the-mobile-device-id)
+   - [Example: Server-Side Events and Spot Content](#expand-server-side-events-and-spot-content)
 
 ## Framework Versions
 
 State the versions of React Native frameworks that you're using for these examples.
 
-- React Native: 0.72+
+- React Native: 0.76+
 
 ## Updated (V2) Framework Version
 
@@ -703,7 +704,72 @@ Follow these steps:
 </details>
 
 ---
+### Example: Server-Side Events and Spot Content
 
+<details><summary>Click to expand</summary>
+<a name="expand-server-side-events-and-spot-content"></a>
+
+This example explains how to use the Server-Side Events screen in the React Native example app to call CI360 SSE endpoints and render server-side spot content as a mobile creative.
+
+#### Where to find the implementation
+
+1. Screen orchestration and UI:
+   - `example/src/screens/ServerSideEventsScreen.tsx`
+2. SSE/API service methods:
+   - `example/src/services/Ci360SseService.ts`
+
+#### Endpoints covered from the screen
+
+1. `GET /t/events/i/{externalTenantId}`
+2. `POST /t/events/e/{externalTenantId}/{visitorId}`
+3. `POST /t/events/e/{externalTenantId}/id_type={idType}/id_value={idValue}`
+4. `POST /t/events/d/{externalTenantId}/{visitorId}/id_type={idType}/id_value={idValue}`
+5. `DELETE /t/events/d/{externalTenantId}/{visitorId}`
+6. Content request endpoint used for spot creative rendering from the same screen.
+
+#### Runtime inputs required on the screen
+
+1. Gateway host (`https://...`)
+2. External tenant ID
+3. Bearer token (access point token)
+4. Identity params (`idType`, `idValue`) when using known-user mode
+5. Spot params (`spotId`, spot identity type, spot identity value)
+
+#### Spot response handling
+
+The screen supports CI360 content envelope responses such as:
+
+```json
+{
+  "contents": [
+    {
+      "spot_id": "...",
+      "spot_key": "...",
+      "task_id": "...",
+      "creative_id": "...",
+      "has_content": true,
+      "content": "<html>...</html>",
+      "channel_type": "mobile"
+    }
+  ],
+  "id_type": "_ci360_id",
+  "id_value": "..."
+}
+```
+
+If `content` is present, it is rendered in a WebView using a responsive HTML wrapper.
+
+#### Tracking behavior
+
+1. After successful spot load, the screen sends `spot_viewable`.
+2. The "Register Spot Click" action sends `spot_clicked`.
+3. Tracking uses visitor-based SSE when visitor ID is available, otherwise known-user SSE.
+
+[Back to Top](#back-to-top)
+
+</details>
+
+---
 ### Example: Working with Spots: Add an Inline Spot
 
 <details><summary>Click to expand</summary>
@@ -899,12 +965,12 @@ Follow these steps:
 <details><summary>Click to expand</summary>
 <a name="enable-mobile-messages-push-notification"></a>
 
-## Prerequisites
+### Prerequisites
 
 - Generate React Native Firebase authentication key
 - Set up Push Notification and Background capability
 
-## Enable android application with Push Notification via SAS SDK
+### Enable android application with Push Notification via SAS SDK
 
 <!-- ### AppDelegate.h Configuration
 
@@ -1043,13 +1109,13 @@ Replace the content in `AppDelegate.h` with the following code:
    }
    ``` -->
 
-6. **To enable Rich Push Notification**
+1. **To enable Rich Push Notification**
 
    Please refere to [Enable Mobile Messages: Rich Push Notification](#enable-mobile-messages-rich-push-notification) section.
 
-7. **Enable Push Notification in React Native App**
+2. **Enable Push Notification in React Native App**
    After apply iOS configuration via XCode, we can now able to add React Native
-
+<!--
    ### Step 1: Import Required Modules
 
    ```typescript
@@ -1059,7 +1125,7 @@ Replace the content in `AppDelegate.h` with the following code:
      Platform,
    } from 'react-native';
    ```
-
+-->
    <!-- ### Step 2: Initialize Mobile Messaging Event for iOS
 
    ```typescript
@@ -1110,7 +1176,7 @@ Replace the content in `AppDelegate.h` with the following code:
    }, []);
    ```
 
-   ### Step 4: Cleanup
+   ### Step 3: Cleanup
 
    Make sure to remove all listeners when the component unmounts.
 
@@ -1153,10 +1219,11 @@ Push Notifications
 
    Note: notificationWithLink is the parameter passed from native side when the app has not been running and tapping push notification starts the app.
 
-5. Before the start of Appt definition, create an instance of event emitter.
-   `typescript
-  const emitter = new EvtEmitter();
-`
+5. Before the start of App definition, create an instance of event emitter.
+
+   ```typescript
+   const emitter = new EvtEmitter();
+   ```
    Note: The emitter will send event when push notification is received while the app is
    in the background. Listener will be set up in deep link in step 11 to listen for the
    event and navigate to the Diagnostic screen.
@@ -1187,17 +1254,18 @@ if (Platform.OS === 'android') {
     }
   });
   DeviceEventEmitter.addListener(Constants.MESSAGE_NOTIFICATION_LINK_RECEIVED, (link: string) => {
-  if (link.includes('diagnostic')) {
-    Toast.show('User got push notification' +  ' with link' + link, Toast.SHORT);
-    //This event is for the listener in deep link to listen
-    emitter.emit('PushLink', {link: link})
+    if (link.includes('diagnostic')) {
+      Toast.show('User got push notification' + ' with link' + link, Toast.SHORT);
+      // This event is for the listener in deep link to listen
+      emitter.emit('PushLink', { link: link });
     }
   });
-}
+  }   // closes if (Platform.OS === 'android')
+}     // closes if (notificationWithLink...)
 
 return () => {
   DeviceEventEmitter.removeAllListeners();
-  }
+};
 }, []);
 ```
 
@@ -1303,4 +1371,3 @@ Push notifications can be tested by sending external events from Postman.
 
 ---
 
-(Continue with other functionalities)

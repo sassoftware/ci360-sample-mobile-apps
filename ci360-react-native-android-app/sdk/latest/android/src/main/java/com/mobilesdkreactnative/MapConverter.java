@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: MapConverter.java                                                                                   #
+//# File Description: Converts React Native ReadableMap and ReadableArray values into Java collections for native SDK calls. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 package com.mobilesdkreactnative;
 
 import com.facebook.react.bridge.ReadableMap;
