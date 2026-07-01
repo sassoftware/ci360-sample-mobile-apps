@@ -67,8 +67,6 @@ const ServerSideContentScreen: React.FC<ServerSideContentScreenProps> = () => {
     DEFAULT_CI360_SETTINGS.gatewayHost,
     DEFAULT_CI360_SETTINGS.externalTenantId
   );
-    // 'https://i-syd.ci360.marketing/t/events/e/aee85757e600010b868fd8f5/0f3272b6369449faa75e87e70cc9c2a3'
-    // 'https://i-mum.ci360.marketing/t/content/aee85757e600010b868fd8f5/id_type=_ci360_id/id_value={visitorID}/spotid=gp_serversidecontent';
   const SSE_GATEWAY_DEFAULT = DEFAULT_CI360_SETTINGS.gatewayHost;
 
   // State management
@@ -193,12 +191,7 @@ const ServerSideContentScreen: React.FC<ServerSideContentScreenProps> = () => {
         url = url.replace(/id_value=([^/]*)/, `id_value=${hexVisitorId}`);
         // url = url.replace(/id_value=([^/]*)/, `id_value=`);
       }
-      // if (spotId.trim()) {
-      //   url = url.replace(
-      //     /(\/id_value=[^/]+\/)([^/?#]+)/,
-      //     `$1${encodeURIComponent(spotId.trim())}`
-      //   );
-      // }
+     
       const safeUrl = url.replace(/\[/g, '%5B').replace(/\]/g, '%5D');
 
       console.log('Fetching content from:', safeUrl);
@@ -503,7 +496,7 @@ const ServerSideContentScreen: React.FC<ServerSideContentScreenProps> = () => {
 
       setBearerToken(token);
       Toast.show('Bearer token obtained successfully!', Toast.SHORT);
-      console.log('Bearer token acquired:', token.substring(0, 20) + '...');
+      
     } catch (error) {
       console.error('Error fetching bearer token:', error);
       const errorMsg = error instanceof Error ? error.message : 'Unknown error occurred';
@@ -909,5 +902,3 @@ const localStyles = StyleSheet.create({
 });
 
 export default ServerSideContentScreen;
-
-//#eyJhbGciOiJSUzUxMiIsInRubSI6ImJjdDMweHoiLCJ0eXAiOiJKV1QifQ.eyJleHAiOjE3NzkyNTYwODYsImlhdCI6MTc3OTE2OTY4NiwiaXNzIjoiQ0kzNjBtaWxfYWNjZXNzUG9pbnQiLCJrIjoiZjM4NDI2ODUtMWE4MS00M2QxLTg3MzEtZTIyOGI1YjdmZTc2Iiwia3N1YiI6IjBiZTBiZjFiLTljNjUtNDA5YS05MDA4LTg1M2E2ZmM1NzI4YyIsInMiOiIyYjliZGQ3MC1hZDdhLTQ5MWMtYTM4Zi04ZjEwZjc3MDM3NjciLCJzdWIiOiI3MDk5MTllZC04NDJhLTQ1MDctYjAyNi00NTUzMDU4YjExZDUiLCJ0bm0iOiJiY3QzMHh6IiwienRvayI6ImIxZjc3OWM3LTEwOGUtNDJkZS1iMmY0LWI5OGI1MDE1ZmRiNCJ9.KCgNQgg0udQyYCLm6K9WwLRr9s3cs4-XJaXk_1ZJ5lYn5Ny-zKDUBgKWp-0gB-5IFaxId2oL9UErALi8LxIJhaWeEL8jH8GcmtVWx2zwYQ7vjI_yqWZST6jyx7-tp5zLigRWVBhMsXO1va8PfuIXybpwexrNx-zGJ0ja0WwtTYhtyhVdtmkDFjBF_z7baX4kt3XElv9wB4xDquraskEt4qke8eaWajZ0Bfk0oA0VrZTXceWlMsFuHpnV8KyuZRE46GcwEhfRaadR1jy_xMScSpplXA-F_VIca1osxOmKZeJlb9ZBARsp2T13c-FALGK4rKLkLIHwrX0BqtLfRwvAZeIHx2DKM93wdFP1F7wbVmsloL5bc4pAuMdypIUgC7BHy0Xbmint229V4Us9Nu6gr5VCYjC_4AblDjtHvIJ64LcFS_K5RijDlB1t3yDL46nJ87eDRCLo7uG_me5HdNjQZsqB8fW20-3HifjlvLJ-VhkfcuhOnhLR5cEWT7WhHu7oeupBbbdHGvu2NbzPBGnevdwrj34jXpod0khuXO5oqNsHzh-kmtBvVHv0nIt6PcC1KzsjGGSZsDch7MNyACgcBFBGI6eUwRpn7LsSy3rtgnXDd5FQp6fjvqBHDVQJby2ZYNfLe6JSyJbGwycOV_aX_MQqBJtRfDDq1ThPiSiMWdM

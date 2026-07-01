@@ -1,3 +1,14 @@
+//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 React Native Demo Application                                                        #
+//# File Name: ConfigScreen.tsx                                                                                #
+//# File Description: React Native component for configuring CI360 SDK with tenant, app, and tag server settings.    #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023       
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 import * as MobileSdk from 'mobile-sdk-react-native';
 import React, { useEffect } from 'react';
 import {

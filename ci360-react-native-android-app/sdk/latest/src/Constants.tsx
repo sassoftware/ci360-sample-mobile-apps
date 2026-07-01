@@ -1,8 +1,8 @@
 //
 //#*************************************************************************************************************#
 //# Application Name: SAS CI360 React Native Demo Application                                                        #
-//# File Name: constants.dart                                                                                   #
-//# File Description: Defines global app-level constants and the AppState singleton for persisting login and tenant connection state across pages. #
+//# File Name: Constants.tsx                                                                                    #
+//# File Description: Defines global app-level constants for ads, identity types, and mobile message events.   #
 //# Author: SAS Global CX-CI                                                                                    #
 //# Date: 31-October-2023       
 //# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #

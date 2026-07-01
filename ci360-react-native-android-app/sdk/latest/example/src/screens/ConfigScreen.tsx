@@ -37,20 +37,20 @@ interface TenantConfig {
 const TENANT_PRESETS: Array<{ key: string; value: string; config: TenantConfig }> = [
   {
     key: '1',
-    value: 'SAS Tenant 5 Sandbox',
+    value: 'Test Tenant',
     config: {
-      tenantId: 'da1a105f5300013b4dde1b18',
-        tagServer: 'https://execution-training.ci360.sas.com/t/mobile',
+      tenantId: 'xxxxxxxx',
+        tagServer: 'https://<gateway_url>/t/mobile',
       appId: 'react_native_demo_app_v1',
     },
   },
   {
     key: '2',
-    value: 'Development Tenant 30',
+    value: 'Development Tenant',
     config: {
-      tenantId: 'aee85757e600010b868fd8f5',
-      tagServer: 'https://execution-training.ci360.sas.com/t/mobile',
-      appId: 'react_native_demo_app_v3',
+      tenantId: 'xxxxxxxxxxxxxx',
+      tagServer: 'https://<gateway_url>/t/mobile',
+      appId: 'react_native_demo_app_v1',
     },
   }
 ];
