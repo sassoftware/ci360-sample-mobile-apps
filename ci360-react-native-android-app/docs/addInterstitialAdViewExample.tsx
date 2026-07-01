@@ -35,7 +35,7 @@ const addInterstitialAdViewExample: React.FC = () => {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <InterstitialAdView
-        spotId="snzrle_app_interstitial" //the mobile spot id defined in your tenant
+        spotId="snzrle_app_interstitial" //the mobile spot id that is defined in your tenant
       />
       <Text>Page to load Interstitial Spot.</Text>
     </View>
