@@ -30,6 +30,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp>
     with SingleTickerProviderStateMixin, WidgetsBindingObserver {
+  // ignore: unused_field
   String _platformVersion = 'Unknown';
   static MethodChannel channel = const MethodChannel('app_channel');
   bool _geofenceStarted = false;

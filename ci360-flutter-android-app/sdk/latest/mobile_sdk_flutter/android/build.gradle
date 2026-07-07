@@ -26,6 +26,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.sas.SASIA.mobile_sdk_flutter'
     compileSdkVersion 31
 
     compileOptions {

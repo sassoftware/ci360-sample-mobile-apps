@@ -1,3 +1,15 @@
+﻿//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 Flutter Demo Application                                                        #
+//# File Name: diagnostic_page.dart                                                                             #
+//# File Description: Provides a diagnostic testing view for loading and displaying SAS CI360 inline spot ads, used for QA and troubleshooting purposes. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023                                                                                       #
+//# Updated: 5-May-2026                                                                                         #
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 import 'package:mobile_sdk_flutter/sas_collector_sdk.dart';
 import 'package:flutter/material.dart';
 

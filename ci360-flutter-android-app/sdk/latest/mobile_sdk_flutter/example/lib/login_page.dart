@@ -27,6 +27,7 @@ class _LoginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SingleChildScrollView(
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         const SizedBox(

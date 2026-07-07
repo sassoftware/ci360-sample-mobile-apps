@@ -1,3 +1,15 @@
+﻿//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 Flutter Demo Application                                                        #
+//# File Name: view_page.dart                                                                                   #
+//# File Description: Demonstrates SAS CI360 inline and interstitial ad spot rendering using the SASCollector SDK native ad view widgets. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023                                                                                       #
+//# Updated: 5-May-2026                                                                                         #
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -87,7 +99,7 @@ class _ViewPageState extends State<ViewPage>
                     height: 430,
                     width: 330,
                     child: SASCollectorInlineAdView(
-                      spotID: 'wei_wen_spot3',
+                      spotID: 'flutter360Spot',
                       onCreated: onInlineAdCreated,
                     ),
                   ),
@@ -115,7 +127,7 @@ class _ViewPageState extends State<ViewPage>
             width: 3,
             height: 4,
             child: SASCollectorInterstitialAdView(
-                spotID: 'interstitial_spot',
+                spotID: 'flutter360InterstitialSpot',
                 onCreated: onInterstitialAdCreated),
           ),
         ],

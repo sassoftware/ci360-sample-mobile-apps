@@ -1,9 +1,23 @@
+﻿//
+//#*************************************************************************************************************#
+//# Application Name: SAS CI360 Flutter Demo Application                                                        #
+//# File Name: home_page.dart                                                                                   #
+//# File Description: Main dashboard page displaying SDK status, session binding parameters, and navigation tabs to the app's core features. #
+//# Author: SAS Global CX-CI                                                                                    #
+//# Date: 31-October-2023                                                                                       #
+//# Updated: 5-May-2026                                                                                         #
+//# Copyright  2026, SAS Institute Inc., Cary, NC, USA.  All Rights Reserved.                                   #
+//# SPDX-License-Identifier: Apache-2.0                                                                         #
+//#*************************************************************************************************************#
+//
 import 'package:flutter/material.dart';
 import 'package:mobile_sdk_flutter/sas_collector_sdk.dart';
 import 'package:ron360flutterapp/initialize_page.dart';
+import 'package:ron360flutterapp/spot_request_page.dart';
 import 'package:ron360flutterapp/view_page.dart';
 import 'package:ron360flutterapp/initialize_route.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:ron360flutterapp/app_theme.dart';
 
 MobileSdkFlutter mobileSdkFlutter = new MobileSdkFlutter();
 
@@ -19,7 +33,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with AutomaticKeepAliveClientMixin<HomePage> {
-  // MobileSdkFlutter mobileSdkFlutter = MobileSdkFlutter();
   bool isEnabled = false;
   String bindingParam = '';
   String tagServer = '';
@@ -49,19 +62,20 @@ class _HomePageState extends State<HomePage>
     inlineAdController = controller;
     inlineAdController.onLoadedHandler = () {
       Fluttertoast.showToast(
-          msg: 'Inline Ad is loaded',
-          toastLength: Toast.LENGTH_LONG,
-          gravity: ToastGravity.CENTER);
+        msg: 'Inline Ad is loaded',
+        toastLength: Toast.LENGTH_LONG,
+        gravity: ToastGravity.CENTER,
+      );
     };
   }
 
   void onInterstitialAdCreated(
-      SASCollectorInterstitialAdViewController controller) {
+    SASCollectorInterstitialAdViewController controller,
+  ) {
     interstitialAdController = controller;
     interstitialAdController.onLoadedHandler = () {
       print('onLoadedHandler is overriden on the client side');
     };
-
     interstitialAdController.onDefaultLoadedHandler = () {
       print('onDefaultLoadedHandler is overriden on the client side');
     };
@@ -91,49 +105,38 @@ class _HomePageState extends State<HomePage>
     super.initState();
   }
 
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   // ignore: unused_field
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Profile',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: Settings',
-      style: optionStyle,
-    ),
-  ];
+  static const TextStyle optionStyle = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+  );
+
+  // ignore: unused_field
+  static const List<Widget> _widgetOptions = <Widget>[];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
       if (_selectedIndex == 0) {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  HomeRoute(mobileSdkFlutter: mobileSdkFlutter)),
-        );
+        Navigator.of(context, rootNavigator: true)
+            .popUntil((route) => route.isFirst);
       }
       if (_selectedIndex == 1) {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) =>
-                  LoginRoute(mobileSdkFlutter: mobileSdkFlutter)),
+            builder: (context) =>
+                LoginRoute(mobileSdkFlutter: mobileSdkFlutter),
+          ),
         );
       }
       if (_selectedIndex == 2) {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) =>
-                  InitializeRoute(mobileSdkFlutter: mobileSdkFlutter)),
+            builder: (context) =>
+                InitializeRoute(mobileSdkFlutter: mobileSdkFlutter),
+          ),
         );
       }
     });
@@ -142,447 +145,301 @@ class _HomePageState extends State<HomePage>
   @override
   // ignore: must_call_super
   Widget build(BuildContext context) {
+    final tt = Theme.of(context).textTheme;
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        body: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('assets/SASCI360.png'),
-              const Text('Inline Ad View'),
-              SizedBox(
-                  height: 400,
-                  width: 400,
-                  child: SASCollectorInlineAdView(
-                    spotID: 'flutter360Spot',
-                    onCreated: onInlineAdCreated,
-                  )),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      const Text('Interstitial Ad View'),
-                      ElevatedButton(
-                          onPressed: () {
-                            interstitialAdController.showAd();
-                          },
-                          child: const Text('Show Interstitial Ad')),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 3,
-                height: 4,
-                child: SASCollectorInterstitialAdView(
-                    spotID: 'flutter360InterstitialSpot',
-                    onCreated: onInterstitialAdCreated),
-              ),
-              //const SizedBox(height: 30),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                      foregroundColor: Colors.black),
-                  onPressed: () {
-                    widget.mobileSdkFlutter
-                        .getApplicationVersion()
-                        .then((version) => setState(() {
-                              appVersion = version;
-                              txtversionController.text = appVersion;
-                            }));
-                  },
-                  child: const Text('Get App Version')),
-              Material(
-                  child: SizedBox(
-                      width: 300,
-                      child: Column(children: [
-                        TextField(
-                            readOnly: true,
-                            style: TextStyle(color: Colors.white),
-                            decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black,
-                                border: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black))),
-                            autofocus: true,
-                            controller: txtversionController)
-                      ]))),
-
-              Divider(color: Colors.white),
-
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                      foregroundColor: Colors.black),
-                  onPressed: () {
-                    widget.mobileSdkFlutter
-                        .getTagServer()
-                        .then((server) => setState(() {
-                              tagServer = server;
-                              txttagsvrController.text = tagServer;
-                            }));
-                  },
-                  child: const Text('Get TagServer')),
-              Material(
-                  child: SizedBox(
-                      width: 250,
-                      child: Column(children: [
-                        TextField(
-                            readOnly: true,
-                            style: TextStyle(color: Colors.white),
-                            decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black,
-                                border: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black))),
-                            autofocus: true,
-                            controller: txttagsvrController)
-                      ]))),
-
-              Divider(color: Colors.white),
-
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                      foregroundColor: Colors.black),
-                  onPressed: () {
-                    widget.mobileSdkFlutter
-                        .getTenantId()
-                        .then((tenant) => setState(() {
-                              tenantId = tenant;
-                              txttenantidController.text = tenantId;
-                            }));
-                  },
-                  child: const Text('Get Tenant ID')),
-              Material(
-                  child: SizedBox(
-                      width: 250,
-                      child: Column(children: [
-                        TextField(
-                            readOnly: true,
-                            style: TextStyle(color: Colors.white),
-                            decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black,
-                                border: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black))),
-                            autofocus: true,
-                            controller: txttenantidController)
-                      ]))),
-
-              Divider(color: Colors.white),
-
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                      foregroundColor: Colors.black),
-                  onPressed: () {
-                    widget.mobileSdkFlutter
-                        .getDeviceId()
-                        .then((device) => setState(() {
-                              deviceId = device;
-                              txtdeviceidController.text = deviceId;
-                            }));
-                  },
-                  child: const Text('Get Device ID')),
-              Material(
-                  child: SizedBox(
-                      width: 250,
-                      child: Column(children: [
-                        TextField(
-                            readOnly: true,
-                            style: TextStyle(color: Colors.white),
-                            decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black,
-                                border: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black))),
-                            autofocus: true,
-                            controller: txtdeviceidController)
-                      ]))),
-
-              Divider(color: Colors.white),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(250, 40),
-                      backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                      foregroundColor: Colors.black),
-                  onPressed: () {
-                    widget.mobileSdkFlutter
-                        .resetDeviceId()
-                        .then((rstdevice) => setState(() {
-                              widget.mobileSdkFlutter
-                                  .getDeviceId()
-                                  .then((device) => setState(() {
-                                        deviceId = device;
-                                        txtresetdeviceidController.text =
-                                            deviceId;
-                                      }));
-                              //txtresetdeviceidController.text = 'Device ID reset successfully!';
-                            }));
-                  },
-                  child: const Text('Reset Device ID')),
-              Material(
-                  child: SizedBox(
-                      width: 250,
-                      child: Column(children: [
-                        TextField(
-                            readOnly: true,
-                            style: TextStyle(color: Colors.white),
-                            decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black,
-                                border: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black))),
-                            autofocus: true,
-                            controller: txtresetdeviceidController)
-                      ]))),
-
-              Divider(color: Colors.white),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(250, 40),
-                    backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                    foregroundColor: Colors.black),
-                onPressed: () {
-                  widget.mobileSdkFlutter
-                      .getSessionBindingParameter()
-                      .then((param) => setState(() {
-                            bindingParam = param;
-                            txtbndgparamController.text = bindingParam;
-                          }));
-                },
-                child: const Text('Check Binding Param'),
-              ),
-              Material(
-                  child: SizedBox(
-                      width: 250,
-                      child: Column(children: [
-                        TextField(
-                            readOnly: true,
-                            style: TextStyle(color: Colors.white),
-                            decoration: const InputDecoration(
-                                filled: true,
-                                fillColor: Colors.black,
-                                border: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black)),
-                                focusedBorder: OutlineInputBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(5)),
-                                    borderSide:
-                                        BorderSide(color: Colors.black))),
-                            autofocus: true,
-                            controller: txtbndgparamController)
-                      ]))),
-
-              Divider(color: Colors.white),
-
-              Card(
-                color: Colors.black,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 40,
-                        width: 300,
-                        child: TextField(
-                            decoration: const InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              labelText: 'page uri',
-                              border: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5))),
-                            ),
-                            autofocus: false,
-                            controller: pageUriController),
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            fixedSize: const Size(250, 40),
-                            backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                            foregroundColor: Colors.black),
-                        onPressed: () {
-                          if (pageUriController.text.isNotEmpty) {
-                            print("new page url: " + pageUriController.text);
-                            widget.mobileSdkFlutter
-                                .newPage(pageUriController.text);
-                          }
-                        },
-                        child: const Text('Invoke New Page Event'),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Divider(color: Colors.black),
-              const SizedBox(height: 20),
-              Card(
-                color: Colors.black,
-                margin: const EdgeInsets.symmetric(horizontal: 10),
-                child: Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 40,
-                        width: 300,
-                        child: TextField(
-                            decoration: const InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              labelText: 'event name',
-                              border: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5))),
-                            ),
-                            autofocus: false,
-                            controller: eventNameController),
-                      ),
-                      SizedBox(
-                        height: 40,
-                        width: 300,
-                        child: TextField(
-                          decoration: const InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              labelText: 'attribute name',
-                              border: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5)))),
-                          autofocus: false,
-                          controller: attributeNameController,
+      appBar: AppBar(title: const Text('Content & Ads')),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // -- SDK Info ---------------------------------------------------
+            const SectionHeader('SDK Information'),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    InfoRow(
+                      label: 'App Version',
+                      value: appVersion,
+                      onRefresh: () => widget.mobileSdkFlutter
+                          .getApplicationVersion()
+                          .then((v) => setState(() {
+                                appVersion = v;
+                              })),
+                    ),
+                    const Divider(height: 16),
+                    InfoRow(
+                      label: 'Tag Server',
+                      value: tagServer,
+                      onRefresh: () => widget.mobileSdkFlutter
+                          .getTagServer()
+                          .then((v) => setState(() {
+                                tagServer = v;
+                                txttagsvrController.text = v;
+                              })),
+                    ),
+                    const Divider(height: 16),
+                    InfoRow(
+                      label: 'Tenant ID',
+                      value: tenantId,
+                      onRefresh: () => widget.mobileSdkFlutter
+                          .getTenantId()
+                          .then((v) => setState(() {
+                                tenantId = v;
+                              })),
+                    ),
+                    const Divider(height: 16),
+                    InfoRow(
+                      label: 'Device ID',
+                      value: deviceId,
+                      onRefresh: () => widget.mobileSdkFlutter
+                          .getDeviceId()
+                          .then((v) => setState(() {
+                                deviceId = v;
+                              })),
+                    ),
+                    const Divider(height: 16),
+                    InfoRow(
+                      label: 'Binding Param',
+                      value: bindingParam,
+                      onRefresh: () => widget.mobileSdkFlutter
+                          .getSessionBindingParameter()
+                          .then((v) => setState(() {
+                                bindingParam = v;
+                              })),
+                    ),
+                    const Divider(height: 16),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: OutlinedButton.icon(
+                        onPressed: () => widget.mobileSdkFlutter
+                            .resetDeviceId()
+                            .then((_) => widget.mobileSdkFlutter
+                                .getDeviceId()
+                                .then((v) => setState(() {
+                                      deviceId = v;
+                                      txtresetdeviceidController.text = v;
+                                    }))),
+                        icon: const Icon(Icons.restart_alt_rounded, size: 18),
+                        label: const Text('Reset Device ID'),
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 10),
+                          textStyle: const TextStyle(fontSize: 13),
+                          minimumSize: Size.zero,
                         ),
                       ),
-                      SizedBox(
-                        height: 40,
-                        width: 300,
-                        child: TextField(
-                          decoration: const InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              labelText: 'attribute value',
-                              border: OutlineInputBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(5)))),
-                          autofocus: false,
-                          controller: attributeValueController,
-                        ),
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            fixedSize: const Size(250, 40),
-                            backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                            foregroundColor: Colors.black),
-                        onPressed: () {
-                          if (eventNameController.text.isEmpty ||
-                              attributeNameController.text.isEmpty ||
-                              attributeValueController.text.isEmpty) {
-                            return;
-                          }
-                          widget.mobileSdkFlutter.addAppEvent(
-                              eventNameController.text, {
-                            attributeNameController.text:
-                                attributeValueController.text
-                          });
-                        },
-                        child: const Text('Invoke App Event'),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(250, 40),
-                    backgroundColor: Color.fromARGB(255, 7, 226, 255),
-                    foregroundColor: Colors.black),
-                onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return ViewPage();
-                  }));
-                },
-                child: const Text('360 Spots Page'),
+            ),
+
+            // -- Event Tracking --------------------------------------------
+            const SectionHeader('Event Tracking'),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text('New Page Event',
+                        style: tt.titleSmall
+                            ?.copyWith(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 10),
+                    TextField(
+                      controller: pageUriController,
+                      decoration: const InputDecoration(
+                        labelText: 'Page URI',
+                        hintText: 'e.g. app://home',
+                        prefixIcon: Icon(Icons.link_rounded),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        if (pageUriController.text.isNotEmpty) {
+                          widget.mobileSdkFlutter
+                              .newPage(pageUriController.text);
+                          Fluttertoast.showToast(msg: 'New page event sent');
+                        }
+                      },
+                      icon: const Icon(Icons.send_rounded, size: 18),
+                      label: const Text('Send New Page Event'),
+                    ),
+                    const SizedBox(height: 20),
+                    const Divider(),
+                    const SizedBox(height: 12),
+                    Text('App Event',
+                        style: tt.titleSmall
+                            ?.copyWith(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 10),
+                    TextField(
+                      controller: eventNameController,
+                      decoration: const InputDecoration(
+                        labelText: 'Event Name',
+                        prefixIcon: Icon(Icons.event_note_outlined),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: attributeNameController,
+                            decoration: const InputDecoration(
+                              labelText: 'Attribute Name',
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: TextField(
+                            controller: attributeValueController,
+                            decoration: const InputDecoration(
+                              labelText: 'Value',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    ElevatedButton.icon(
+                      onPressed: () {
+                        if (eventNameController.text.isEmpty ||
+                            attributeNameController.text.isEmpty ||
+                            attributeValueController.text.isEmpty) {
+                          return;
+                        }
+                        widget.mobileSdkFlutter
+                            .addAppEvent(eventNameController.text, {
+                          attributeNameController.text:
+                              attributeValueController.text,
+                        });
+                        Fluttertoast.showToast(msg: 'App event sent');
+                      },
+                      icon: const Icon(Icons.send_rounded, size: 18),
+                      label: const Text('Send App Event'),
+                    ),
+                  ],
+                ),
               ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.business),
-              label: 'Profile',
+
+            // -- Ad Spots --------------------------------------------------
+            const SectionHeader('Ad Spots'),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text('Inline Ad',
+                        style: tt.titleSmall
+                            ?.copyWith(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: inlineAdTextFieldController,
+                      decoration: const InputDecoration(
+                        labelText: 'Inline Ad Spot ID',
+                        hintText: 'flutter360Spot',
+                        prefixIcon: Icon(Icons.image_outlined),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: SizedBox(
+                        height: 200,
+                        child: SASCollectorInlineAdView(
+                          spotID: 'flutter360Spot',
+                          onCreated: onInlineAdCreated,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    const Divider(),
+                    const SizedBox(height: 12),
+                    Text('Interstitial Ad',
+                        style: tt.titleSmall
+                            ?.copyWith(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: interstitialAdTextFieldController,
+                      decoration: const InputDecoration(
+                        labelText: 'Interstitial Ad Spot ID',
+                        hintText: 'flutter360InterstitialSpot',
+                        prefixIcon: Icon(Icons.fullscreen_rounded),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    ElevatedButton.icon(
+                      onPressed: () => interstitialAdController.showAd(),
+                      icon: const Icon(Icons.play_circle_outline_rounded),
+                      label: const Text('Show Interstitial Ad'),
+                    ),
+                    SizedBox(
+                      width: 1,
+                      height: 1,
+                      child: SASCollectorInterstitialAdView(
+                        spotID: 'flutter360InterstitialSpot',
+                        onCreated: onInterstitialAdCreated,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'Settings',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.school),
-              label: 'Config',
+
+            // -- Content navigation ----------------------------------------
+            const SectionHeader('Content Pages'),
+            Card(
+              child: Column(
+                children: [
+                  NavTile(
+                    icon: Icons.grid_view_rounded,
+                    iconColor: kIconPurple,
+                    title: '360 Spots Page',
+                    subtitle: 'Browse and preview CI360 ad spots',
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => ViewPage()),
+                    ),
+                  ),
+                  NavTile(
+                    icon: Icons.api_rounded,
+                    iconColor: kIconTeal,
+                    title: 'Content Server Request',
+                    subtitle: 'Spot SDK calls and direct HTTP CSR API',
+                    isLast: true,
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => SpotRequestPage(
+                          mobileSdkFlutter: widget.mobileSdkFlutter,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
-          onTap: _onItemTapped,
-        ));
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_rounded), label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_rounded), label: 'Profile'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.tune_rounded), label: 'Features'),
+        ],
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+      ),
+    );
   }
 
   @override
@@ -602,9 +459,9 @@ class HomeRoute extends StatelessWidget {
       child: Navigator(
         onGenerateRoute: (RouteSettings settings) {
           return MaterialPageRoute(
-              builder: (BuildContext context) => HomePage(
-                    mobileSdkFlutter: mobileSdkFlutter,
-                  ));
+            builder: (BuildContext context) =>
+                HomePage(mobileSdkFlutter: mobileSdkFlutter),
+          );
         },
       ),
     );
