@@ -1207,4 +1207,3 @@ Run this code to start the mobile SDK again:
 
 [Back to Top](#back-to-top)
 </details>
-
