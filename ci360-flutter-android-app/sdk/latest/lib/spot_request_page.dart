@@ -46,7 +46,7 @@ class _SpotRequestPageState extends State<SpotRequestPage> {
   String _spotKey = '';
   final contentApiUrlController = TextEditingController(
     text:
-        'https://ingest-training.ci360.sas.com/t/content/da1a105f5300013b4dde1b18/id_type=_ci360_id/id_value=/spotkey=RonTestSpot',
+        'https://<content server api url based on region>/t/content/<tenant-Id>/id_type=_ci360_id/id_value=/spotkey=RonTestSpot',
   );
   final jwtTokenController = TextEditingController();
 
