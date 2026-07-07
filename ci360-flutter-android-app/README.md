@@ -1206,5 +1206,5 @@ Run this code to start the mobile SDK again:
          widget.mobileSdkFlutter.shutdown();
 
 [Back to Top](#back-to-top)
-</details>
+</details> 
 
