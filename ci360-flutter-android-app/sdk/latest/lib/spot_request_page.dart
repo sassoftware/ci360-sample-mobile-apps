@@ -2,7 +2,7 @@
 //#*************************************************************************************************************#
 //# Application Name: SAS CI360 Flutter Demo Application                                                        #
 //# File Name: spot_request_page.dart                                                                           #
-//# File Description: Provides a full UI for making SAS CI360 Content Server Request API calls to load spot HTML content and register viewable and click events. #
+//# File Description: It Provides a full UI for making SAS CI360 Content Server Request API calls to load spot HTML content and register viewable and click events. #
 //# Author: SAS Global CX-CI                                                                                    #
 //# Date: 5-May-2026                                                                                       #
 //# Updated: 5-May-2026                                                                                         #
