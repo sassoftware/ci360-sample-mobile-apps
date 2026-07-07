@@ -1,8 +1,8 @@
 ﻿//
 //#*************************************************************************************************************#
 //# Application Name: SAS CI360 Flutter Demo Application                                                        #
-//# File Name: constants.dart                                                                                   #
-//# File Description: Defines global app-level constants and the AppState singleton for persisting login and tenant connection state across pages. #
+//# File Name: custom_button.dart                                                                               #
+//# File Description: Reserved for reusable custom button widget definitions to be shared across the application pages. #
 //# Author: SAS Global CX-CI                                                                                    #
 //# Date: 31-October-2023                                                                                       #
 //# Updated: 5-May-2026                                                                                         #
@@ -10,18 +10,3 @@
 //# SPDX-License-Identifier: Apache-2.0                                                                         #
 //#*************************************************************************************************************#
 //
-const String msgDismissed = 'msgDismissed';
-const String actionLinkClicked = 'actionLinkClicked';
-const String pushNotification = 'PushNotification';
-
-/// Lightweight app-level singleton for persisting login and tenant state
-/// across pages without a full state-management solution.
-class AppState {
-  String loggedInUser = '';
-  String connectedTenantId = '';
-  String connectedTagServer = '';
-
-  AppState._private();
-  static final AppState _instance = AppState._private();
-  static AppState get instance => _instance;
-}

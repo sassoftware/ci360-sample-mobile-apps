@@ -16,27 +16,30 @@ Before we get started, make sure you have embedded the Flutter for Android 360 M
 
 ## Table of Contents
 <details><summary>Click to expand</summary>
-    - Framework Version
-    - Naming Convention
-    - Folder Heirarchy
-    - Creating a Flutter Plug-in Project & Template
-    - Embed 360 SDK libraries
-    - Default Functionality
-    - Configuring Dart
-    - Configuring Android
-    - Configuring the Flutter App
-    - SDK Features
-        - Sending Events
-        - Working with Mobile Spots
-            - Inline Ad Spot
-            - Interstitial Ad Spot
-        - Location Functionality (Geofence/Beacon)
-        - Implement Mobile Messaging
-        - Get App Version
-        - Reset Device ID
-        - Get Platform Version
-        - Disable the SDK
-        - Initialize 360 manually
+
+- Framework Version
+- Naming Convention
+- Folder Heirarchy
+- Creating a Flutter Plug-in Project & Template
+- Embed 360 SDK libraries
+- Default Functionality
+- Configuring Dart
+- Configuring Android
+- Configuring the Flutter App
+- SDK Features
+       - Sending Events
+       - Working with Mobile Spots
+       - Inline Ad Spot
+       - Interstitial Ad Spot
+       - Location Functionality (Geofence/Beacon)
+       - Implement Mobile Messaging
+       - Get App Version
+       - Reset Device ID
+       - Get Platform Version
+       - Disable the SDK
+       - Initialize 360 manually
+       - Content Server Implementation
+             - API Calls    
 </details>
 
 # Framework Version
@@ -834,5 +837,33 @@ setup than Dart setup.
         </intent-filter>
         </service>
 
+
+</details>
+
+
+# Content Server Implementation
+
+<details><summary>Click to expand</summary>
+
+## API Calls
+
+The Content Request API for SAS Customer Intelligence 360 enables you to retrieve personalized content and spot definitions without using the SAS tag (JavaScript) or the SAS mobile SDK. You can use this API to request content from any system that can make HTTPS calls, including back-end servers, server-side rendering engines, and third-party platforms.
+
+Documentation for the API is available here: https://support.sas.com/documentation/onlinedoc/ci/ci360-apis/serverSideContent/v1/redoc.html#section/Overview 
+
+In the App, there is a GET call to the Content Server API to fetch data for a particular spot from a tenant. The url is in this format: https://i-<region>.ci360.marketing/t/content/<tenantid>/id_type=_ci360_id/id_value=/spotkey=<spotname>
+
+This url is to get spot content for an anonymous user. TO get spot content for a known/logged-in user, the url changes to: https://i-<region>.ci360.marketing/t/content/<tenantid>/id_type=<idtype>/id_value=<idvalue>/spotkey=<spotname>
+
+Here the variables are:
+<region> - Depending on the host region for the tenant, could be any of these: us, eu, ap, mu, au.
+<tenantid> - The unique Tenant ID for the tenant.
+<idtype> - The identity type to use, could be login_id or customer_id or subject_id. 
+<idvalue> - The actual identity value of the selected ID Type.
+<spotname> - The name of the spot for which the content has to be retrieved.
+
+The authorization for this API call is a Bearer JWT. The token is derived by combining TenantID and ClientSecret values from an Event Access Point in the tenant.
+
+As you see, the spot is not already defined in the App. The contents of the spot are fetched from the above API call and rendered on a dynamic spot in the App.
 
 </details>

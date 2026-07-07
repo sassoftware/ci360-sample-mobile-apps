@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 import 'mobile_sdk_flutter_method_channel.dart';
@@ -115,5 +113,70 @@ abstract class MobileSdkFlutterPlatform extends PlatformInterface {
 
   Future<void> setMobileMessagingDelegate2() {
     throw UnimplementedError('setMobileMessagingDelegate2 not implemented');
+  }
+
+  Future<String?> getCi360Id() {
+    throw UnimplementedError('getCi360Id is not implemented');
+  }
+
+  Future<String> loadSpotData(String spotId, Map<String, dynamic>? attrs) {
+    throw UnimplementedError('loadSpotData is not implemented');
+  }
+
+  Future<Map<String, dynamic>> loadSpotDataWithIds(
+    String spotId,
+    Map<String, dynamic>? attrs,
+  ) {
+    throw UnimplementedError('loadSpotDataWithIds is not implemented');
+  }
+
+  Future<void> registerSpotViewable(String spotId) {
+    throw UnimplementedError('registerSpotViewable is not implemented');
+  }
+
+  Future<void> registerSpotViewableWithIds({
+    required String spotId,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+  }) {
+    throw UnimplementedError('registerSpotViewableWithIds is not implemented');
+  }
+
+  Future<void> registerSpotViewableWithRequestId({
+    required String spotKey,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+    required String requestId,
+  }) {
+    throw UnimplementedError(
+      'registerSpotViewableWithRequestId is not implemented',
+    );
+  }
+
+  Future<void> registerSpotClicked(String spotId) {
+    throw UnimplementedError('registerSpotClicked is not implemented');
+  }
+
+  Future<void> registerSpotClickedWithIds({
+    required String spotId,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+  }) {
+    throw UnimplementedError('registerSpotClickedWithIds is not implemented');
+  }
+
+  Future<void> registerSpotClickedWithRequestId({
+    required String spotKey,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+    required String requestId,
+  }) {
+    throw UnimplementedError(
+      'registerSpotClickedWithRequestId is not implemented',
+    );
   }
 }

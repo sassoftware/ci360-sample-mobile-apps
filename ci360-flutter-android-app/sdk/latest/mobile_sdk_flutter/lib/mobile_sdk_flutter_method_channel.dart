@@ -11,8 +11,9 @@ class MethodChannelMobileSdkFlutter extends MobileSdkFlutterPlatform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version =
-        await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version = await methodChannel.invokeMethod<String>(
+      'getPlatformVersion',
+    );
     return version;
   }
 
@@ -23,14 +24,18 @@ class MethodChannelMobileSdkFlutter extends MobileSdkFlutterPlatform {
 
   @override
   Future<void> addAppEvent(String eventKey, Map<String, dynamic>? data) async {
-    return await methodChannel.invokeMethod(
-        'addAppEvent', <String, dynamic>{'eventKey': eventKey, 'data': data});
+    return await methodChannel.invokeMethod('addAppEvent', <String, dynamic>{
+      'eventKey': eventKey,
+      'data': data,
+    });
   }
 
   @override
   Future<bool> identity(String value, String type) async {
-    return await methodChannel
-        .invokeMethod('identity', {'value': value, 'type': type});
+    return await methodChannel.invokeMethod('identity', {
+      'value': value,
+      'type': type,
+    });
   }
 
   @override
@@ -40,14 +45,16 @@ class MethodChannelMobileSdkFlutter extends MobileSdkFlutterPlatform {
 
   @override
   Future<void> registerForMobileMessages(String token) async {
-    return await methodChannel
-        .invokeMethod('registerForMobileMessages', {'token': token});
+    return await methodChannel.invokeMethod('registerForMobileMessages', {
+      'token': token,
+    });
   }
 
   @override
   Future<bool> handleMobileMessage(Map<String, dynamic> data) async {
-    return await methodChannel
-        .invokeMethod('handleMobileMessage', {'data': data});
+    return await methodChannel.invokeMethod('handleMobileMessage', {
+      'data': data,
+    });
   }
 
   @override
@@ -77,10 +84,11 @@ class MethodChannelMobileSdkFlutter extends MobileSdkFlutterPlatform {
 
   @override
   Future<void> setTenantId(String tenantId) async {
-    return await methodChannel
-        .invokeMethod('setTenantIid', {'tenantId': tenantId});
+    return await methodChannel.invokeMethod('setTenantIid', {
+      'tenantId': tenantId,
+    });
   }
-  
+
   @override
   Future<String> getTagServer() async {
     return await methodChannel.invokeMethod('getTagServer');
@@ -123,13 +131,128 @@ class MethodChannelMobileSdkFlutter extends MobileSdkFlutterPlatform {
 
   @override
   Future<bool> setTenant(
-      String tenantId, String tagServer, String appId) async {
-    return await methodChannel.invokeMethod('setTenant',
-        {'tenantId': tenantId, 'tagServer': tagServer, 'appId': appId});
+    String tenantId,
+    String tagServer,
+    String appId,
+  ) async {
+    return await methodChannel.invokeMethod('setTenant', {
+      'tenantId': tenantId,
+      'tagServer': tagServer,
+      'appId': appId,
+    });
   }
 
   @override
   Future<void> setMobileMessagingDelegate2() async {
     return await methodChannel.invokeMethod('setMobileMessagingDelegate2');
+  }
+
+  @override
+  Future<String?> getCi360Id() async {
+    return await methodChannel.invokeMethod<String>('getCi360Id');
+  }
+
+  @override
+  Future<String> loadSpotData(
+    String spotId,
+    Map<String, dynamic>? attrs,
+  ) async {
+    return await methodChannel.invokeMethod('loadSpotData', {
+          'spotId': spotId,
+          'attrs': attrs,
+        }) ??
+        '';
+  }
+
+  @override
+  Future<Map<String, dynamic>> loadSpotDataWithIds(
+    String spotId,
+    Map<String, dynamic>? attrs,
+  ) async {
+    final result = await methodChannel.invokeMapMethod<String, dynamic>(
+      'loadSpotDataWithIds',
+      {'spotId': spotId, 'attrs': attrs},
+    );
+    return result ?? {};
+  }
+
+  @override
+  Future<void> registerSpotViewable(String spotId) async {
+    return await methodChannel.invokeMethod('registerSpotViewable', {
+      'spotId': spotId,
+    });
+  }
+
+  @override
+  Future<void> registerSpotViewableWithIds({
+    required String spotId,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+  }) async {
+    return await methodChannel.invokeMethod('registerSpotViewableWithIds', {
+      'spotId': spotId,
+      'taskId': taskId,
+      'creativeId': creativeId,
+      'recGroup': recGroup,
+    });
+  }
+
+  @override
+  Future<void> registerSpotViewableWithRequestId({
+    required String spotKey,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+    required String requestId,
+  }) async {
+    return await methodChannel
+        .invokeMethod('registerSpotViewableWithRequestId', {
+          'spotKey': spotKey,
+          'taskId': taskId,
+          'creativeId': creativeId,
+          'recGroup': recGroup,
+          'requestId': requestId,
+        });
+  }
+
+  @override
+  Future<void> registerSpotClicked(String spotId) async {
+    return await methodChannel.invokeMethod('registerSpotClicked', {
+      'spotId': spotId,
+    });
+  }
+
+  @override
+  Future<void> registerSpotClickedWithIds({
+    required String spotId,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+  }) async {
+    return await methodChannel.invokeMethod('registerSpotClickedWithIds', {
+      'spotId': spotId,
+      'taskId': taskId,
+      'creativeId': creativeId,
+      'recGroup': recGroup,
+    });
+  }
+
+  @override
+  Future<void> registerSpotClickedWithRequestId({
+    required String spotKey,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+    required String requestId,
+  }) async {
+    return await methodChannel
+        .invokeMethod('registerSpotClickedWithRequestId', {
+          'spotKey': spotKey,
+          'taskId': taskId,
+          'creativeId': creativeId,
+          'recGroup': recGroup,
+          'requestId': requestId,
+        });
   }
 }

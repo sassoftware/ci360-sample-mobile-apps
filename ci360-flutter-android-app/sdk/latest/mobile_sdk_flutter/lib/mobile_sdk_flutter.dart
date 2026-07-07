@@ -74,7 +74,93 @@ class MobileSdkFlutter {
   }
 
   Future<bool> setTenant(String tenantId, String tagServer, String appId) {
-    return MobileSdkFlutterPlatform.instance
-        .setTenant(tenantId, tagServer, appId);
+    return MobileSdkFlutterPlatform.instance.setTenant(
+      tenantId,
+      tagServer,
+      appId,
+    );
+  }
+
+  Future<String?> getCi360Id() {
+    return MobileSdkFlutterPlatform.instance.getCi360Id();
+  }
+
+  Future<String> loadSpotData(String spotId, Map<String, dynamic>? attrs) {
+    return MobileSdkFlutterPlatform.instance.loadSpotData(spotId, attrs);
+  }
+
+  Future<Map<String, dynamic>> loadSpotDataWithIds(
+    String spotId,
+    Map<String, dynamic>? attrs,
+  ) {
+    return MobileSdkFlutterPlatform.instance.loadSpotDataWithIds(spotId, attrs);
+  }
+
+  Future<void> registerSpotViewable(String spotId) {
+    return MobileSdkFlutterPlatform.instance.registerSpotViewable(spotId);
+  }
+
+  Future<void> registerSpotViewableWithIds({
+    required String spotId,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+  }) {
+    return MobileSdkFlutterPlatform.instance.registerSpotViewableWithIds(
+      spotId: spotId,
+      taskId: taskId,
+      creativeId: creativeId,
+      recGroup: recGroup,
+    );
+  }
+
+  Future<void> registerSpotViewableWithRequestId({
+    required String spotKey,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+    required String requestId,
+  }) {
+    return MobileSdkFlutterPlatform.instance.registerSpotViewableWithRequestId(
+      spotKey: spotKey,
+      taskId: taskId,
+      creativeId: creativeId,
+      recGroup: recGroup,
+      requestId: requestId,
+    );
+  }
+
+  Future<void> registerSpotClicked(String spotId) {
+    return MobileSdkFlutterPlatform.instance.registerSpotClicked(spotId);
+  }
+
+  Future<void> registerSpotClickedWithIds({
+    required String spotId,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+  }) {
+    return MobileSdkFlutterPlatform.instance.registerSpotClickedWithIds(
+      spotId: spotId,
+      taskId: taskId,
+      creativeId: creativeId,
+      recGroup: recGroup,
+    );
+  }
+
+  Future<void> registerSpotClickedWithRequestId({
+    required String spotKey,
+    required String taskId,
+    required String creativeId,
+    String? recGroup,
+    required String requestId,
+  }) {
+    return MobileSdkFlutterPlatform.instance.registerSpotClickedWithRequestId(
+      spotKey: spotKey,
+      taskId: taskId,
+      creativeId: creativeId,
+      recGroup: recGroup,
+      requestId: requestId,
+    );
   }
 }

@@ -71,6 +71,7 @@ class _ViewPageState extends State<ViewPage>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
